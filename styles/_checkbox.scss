@@ -1,0 +1,22 @@
+.checkbox {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 1rem auto ;
+
+    &__label {
+        margin: 10px;
+    }
+
+    &__input {
+        width: 2rem;
+        height: 2rem;
+        border: 2px $white solid;
+        border-radius: 3px;
+        transition: background-color 0.2s ease-out;
+
+        &:checked {
+            background-color: $white;
+        }
+    }
+}

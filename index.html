@@ -5,12 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="shortcut icon" href="./src/img/ico/logo.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="./styles/main.css">
     <title>SOS Colombia</title>
 </head>
 <body>
+
+    <main>
+        <h1>Ciudad</h1>
+
+        <form>
+            <div class="textfield">
+                <label for="punto" class="textfield__label">Puntos</label>
+                <select name="punto" id="punto" class="textfield__input">
+                    <option value="1">Punto 1</option>
+                    <option value="2">Punto 2</option>
+                    <option value="3">Punto 3</option>
+                    <option value="4">Punto 4</option>
+                </select>
+            </div>
+            
+            <div class="textfield">
+                <label for="filter" class="textfield__label">Pedido</label>
+                <input type="text" id="filter" placeholder="Filtrar" class="textfield__input">
+            </div>
+
+            <div class="checkbox">
+                <input type="checkbox" name="request" id="request1" class="checkbox__input">
+                <label for="request1" class="checkbox__label">Insumo 1</label>
+            </div>
+        
+            <div class="checkbox">
+                <input type="checkbox" name="request" id="request2" class="checkbox__input">
+                <label for="request2" class="checkbox__label">Insumo 2</label>
+            </div>
+            
+            <div class="checkbox">
+                <input type="checkbox" name="request" id="request3" class="checkbox__input">
+                <label for="request3" class="checkbox__label">Insumo 3</label>
+            </div>
+        </form>
+    </main>
+    
+
     <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-firestore.js"></script>
     <script src="/js/firebaseApp.js"></script>

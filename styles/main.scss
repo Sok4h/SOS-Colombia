@@ -2,3 +2,15 @@
 @import './utils/reset';
 @import './utils/typography';
 @import './utils/btns';
+@import './texfield';
+@import './checkbox';
+
+html {
+    font-size: 62.5%
+}
+
+body {
+    padding: 2rem;
+    background-color: $bg;
+    color: $white
+}
