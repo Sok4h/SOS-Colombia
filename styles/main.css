@@ -63,11 +63,58 @@ h1, h2, h3 {
   font-size: 1.6rem;
 }
 
+.textfield {
+  width: 100%;
+  margin: 2rem auto;
+}
+
+.textfield__label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.textfield__input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background: none;
+  color: #FFFFFF;
+  border: 1px #FFFFFF solid;
+  border-radius: 10px;
+}
+
+.textfield__input::-webkit-input-placeholder {
+  color: #FFFFFF;
+  opacity: 0.7;
+}
+
+.textfield__input:-ms-input-placeholder {
+  color: #FFFFFF;
+  opacity: 0.7;
+}
+
+.textfield__input::-ms-input-placeholder {
+  color: #FFFFFF;
+  opacity: 0.7;
+}
+
+.textfield__input::placeholder {
+  color: #FFFFFF;
+  opacity: 0.7;
+}
+
+.textfield__input option {
+  color: #0D1B63;
+}
+
 html {
   font-size: 62.5%;
 }
 
 body {
   padding: 2rem;
+  background-color: #0D1B63;
+  color: #FFFFFF;
 }
 /*# sourceMappingURL=main.css.map */
