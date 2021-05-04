@@ -2,6 +2,7 @@
 @import './utils/reset';
 @import './utils/typography';
 @import './texfield';
+@import './checkbox';
 
 html {
     font-size: 62.5%
@@ -9,4 +10,6 @@ html {
 
 body {
     padding: 2rem;
+    background-color: $blueDark;
+    color: $white
 }
