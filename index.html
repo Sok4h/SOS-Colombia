@@ -12,6 +12,43 @@
 </head>
 <body>
 
+    <main>
+        <h1>Ciudad</h1>
+
+        <form>
+            <div class="textfield">
+                <label for="punto" class="textfield__label">Puntos</label>
+                <select name="punto" id="punto" class="textfield__input">
+                    <option value="1">Punto 1</option>
+                    <option value="2">Punto 2</option>
+                    <option value="3">Punto 3</option>
+                    <option value="4">Punto 4</option>
+                </select>
+            </div>
+            
+            <div class="textfield">
+                <label for="filter" class="textfield__label">Pedido</label>
+                <input type="text" id="filter" placeholder="Filtrar" class="textfield__input">
+            </div>
+
+            <div class="checkbox">
+                <input type="checkbox" name="request" id="request1" class="checkbox__input">
+                <label for="request1" class="checkbox__label">Insumo 1</label>
+            </div>
+        
+            <div class="checkbox">
+                <input type="checkbox" name="request" id="request2" class="checkbox__input">
+                <label for="request2" class="checkbox__label">Insumo 2</label>
+            </div>
+            
+            <div class="checkbox">
+                <input type="checkbox" name="request" id="request3" class="checkbox__input">
+                <label for="request3" class="checkbox__label">Insumo 3</label>
+            </div>
+        </form>
+    </main>
+    
+
     <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-firestore.js"></script>
     <script src="/js/firebaseApp.js"></script>

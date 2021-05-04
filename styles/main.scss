@@ -1,3 +1,12 @@
 @import './utils/colors';
 @import './utils/reset';
 @import './utils/typography';
+@import './texfield';
+
+html {
+    font-size: 62.5%
+}
+
+body {
+    padding: 2rem;
+}

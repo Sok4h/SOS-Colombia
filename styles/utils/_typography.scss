@@ -3,8 +3,10 @@ $quicksand: 'Quicksand', sans-serif;
 
 h1, h2, h3 {
     font-family: $quicksand;
+    font-size: 3rem;
 }
 
-* {
+*, label, button, select {
     font-family: $mulish;
+    font-size: 1.6rem;
 }
