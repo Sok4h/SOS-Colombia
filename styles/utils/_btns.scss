@@ -1,0 +1,19 @@
+.btn{
+    width: 212px;
+    height:46px;
+    font-size: 14px;
+    border-radius: 10px;
+    border: none;
+
+    &--blue{
+        background: $blue;
+        color: $white;
+    }
+
+    &--outlineWhite{
+        background: none;
+        color: $white;
+        border: 2px solid $white;
+    }
+
+}
