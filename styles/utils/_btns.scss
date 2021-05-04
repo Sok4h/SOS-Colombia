@@ -4,10 +4,22 @@
     font-size: 14px;
     border-radius: 10px;
     border: none;
+    margin: 1rem auto ;
 
     &--blue{
         background: $blue;
         color: $white;
+    }
+
+    &--white{
+        background: $white;
+        color: $blueDark;
+    }
+
+    &--outline{
+        background: none;
+        color: $blueDark;
+        border: 2px solid $blueDark;
     }
 
     &--outlineWhite{

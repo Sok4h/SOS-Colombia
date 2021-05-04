@@ -12,5 +12,9 @@ html {
 body {
     padding: 2rem;
     background-color: $bg;
-    color: $white
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
