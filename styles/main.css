@@ -108,13 +108,41 @@ h1, h2, h3 {
   color: #0D1B63;
 }
 
+.checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin: 1rem auto;
+}
+
+.checkbox__label {
+  margin: 10px;
+}
+
+.checkbox__input {
+  width: 2rem;
+  height: 2rem;
+  border: 2px #FFFFFF solid;
+  border-radius: 3px;
+  -webkit-transition: background-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out;
+}
+
+.checkbox__input:checked {
+  background-color: #FFFFFF;
+}
+
 html {
   font-size: 62.5%;
 }
 
 body {
   padding: 2rem;
-  background-color: #0D1B63;
+  background-color: #091244;
   color: #FFFFFF;
 }
 /*# sourceMappingURL=main.css.map */
