@@ -27,6 +27,7 @@
         href="https://fonts.googleapis.com/icon?family=Material+Icons"
         rel="stylesheet"
         >
+        
     <link rel="stylesheet" href="./styles/main.css" />
     <title>SOS Colombia</title>
 </head>
@@ -38,11 +39,14 @@
             <div class="textfield">
                 <label for="punto" class="textfield__label">Puntos</label>
                 <select name="punto" id="punto" class="textfield__input">
+                    <option value="">Selecciona un punto</option>
                     <option value="1">Punto 1</option>
                     <option value="2">Punto 2</option>
                     <option value="3">Punto 3</option>
                     <option value="4">Punto 4</option>
                 </select>
+
+                <span class="material-icons material-icons-outlined textfield__arrow">expand_more</span>
             </div>
 
             <div class="textfield">
@@ -372,11 +376,23 @@
                     </li>
                 </ul>
             </div> 
+
+            <li class="checkbox">
+                <input
+                    type="checkbox"
+                    name="foodRequest"
+                    id="foodRequest"
+                    class="checkbox__input"
+                />
+                <label for="foodRequest" class="checkbox__label">Cualquier alimento</label>
+            </li>
+
+            <button class="btn btn--white">Enviar</button>
         </form>
     </main>
 
     <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-firestore.js"></script>
     <script src="/js/firebaseApp.js"></script>
-  </body>
+</body>
 </html>
