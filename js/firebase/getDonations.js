@@ -9,7 +9,6 @@ window.addEventListener('load', () => {
                 list: donation.data().accounts
             }
 
-            console.log(donation.data());
             const card = createCard('white', donationData);
             donationsContainer.appendChild(card);
         });
