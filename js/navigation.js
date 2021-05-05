@@ -59,8 +59,15 @@ citizenBtn.addEventListener("click", () => {
 });
 
 loginBtn.addEventListener("click", () => {
-  navigateBetweenScreensAnimated(loginScreen, requestListScreen,"animate__fadeOutLeft","animate__fadeInRight");
-
+  login()
+  .then(user => {
+    console.log(user);
+    navigateBetweenScreensAnimated(loginScreen, requestListScreen,"animate__fadeOutLeft","animate__fadeInRight");
+  })
+  .catch(error => {
+    window.alert(error.message);
+    console.log(error);
+  });
 });
 
 createRequestBtn.addEventListener("click", () => {

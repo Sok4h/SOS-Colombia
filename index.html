@@ -695,7 +695,7 @@
             </div>
             
             <div class="textfield">
-                <input class="textfield__input textfield__input--icon" type="password" name="codigoAcceso" id="" placeholder="Código de acceso">  
+                <input class="textfield__input textfield__input--icon" type="password" name="codigoAcceso" id="password" placeholder="Código de acceso">  
                 <span class="material-icons material-icons-outlined textfield__icon">
                     gpp_good
                     </span>
@@ -1096,17 +1096,7 @@
         <h2>Cuentas habilitadas para donación</h2>
 
         <div class="donations__wrapper">
-            <div class="card card--white">
-                <header class="card__header">
-                    <h3 class="card__title">Calipso</h3>
-                </header>    
-                
-                <p class="card__section">Lugar de encuentro: Lugar Insumos</p>
-                <ul class="card__list">
-                    <li class="card__listItem"><b>Nequi</b> <br> 315 238 9384</li>
-                    <li class="card__listItem"><b>Nequi</b> <br> 315 238 9384</li>
-                </ul>
-            </div>
+
         </div>
       </section>
 
@@ -1158,9 +1148,9 @@
 
     <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-auth.js"></script>
     <script src="/js/utils/firebaseApp.js"></script>
     <script src="/js/utils/transitions.js"></script>
-    <script src="/js/navigation.js"></script>
     <script src="/js/burgermenuinteraction.js"></script>
     <script src="/js/requestCheckboxBehavior.js"></script>
     <script src="/js/utils/createCard.js"></script>
@@ -1169,5 +1159,9 @@
     DB scripts  
     ////////////////////-->
     <script src="/js/firebase/getDonations.js"></script>
+    <script src="/js/firebase/login.js"></script>
+
+
+    <script src="/js/navigation.js"></script>
   </body>
 </html>
