@@ -33,10 +33,22 @@ body {
     }
 }
 
+.create-request-section {
+    padding: 3rem 2rem;
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
 .flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    h1 {
+        text-align: center;
+    }
 }
 
 main {
