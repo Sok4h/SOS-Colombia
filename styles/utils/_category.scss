@@ -1,0 +1,35 @@
+.category {
+    margin-bottom: 0;
+
+    &__expand {
+
+        &:checked {
+            ~ .category__content {
+                max-height: 35rem;
+            }
+
+            + .category__arrow {
+                transform: translate(-50%, -50%) rotate(-180deg);
+            }
+        }
+    }
+
+    &__content {
+        max-height: 0;
+        overflow-y: hidden;
+        transition: max-height 0.5s ease-out;
+        padding-left: 2rem;
+    }
+
+    &__container {
+        position: relative;
+    }
+
+    &__arrow {
+        position: absolute;
+        top: 1.6rem;
+        right: 0;
+        transform: translate(-50%, -50%);
+        transition: transform 0.3s ease-out;
+    }
+}

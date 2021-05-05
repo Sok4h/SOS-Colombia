@@ -4,6 +4,7 @@
 @import './utils/btns';
 @import './texfield';
 @import './checkbox';
+@import './utils/category';
 
 html {
     font-size: 62.5%
@@ -13,8 +14,18 @@ body {
     padding: 2rem;
     background-color: $bg;
     color: $white;
+    min-height: 100vh;
+}
+
+.flex-center {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+main {
+    width: 100%;
+    max-width: 780px;
+    margin: 0 auto;
 }

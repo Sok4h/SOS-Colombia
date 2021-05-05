@@ -19,4 +19,8 @@
             background-color: $white;
         }
     }
+
+    &--underline {
+        border-bottom: 1px $white solid;
+    }
 }
