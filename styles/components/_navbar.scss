@@ -8,7 +8,6 @@
     justify-content:flex-end;
     text-align: right;
 
-
     &__a {
         height: 30%;
         width: 100%;
@@ -30,12 +29,10 @@
         justify-content: flex-end;
         margin-top: 7rem;
         display: none;
+        pointer-events: none;
 
         a{
             text-align: left;
-
         }
-
-    }
-    
+    }    
 }

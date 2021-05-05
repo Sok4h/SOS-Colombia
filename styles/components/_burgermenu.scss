@@ -1,11 +1,10 @@
 .burgermenu{
-
     display: flex;
     flex-direction: row;
     position: relative;
     justify-content: space-between;
     align-items: center;
-    margin-top: 7.5vh;
+    margin-top: 5rem;
 
     &__logo{
         display: none;
@@ -22,6 +21,7 @@
         display: none;
         background-color: transparent;
         cursor: pointer;
+        pointer-events: all;
     
         span{
             background-color: aliceblue;
@@ -78,7 +78,6 @@
       
     }
 }
-
 
 @media screen and(max-width: $small) {
     .burgermenu{
