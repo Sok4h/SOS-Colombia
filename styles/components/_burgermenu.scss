@@ -8,12 +8,7 @@
     position: relative;
     justify-content: space-between;
     align-items: center;
-    margin-top: 7.5%;
-
-    &--store{
-        background-color: rgba(31, 31, 31, 0.842);
-        
-    }
+    margin-top: 7.5vh;
 
     &__logo{
         display: none;
@@ -87,10 +82,10 @@
 }
 
 
-@media screen and(max-width: 600px) {
+@media screen and(max-width: $small) {
     .burgermenu{
         &__logo{
-            display: block;
+            display: none;
         }
 
         &__btn{

@@ -6,7 +6,8 @@
 @import './components/btns';
 @import './components/texfield';
 @import './components/checkbox';
-@import './components/header';
+@import './components/burgermenu';
+@import './components/navbar';
 
 
 html {
@@ -54,4 +55,16 @@ main {
 
 .hidden {
     display: none;
+}
+
+@media screen and(max-width: $small) {
+    header{
+        position: fixed;
+        right:0;
+        background-color: $blue;
+        height:100vh;
+        width:50%;
+
+    }
+    
 }
