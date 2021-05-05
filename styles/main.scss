@@ -38,16 +38,19 @@ body {
     width: 100%;
 }
 
-header {
-    width: 100%;
-}
+.main-header {
+    position: fixed;
+    z-index: 10;
 
-.blue{
-    background-color: $blue;
-    .navbar {
-        display: flex;
+    &--active {
+        background-color: $blue;
+
+        .navbar {
+            display: flex;
+        }
     }
 }
+
 .help-section, .find-items {
     padding: 5rem 2rem;
 
@@ -89,15 +92,11 @@ main {
     display: none;
 }
 
-@media screen and(max-width: $small) {
-    header{
+@media (max-width: $small) {
+    .main-header {
         position: fixed;
-        right:0;
-        background-color: transparent;
+        right: 0;
         height:100vh;
         width:70%;
-
-    }
-
-    
+    } 
 }
