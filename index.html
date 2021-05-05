@@ -32,62 +32,73 @@
     <title>SOS Colombia</title>
   </head>
   <body>
+
+
     <header class="main-header">
       <section class="burgermenu">
-        <img src="" alt="Logo" class="burgermenu__logo">
-        <button class="burgermenu__btn" >
-            <span></span>
-            <span></span>
-            <span></span>
+        <img src="" alt="Logo" class="burgermenu__logo" />
+        <button class="burgermenu__btn">
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
       </section>
       <nav class="navbar">
-          <a href="#" class="navbar__a">Brinda Ayuda</a>
-          <a href="#" class="navbar__a">Donaciones</a>
-          <a href="#" class="navbar__a">Obtener Insumos</a>
+        <a href="#" class="navbar__a">Brinda Ayuda</a>
+        <a href="#" class="navbar__a">Donaciones</a>
+        <a href="#" class="navbar__a">Obtener Insumos</a>
       </nav>
     </header>
-    <main>
 
-    <!--////////////////////////////////
+    
+    <main>
+      <!--////////////////////////////////
     Splash Page
     ////////////////////////////////-->
 
-    <section class="splashpage animate__animated animate__zoomIn">
-      <img class="animate__animated animate__fadeInDown" src="./src/img/ico/logo.png" alt="" />
+      <section class="splashpage animate__animated animate__zoomIn">
+        <img
+          class="animate__animated animate__fadeInDown"
+          src="./src/img/ico/logo.png"
+          alt=""
+        />
 
-      <div class="splashpage__btnContainer animate__animated animate__fadeInUp">
-        <button class="btn btn--blue"  onclick=ClickedBrigradeButton()>Soy Brigadista</button>
-        <button class="btn btn--outlineWhite">Soy Ciudadano</button>
+        <div
+          class="splashpage__btnContainer animate__animated animate__fadeInUp"
+        >
+          <button class="btn btn--blue" onclick="ClickedBrigradeButton()">
+            Soy Brigadista
+          </button>
+          <button class="btn btn--outlineWhite">Soy Ciudadano</button>
+        </div>
+      </section>
 
-      </div>
-      
-    </section>
-
-<!--////////////////////////////////
+      <!--////////////////////////////////
     New Supply Request Page
     ////////////////////////////////-->
-    <section class="animate__animated create-request-section hidden">
-      <header class="flex-center">
-        <h1>Indícanos qué necesitas</h1>
-      </header>
-      <form>
-        <div class="textfield">
-          <label for="punto" class="textfield__label">¿En dónde estás?</label>
-          <select name="punto" id="punto" class="textfield__input">
-            <option value="">Selecciona un punto</option>
-            <option value="1">Punto 1</option>
-            <option value="2">Punto 2</option>
-            <option value="3">Punto 3</option>
-            <option value="4">Punto 4</option>
-          </select>
 
-          <span class="material-icons material-icons-outlined textfield__arrow"
-            >expand_more</span
-          >
-        </div>
+      <section class="animate__animated create-request-section hidden">
+        <header class="flex-center">
+          <h1>Indícanos qué necesitas</h1>
+        </header>
+        <form>
+          <div class="textfield">
+            <label for="punto" class="textfield__label">¿En dónde estás?</label>
+            <select name="punto" id="punto" class="textfield__input">
+              <option value="">Selecciona un punto</option>
+              <option value="1">Punto 1</option>
+              <option value="2">Punto 2</option>
+              <option value="3">Punto 3</option>
+              <option value="4">Punto 4</option>
+            </select>
 
-        <!--
+            <span
+              class="material-icons material-icons-outlined textfield__arrow"
+              >expand_more</span
+            >
+          </div>
+
+          <!--
         <div class="textfield">
           <label for="filter" class="textfield__label">Insumos médicos</label>
           <input
@@ -99,554 +110,578 @@
         </div>
         -->
 
-        <div class="category__container" style="--height: 20rem" style="--height: 20rem">
-          <label for="basicTitle" class="category checkbox checkbox--underline">
+          <div
+            class="category__container"
+            style="--height: 20rem"
+            style="--height: 20rem"
+          >
+            <label
+              for="basicTitle"
+              class="category checkbox checkbox--underline"
+            >
+              <input
+                type="checkbox"
+                name="basic"
+                id="basic"
+                class="checkbox__input"
+              />
+              <p for="basic" class="checkbox__label">Básicos</p>
+            </label>
+
             <input
               type="checkbox"
-              name="basic"
-              id="basic"
-              class="checkbox__input"
+              name="basicTitle"
+              id="basicTitle"
+              class="category__expand"
             />
-            <p for="basic" class="checkbox__label">Básicos</p>
-          </label>
 
-          <input
-            type="checkbox"
-            name="basicTitle"
-            id="basicTitle"
-            class="category__expand"
-          />
+            <span class="material-icons material-icons-outlined category__arrow"
+              >expand_more</span
+            >
 
-          <span class="material-icons material-icons-outlined category__arrow"
-            >expand_more</span
+            <ul class="category__content">
+              <li class="checkbox">
+                <input
+                  type="checkbox"
+                  name="basicRequest"
+                  id="basicRequest1"
+                  class="checkbox__input"
+                />
+                <label for="basicRequest1" class="checkbox__label">Agua</label>
+              </li>
+
+              <li class="checkbox">
+                <input
+                  type="checkbox"
+                  name="basicRequest"
+                  id="basicRequest2"
+                  class="checkbox__input"
+                />
+                <label for="basicRequest2" class="checkbox__label"
+                  >Alcohol</label
+                >
+              </li>
+
+              <li class="checkbox">
+                <input
+                  type="checkbox"
+                  name="basicRequest"
+                  id="basicRequest3"
+                  class="checkbox__input"
+                />
+                <label for="basicRequest3" class="checkbox__label"
+                  >Bicarbonato</label
+                >
+              </li>
+
+              <li class="checkbox">
+                <input
+                  type="checkbox"
+                  name="basicRequest"
+                  id="basicRequest4"
+                  class="checkbox__input"
+                />
+                <label for="basicRequest4" class="checkbox__label">Leche</label>
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="category__container"
+            style="--height: 45rem"
+            style="--height: 35rem"
           >
-
-          <ul class="category__content">
-            <li class="checkbox">
+            <label
+              for="equipmentTitle"
+              class="category checkbox checkbox--underline"
+            >
               <input
                 type="checkbox"
-                name="basicRequest"
-                id="basicRequest1"
+                name="equipment"
+                id="equipment"
                 class="checkbox__input"
               />
-              <label for="basicRequest1" class="checkbox__label">Agua</label>
-            </li>
+              <p for="equipment" class="checkbox__label">Equipamentos</p>
+            </label>
 
-            <li class="checkbox">
-              <input
-                type="checkbox"
-                name="basicRequest"
-                id="basicRequest2"
-                class="checkbox__input"
-              />
-              <label for="basicRequest2" class="checkbox__label">Alcohol</label>
-            </li>
-
-            <li class="checkbox">
-              <input
-                type="checkbox"
-                name="basicRequest"
-                id="basicRequest3"
-                class="checkbox__input"
-              />
-              <label for="basicRequest3" class="checkbox__label"
-                >Bicarbonato</label
-              >
-            </li>
-
-            <li class="checkbox">
-              <input
-                type="checkbox"
-                name="basicRequest"
-                id="basicRequest4"
-                class="checkbox__input"
-              />
-              <label for="basicRequest4" class="checkbox__label">Leche</label>
-            </li>
-          </ul>
-        </div>
-
-        <div class="category__container" style="--height: 45rem" style="--height: 35rem">
-          <label
-            for="equipmentTitle"
-            class="category checkbox checkbox--underline"
-          >
             <input
               type="checkbox"
-              name="equipment"
-              id="equipment"
-              class="checkbox__input"
+              name="equipmentTitle"
+              id="equipmentTitle"
+              class="category__expand"
             />
-            <p for="equipment" class="checkbox__label">Equipamentos</p>
-          </label>
 
-          <input
-            type="checkbox"
-            name="equipmentTitle"
-            id="equipmentTitle"
-            class="category__expand"
-          />
+            <span class="material-icons material-icons-outlined category__arrow"
+              >expand_more</span
+            >
 
-          <span class="material-icons material-icons-outlined category__arrow"
-            >expand_more</span
-          >
+            <ul class="category__content">
+              <li class="checkbox">
+                <input
+                  type="checkbox"
+                  name="equipmentRequest"
+                  id="equipmentRequest1"
+                  class="checkbox__input"
+                />
+                <label for="equipmentRequest1" class="checkbox__label"
+                  >Caretas</label
+                >
+              </li>
 
-          <ul class="category__content">
-            <li class="checkbox">
+              <li class="checkbox">
+                <input
+                  type="checkbox"
+                  name="equipmentRequest"
+                  id="equipmentRequest2"
+                  class="checkbox__input"
+                />
+                <label for="equipmentRequest2" class="checkbox__label"
+                  >Cascos</label
+                >
+              </li>
+
+              <li class="checkbox">
+                <input
+                  type="checkbox"
+                  name="equipmentRequest"
+                  id="equipmentRequest3"
+                  class="checkbox__input"
+                />
+                <label for="equipmentRequest3" class="checkbox__label"
+                  >Gafas</label
+                >
+              </li>
+
+              <li class="checkbox">
+                <input
+                  type="checkbox"
+                  name="equipmentRequest"
+                  id="equipmentRequest4"
+                  class="checkbox__input"
+                />
+                <label for="equipmentRequest4" class="checkbox__label"
+                  >Guantes crudos</label
+                >
+              </li>
+
+              <li class="checkbox">
+                <input
+                  type="checkbox"
+                  name="equipmentRequest"
+                  id="equipmentRequest5"
+                  class="checkbox__input"
+                />
+                <label for="equipmentRequest5" class="checkbox__label"
+                  >Guantes estériles</label
+                >
+              </li>
+
+              <li class="checkbox">
+                <input
+                  type="checkbox"
+                  name="equipmentRequest"
+                  id="equipmentRequest7"
+                  class="checkbox__input"
+                />
+                <label for="equipmentRequest7" class="checkbox__label"
+                  >Tapabocas</label
+                >
+              </li>
+
+              <li class="checkbox">
+                <input
+                  type="checkbox"
+                  name="equipmentRequest"
+                  id="equipmentRequest8"
+                  class="checkbox__input"
+                />
+                <label for="equipmentRequest8" class="checkbox__label"
+                  >Máscaras Ambu</label
+                >
+              </li>
+
+              <li class="checkbox">
+                <input
+                  type="checkbox"
+                  name="equipmentRequest"
+                  id="equipmentRequest9"
+                  class="checkbox__input"
+                />
+                <label for="equipmentRequest9" class="checkbox__label"
+                  >Tapones auditivos</label
+                >
+              </li>
+
+              <li class="checkbox">
+                <input
+                  type="checkbox"
+                  name="equipmentRequest"
+                  id="equipmentRequest10"
+                  class="checkbox__input"
+                />
+                <label for="equipmentRequest10" class="checkbox__label"
+                  >Monogafas</label
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="category__container" style="--height: 20rem">
+            <label
+              for="injectologyTitle"
+              class="category checkbox checkbox--underline"
+            >
               <input
                 type="checkbox"
-                name="equipmentRequest"
-                id="equipmentRequest1"
+                name="injectology"
+                id="injectology"
                 class="checkbox__input"
               />
-              <label for="equipmentRequest1" class="checkbox__label"
-                >Caretas</label
-              >
-            </li>
+              <p for="injectology" class="checkbox__label">Inyectología</p>
+            </label>
 
-            <li class="checkbox">
-              <input
-                type="checkbox"
-                name="equipmentRequest"
-                id="equipmentRequest2"
-                class="checkbox__input"
-              />
-              <label for="equipmentRequest2" class="checkbox__label"
-                >Cascos</label
-              >
-            </li>
-
-            <li class="checkbox">
-              <input
-                type="checkbox"
-                name="equipmentRequest"
-                id="equipmentRequest3"
-                class="checkbox__input"
-              />
-              <label for="equipmentRequest3" class="checkbox__label"
-                >Gafas</label
-              >
-            </li>
-
-            <li class="checkbox">
-              <input
-                type="checkbox"
-                name="equipmentRequest"
-                id="equipmentRequest4"
-                class="checkbox__input"
-              />
-              <label for="equipmentRequest4" class="checkbox__label"
-                >Guantes crudos</label
-              >
-            </li>
-
-            <li class="checkbox">
-              <input
-                type="checkbox"
-                name="equipmentRequest"
-                id="equipmentRequest5"
-                class="checkbox__input"
-              />
-              <label for="equipmentRequest5" class="checkbox__label"
-                >Guantes estériles</label
-              >
-            </li>
-
-            <li class="checkbox">
-              <input
-                type="checkbox"
-                name="equipmentRequest"
-                id="equipmentRequest7"
-                class="checkbox__input"
-              />
-              <label for="equipmentRequest7" class="checkbox__label"
-                >Tapabocas</label
-              >
-            </li>
-
-            <li class="checkbox">
-              <input
-                type="checkbox"
-                name="equipmentRequest"
-                id="equipmentRequest8"
-                class="checkbox__input"
-              />
-              <label for="equipmentRequest8" class="checkbox__label"
-                >Máscaras Ambu</label
-              >
-            </li>
-
-            <li class="checkbox">
-              <input
-                type="checkbox"
-                name="equipmentRequest"
-                id="equipmentRequest9"
-                class="checkbox__input"
-              />
-              <label for="equipmentRequest9" class="checkbox__label"
-                >Tapones auditivos</label
-              >
-            </li>
-
-            <li class="checkbox">
-              <input
-                type="checkbox"
-                name="equipmentRequest"
-                id="equipmentRequest10"
-                class="checkbox__input"
-              />
-              <label for="equipmentRequest10" class="checkbox__label"
-                >Monogafas</label
-              >
-            </li>
-          </ul>
-        </div>
-
-        <div class="category__container" style="--height: 20rem">
-          <label
-            for="injectologyTitle"
-            class="category checkbox checkbox--underline"
-          >
             <input
               type="checkbox"
-              name="injectology"
-              id="injectology"
-              class="checkbox__input"
+              name="injectologyTitle"
+              id="injectologyTitle"
+              class="category__expand"
             />
-            <p for="injectology" class="checkbox__label">Inyectología</p>
-          </label>
 
-          <input
-            type="checkbox"
-            name="injectologyTitle"
-            id="injectologyTitle"
-            class="category__expand"
-          />
+            <span class="material-icons material-icons-outlined category__arrow"
+              >expand_more</span
+            >
 
-          <span class="material-icons material-icons-outlined category__arrow"
-            >expand_more</span
+            <ul class="category__content">
+              <li class="checkbox">
+                <input
+                  type="checkbox"
+                  name="injectologyRequest"
+                  id="injectologyRequest1"
+                  class="checkbox__input"
+                />
+                <label for="injectologyRequest1" class="checkbox__label"
+                  >Cánulas</label
+                >
+              </li>
+
+              <li class="checkbox">
+                <input
+                  type="checkbox"
+                  name="injectologyRequest"
+                  id="injectologyRequest2"
+                  class="checkbox__input"
+                />
+                <label for="injectologyRequest2" class="checkbox__label"
+                  >Jeringas</label
+                >
+              </li>
+
+              <li class="checkbox">
+                <input
+                  type="checkbox"
+                  name="injectologyRequest"
+                  id="injectologyRequest3"
+                  class="checkbox__input"
+                />
+                <label for="injectologyRequest3" class="checkbox__label"
+                  >Catéter calibre 16 o 18</label
+                >
+              </li>
+
+              <li class="checkbox">
+                <input
+                  type="checkbox"
+                  name="injectologyRequest"
+                  id="injectologyRequest4"
+                  class="checkbox__input"
+                />
+                <label for="injectologyRequest4" class="checkbox__label"
+                  >Ampolla Diclofenaco</label
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="category__container"
+            style="--height: 25rem"
+            style="--height: 10rem"
           >
-
-          <ul class="category__content">
-            <li class="checkbox">
+            <label
+              for="medicineTitle"
+              class="category checkbox checkbox--underline"
+            >
               <input
                 type="checkbox"
-                name="injectologyRequest"
-                id="injectologyRequest1"
+                name="medicine"
+                id="medicine"
                 class="checkbox__input"
               />
-              <label for="injectologyRequest1" class="checkbox__label"
-                >Cánulas</label
-              >
-            </li>
+              <p for="medicine" class="checkbox__label">Medicamentos</p>
+            </label>
 
-            <li class="checkbox">
-              <input
-                type="checkbox"
-                name="injectologyRequest"
-                id="injectologyRequest2"
-                class="checkbox__input"
-              />
-              <label for="injectologyRequest2" class="checkbox__label"
-                >Jeringas</label
-              >
-            </li>
-
-            <li class="checkbox">
-              <input
-                type="checkbox"
-                name="injectologyRequest"
-                id="injectologyRequest3"
-                class="checkbox__input"
-              />
-              <label for="injectologyRequest3" class="checkbox__label"
-                >Catéter calibre 16 o 18</label
-              >
-            </li>
-
-            <li class="checkbox">
-              <input
-                type="checkbox"
-                name="injectologyRequest"
-                id="injectologyRequest4"
-                class="checkbox__input"
-              />
-              <label for="injectologyRequest4" class="checkbox__label"
-                >Ampolla Diclofenaco</label
-              >
-            </li>
-          </ul>
-        </div>
-
-        <div class="category__container" style="--height: 25rem" style="--height: 10rem">
-          <label
-            for="medicineTitle"
-            class="category checkbox checkbox--underline"
-          >
             <input
               type="checkbox"
-              name="medicine"
-              id="medicine"
-              class="checkbox__input"
+              name="medicineTitle"
+              id="medicineTitle"
+              class="category__expand"
             />
-            <p for="medicine" class="checkbox__label">Medicamentos</p>
-          </label>
 
-          <input
-            type="checkbox"
-            name="medicineTitle"
-            id="medicineTitle"
-            class="category__expand"
-          />
+            <span class="material-icons material-icons-outlined category__arrow"
+              >expand_more</span
+            >
 
-          <span class="material-icons material-icons-outlined category__arrow"
-            >expand_more</span
+            <ul class="category__content">
+              <li class="checkbox">
+                <input
+                  type="checkbox"
+                  name="medicineRequest"
+                  id="medicineRequest1"
+                  class="checkbox__input"
+                />
+                <label for="medicineRequest1" class="checkbox__label"
+                  >Acetaminofén</label
+                >
+              </li>
+
+              <li class="checkbox">
+                <input
+                  type="checkbox"
+                  name="medicineRequest"
+                  id="medicineRequest2"
+                  class="checkbox__input"
+                />
+                <label for="medicineRequest2" class="checkbox__label"
+                  >Diclofenaco</label
+                >
+              </li>
+
+              <li class="checkbox">
+                <input
+                  type="checkbox"
+                  name="medicineRequest"
+                  id="medicineRequest3"
+                  class="checkbox__input"
+                />
+                <label for="medicineRequest3" class="checkbox__label"
+                  >Lidocaina al 1%</label
+                >
+              </li>
+
+              <li class="checkbox">
+                <input
+                  type="checkbox"
+                  name="medicineRequest"
+                  id="medicineRequest4"
+                  class="checkbox__input"
+                />
+                <label for="medicineRequest4" class="checkbox__label"
+                  >Sulfadiazina de plata</label
+                >
+              </li>
+
+              <li class="checkbox">
+                <input
+                  type="checkbox"
+                  name="medicineRequest"
+                  id="medicineRequest5"
+                  class="checkbox__input"
+                />
+                <label for="medicineRequest5" class="checkbox__label"
+                  >Tramadol</label
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="category__container"
+            style="--height: 25rem"
+            style="--height: 20rem"
           >
-
-          <ul class="category__content">
-            <li class="checkbox">
+            <label
+              for="solutionsTitle"
+              class="category checkbox checkbox--underline"
+            >
               <input
                 type="checkbox"
-                name="medicineRequest"
-                id="medicineRequest1"
+                name="solutions"
+                id="solutions"
                 class="checkbox__input"
               />
-              <label for="medicineRequest1" class="checkbox__label"
-                >Acetaminofén</label
-              >
-            </li>
+              <p for="solutions" class="checkbox__label">Soluciones</p>
+            </label>
 
-            <li class="checkbox">
-              <input
-                type="checkbox"
-                name="medicineRequest"
-                id="medicineRequest2"
-                class="checkbox__input"
-              />
-              <label for="medicineRequest2" class="checkbox__label"
-                >Diclofenaco</label
-              >
-            </li>
-
-            <li class="checkbox">
-              <input
-                type="checkbox"
-                name="medicineRequest"
-                id="medicineRequest3"
-                class="checkbox__input"
-              />
-              <label for="medicineRequest3" class="checkbox__label"
-                >Lidocaina al 1%</label
-              >
-            </li>
-
-            <li class="checkbox">
-              <input
-                type="checkbox"
-                name="medicineRequest"
-                id="medicineRequest4"
-                class="checkbox__input"
-              />
-              <label for="medicineRequest4" class="checkbox__label"
-                >Sulfadiazina de plata</label
-              >
-            </li>
-
-            <li class="checkbox">
-              <input
-                type="checkbox"
-                name="medicineRequest"
-                id="medicineRequest5"
-                class="checkbox__input"
-              />
-              <label for="medicineRequest5" class="checkbox__label"
-                >Tramadol</label
-              >
-            </li>
-          </ul>
-        </div>
-
-        <div class="category__container" style="--height: 25rem" style="--height: 20rem">
-          <label
-            for="solutionsTitle"
-            class="category checkbox checkbox--underline"
-          >
             <input
               type="checkbox"
-              name="solutions"
-              id="solutions"
-              class="checkbox__input"
+              name="solutionsTitle"
+              id="solutionsTitle"
+              class="category__expand"
             />
-            <p for="solutions" class="checkbox__label">Soluciones</p>
-          </label>
 
-          <input
-            type="checkbox"
-            name="solutionsTitle"
-            id="solutionsTitle"
-            class="category__expand"
-          />
+            <span class="material-icons material-icons-outlined category__arrow"
+              >expand_more</span
+            >
 
-          <span class="material-icons material-icons-outlined category__arrow"
-            >expand_more</span
-          >
+            <ul class="category__content">
+              <li class="checkbox">
+                <input
+                  type="checkbox"
+                  name="solutionsRequest"
+                  id="solutionsRequest1"
+                  class="checkbox__input"
+                />
+                <label for="solutionsRequest1" class="checkbox__label"
+                  >Agua oxigenada</label
+                >
+              </li>
 
-          <ul class="category__content">
-            <li class="checkbox">
+              <li class="checkbox">
+                <input
+                  type="checkbox"
+                  name="solutionsRequest"
+                  id="solutionsRequest2"
+                  class="checkbox__input"
+                />
+                <label for="solutionsRequest2" class="checkbox__label"
+                  >Solución salina</label
+                >
+              </li>
+
+              <li class="checkbox">
+                <input
+                  type="checkbox"
+                  name="solutionsRequest"
+                  id="solutionsRequest3"
+                  class="checkbox__input"
+                />
+                <label for="solutionsRequest3" class="checkbox__label"
+                  >Sulfato de aluminio</label
+                >
+              </li>
+
+              <li class="checkbox">
+                <input
+                  type="checkbox"
+                  name="solutionsRequest"
+                  id="solutionsRequest4"
+                  class="checkbox__input"
+                />
+                <label for="solutionsRequest4" class="checkbox__label"
+                  >Yodo solución</label
+                >
+              </li>
+
+              <li class="checkbox">
+                <input
+                  type="checkbox"
+                  name="solutionsRequest"
+                  id="solutionsRequest5"
+                  class="checkbox__input"
+                />
+                <label for="solutionsRequest5" class="checkbox__label"
+                  >Leche de magnesia</label
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="category__container" style="--height: 20rem">
+            <label
+              for="woundsTitle"
+              class="category checkbox checkbox--underline"
+            >
               <input
                 type="checkbox"
-                name="solutionsRequest"
-                id="solutionsRequest1"
+                name="wounds"
+                id="wounds"
                 class="checkbox__input"
               />
-              <label for="solutionsRequest1" class="checkbox__label"
-                >Agua oxigenada</label
-              >
-            </li>
+              <p for="wounds" class="checkbox__label">Heridas</p>
+            </label>
 
-            <li class="checkbox">
-              <input
-                type="checkbox"
-                name="solutionsRequest"
-                id="solutionsRequest2"
-                class="checkbox__input"
-              />
-              <label for="solutionsRequest2" class="checkbox__label"
-                >Solución salina</label
-              >
-            </li>
-
-            <li class="checkbox">
-              <input
-                type="checkbox"
-                name="solutionsRequest"
-                id="solutionsRequest3"
-                class="checkbox__input"
-              />
-              <label for="solutionsRequest3" class="checkbox__label"
-                >Sulfato de aluminio</label
-              >
-            </li>
-
-            <li class="checkbox">
-              <input
-                type="checkbox"
-                name="solutionsRequest"
-                id="solutionsRequest4"
-                class="checkbox__input"
-              />
-              <label for="solutionsRequest4" class="checkbox__label"
-                >Yodo solución</label
-              >
-            </li>
-
-            <li class="checkbox">
-              <input
-                type="checkbox"
-                name="solutionsRequest"
-                id="solutionsRequest5"
-                class="checkbox__input"
-              />
-              <label for="solutionsRequest5" class="checkbox__label"
-                >Leche de magnesia</label
-              >
-            </li>
-          </ul>
-        </div>
-
-        <div class="category__container" style="--height: 20rem"> 
-          <label
-            for="woundsTitle"
-            class="category checkbox checkbox--underline"
-          >
             <input
               type="checkbox"
-              name="wounds"
-              id="wounds"
+              name="woundsTitle"
+              id="woundsTitle"
+              class="category__expand"
+            />
+
+            <span class="material-icons material-icons-outlined category__arrow"
+              >expand_more</span
+            >
+
+            <ul class="category__content">
+              <li class="checkbox">
+                <input
+                  type="checkbox"
+                  name="woundsRequest"
+                  id="woundsRequest1"
+                  class="checkbox__input"
+                />
+                <label for="woundsRequest1" class="checkbox__label"
+                  >Gasas</label
+                >
+              </li>
+
+              <li class="checkbox">
+                <input
+                  type="checkbox"
+                  name="woundsRequest"
+                  id="woundsRequest2"
+                  class="checkbox__input"
+                />
+                <label for="woundsRequest2" class="checkbox__label"
+                  >Compresas</label
+                >
+              </li>
+
+              <li class="checkbox">
+                <input
+                  type="checkbox"
+                  name="woundsRequest"
+                  id="woundsRequest3"
+                  class="checkbox__input"
+                />
+                <label for="woundsRequest3" class="checkbox__label"
+                  >Esparadrapo / Micropore</label
+                >
+              </li>
+
+              <li class="checkbox">
+                <input
+                  type="checkbox"
+                  name="woundsRequest"
+                  id="woundsRequest4"
+                  class="checkbox__input"
+                />
+                <label for="woundsRequest4" class="checkbox__label"
+                  >Vendaje</label
+                >
+              </li>
+            </ul>
+          </div>
+
+          <li class="checkbox">
+            <input
+              type="checkbox"
+              name="foodRequest"
+              id="foodRequest"
               class="checkbox__input"
             />
-            <p for="wounds" class="checkbox__label">Heridas</p>
-          </label>
+            <label for="foodRequest" class="checkbox__label"
+              >Cualquier alimento</label
+            >
+          </li>
 
-          <input
-            type="checkbox"
-            name="woundsTitle"
-            id="woundsTitle"
-            class="category__expand"
-          />
-
-          <span class="material-icons material-icons-outlined category__arrow"
-            >expand_more</span
-          >
-
-          <ul class="category__content">
-            <li class="checkbox">
-              <input
-                type="checkbox"
-                name="woundsRequest"
-                id="woundsRequest1"
-                class="checkbox__input"
-              />
-              <label for="woundsRequest1" class="checkbox__label"
-                >Gasas</label
-              >
-            </li>
-
-            <li class="checkbox">
-              <input
-                type="checkbox"
-                name="woundsRequest"
-                id="woundsRequest2"
-                class="checkbox__input"
-              />
-              <label for="woundsRequest2" class="checkbox__label"
-                >Compresas</label
-              >
-            </li>
-
-            <li class="checkbox">
-              <input
-                type="checkbox"
-                name="woundsRequest"
-                id="woundsRequest3"
-                class="checkbox__input"
-              />
-              <label for="woundsRequest3" class="checkbox__label"
-                >Esparadrapo / Micropore</label
-              >
-            </li>
-
-            <li class="checkbox">
-              <input
-                type="checkbox"
-                name="woundsRequest"
-                id="woundsRequest4"
-                class="checkbox__input"
-              />
-              <label for="woundsRequest4" class="checkbox__label"
-                >Vendaje</label
-              >
-            </li>
-          </ul>
-        </div>
-
-        <li class="checkbox">
-          <input
-            type="checkbox"
-            name="foodRequest"
-            id="foodRequest"
-            class="checkbox__input"
-          />
-          <label for="foodRequest" class="checkbox__label"
-            >Cualquier alimento</label
-          >
-        </li>
-
-        <button class="btn btn--white">Enviar</button>
-      </form>
-    </section>
-      
+          <button class="btn btn--white">Enviar</button>
+        </form>
+      </section>
     </main>
+
+    <!--////////////////////////////////
+    Scripts
+    ////////////////////////////////-->
 
     <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-firestore.js"></script>
