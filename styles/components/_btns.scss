@@ -1,13 +1,13 @@
 .btn {
     display: block;
     width: 100%;
-    max-width: 212px;
+    max-width: 250px;
     height: 46px;
     font-size: 1.4rem;
     font-weight: 600;
     border-radius: 10px;
     border: none;
-    margin: 1rem auto;
+    margin: 2rem auto;
     cursor: pointer;
 
     &--blue {
@@ -28,13 +28,13 @@
     &--outline {
         background: none;
         color: $blueDark;
-        border: 2px solid $blueDark;
+        border: 3px solid $blueDark;
     }
 
     &--outlineWhite {
         background: none;
         color: $white;
-        border: 2px solid $white;
+        border: 3px solid $white;
     } 
 
     

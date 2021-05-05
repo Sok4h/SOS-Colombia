@@ -6,7 +6,7 @@
 @import './components/btns';
 @import './components/texfield';
 @import './components/checkbox';
-
+@import './containers/splashPage';
 
 html {
     font-size: 62.5%
@@ -17,25 +17,11 @@ body {
     background-color: $bg;
     color: $white;
     min-height: 100vh;
-
-    display: flex;
+    height: 100%;
 }
 
-.splashpage {
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 450px;
-    width: 100%;
 
-}
-
-.splashpage__btnContainer {
-    margin-top: 50px;
-    width: 100%;
-}
 
 main {
     width: 100%;
