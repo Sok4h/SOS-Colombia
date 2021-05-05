@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <link
+      rel="shortcut icon"
+      href="./src/img/ico/favicon.png"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/main.css" />
+    <title>SOS Colombia</title>
+  </head>
+  <body>
+    <!--////////////////////////////////
+    Create request Page
+    ////////////////////////////////-->
+    <section class="request">
+      <div class="request__header">
+          <h1 class="request__tittle">Mis solicitudes</h1>
+          <div class="request__btnContainer">
+            <p class="request__text">Realizar una solicitud</p>
+            <button class="request__btn">+</button>
+          </div>
+      </div>
+      <div class="card">
+        <header class="card__header">
+            <div>
+                <h3 class="card__title">Calipso</h3>
+                <h4 class="card__subtitle">(Calle 72J # 28b 24)</h4>
+            </div>
+
+            <div class="card__time card__time--bgOut">
+                2:33 PM
+            </div>
+        </header>          
+        <ul class="card__list">
+            <li class="card__listItem">Agua</li>
+            <li class="card__listItem">Cánulas</li>
+            <li class="card__listItem">Tapabocas</li>
+        </ul>
+        <button class="btn btn--white">
+            Terminar solicitud
+        </button>
+        <p class="card__textCenter">Terminarás tu solicitud de insumos</p>
+    </div>
+    </section>
+
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-firestore.js"></script>
+    <script src="/js/firebaseApp.js"></script>
+  </body>
+</html>

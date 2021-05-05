@@ -1,0 +1,42 @@
+.request{
+
+    margin: 0 auto;
+    font-size: 1.6rem;
+    font-family: $mulish;
+
+    &__header{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 30px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__tittle{
+        font-size: 2rem;
+    }
+
+    &__text{
+        font-size: 1.4rem;
+        margin-right: 10px;
+        width: 84px;
+        text-align: right;
+    }
+
+    &__btnContainer{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &__btn{
+        background-color: $blue;
+        color: $white;
+        border-style: none;
+        border-radius: 10px;
+        width: 35px;
+        height: 35px;
+        text-align: center;
+    }
+
+}
