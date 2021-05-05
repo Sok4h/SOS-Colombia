@@ -13,17 +13,28 @@ html {
 }
 
 body {
-    padding: 2rem;
+
     background-color: $bg;
     color: $white;
     min-height: 100vh;
+
+    display: flex;
 }
 
-.flex-center {
+.splashpage {
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 450px;
+    width: 100%;
+
+}
+
+.splashpage__btnContainer {
+    margin-top: 50px;
+    width: 100%;
 }
 
 main {
@@ -34,4 +45,8 @@ main {
         max-width: 650px;
         margin: 10rem auto 5rem auto;
     }
+}
+
+.hidden {
+    display: none;
 }

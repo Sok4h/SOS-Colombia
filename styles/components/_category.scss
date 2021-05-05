@@ -1,14 +1,15 @@
 .category {
     margin-bottom: 0;
+    cursor: pointer;
 
     &__expand {
 
         &:checked {
-            ~ .category__content {
+            ~.category__content {
                 max-height: 35rem;
             }
 
-            + .category__arrow {
+            +.category__arrow {
                 transform: translate(-50%, -50%) rotate(-180deg);
             }
         }

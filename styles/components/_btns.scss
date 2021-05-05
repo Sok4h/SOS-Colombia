@@ -1,34 +1,42 @@
-.btn{
+.btn {
     display: block;
     width: 100%;
     max-width: 212px;
-    height:46px;
+    height: 46px;
     font-size: 1.4rem;
     font-weight: 600;
     border-radius: 10px;
     border: none;
     margin: 1rem auto;
+    cursor: pointer;
 
-    &--blue{
+    &--blue {
         background: $blue;
         color: $white;
+
+        &:hover{
+            background-color:darken($color: $blue, $amount: 10%);
+        }
+    
     }
 
-    &--white{
+    &--white {
         background: $white;
         color: $blueDark;
     }
 
-    &--outline{
+    &--outline {
         background: none;
         color: $blueDark;
         border: 2px solid $blueDark;
     }
 
-    &--outlineWhite{
+    &--outlineWhite {
         background: none;
         color: $white;
         border: 2px solid $white;
-    }
+    } 
 
-}
+    
+} 
+
