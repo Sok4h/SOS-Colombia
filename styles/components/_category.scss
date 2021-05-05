@@ -6,7 +6,7 @@
 
         &:checked {
             ~.category__content {
-                max-height: 35rem;
+                max-height: var(--height);
             }
 
             +.category__arrow {

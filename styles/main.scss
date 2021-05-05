@@ -8,6 +8,7 @@
 @import './components/checkbox';
 @import './components/burgermenu';
 @import './components/navbar';
+@import './components/card';
 
 
 html {
@@ -15,12 +16,10 @@ html {
 }
 
 body {
-
+    display: flow-root;
     background-color: $bg;
     color: $white;
     min-height: 100vh;
-
-    display: flex;
 }
 
 .splashpage {
@@ -29,7 +28,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 450px;
+    min-height: 100vh;
     width: 100%;
 
 }
@@ -41,6 +40,39 @@ body {
 
 header {
     width: 100%;
+}
+
+.blue{
+    background-color: $blue;
+    .navbar {
+        display: flex;
+    }
+}
+.help-section, .find-items {
+    padding: 5rem 2rem;
+
+    h2 {
+        font-size: 2rem;
+        margin: 2rem auto;
+    }
+}
+
+.create-request-section {
+    padding: 3rem 2rem;
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        text-align: center;
+    }
 }
 
 main {

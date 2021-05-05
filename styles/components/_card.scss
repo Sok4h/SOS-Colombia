@@ -1,0 +1,74 @@
+.card {
+    position: relative;
+    padding: 2rem;
+    margin: 0 auto;
+    background-color: $blue;
+    max-width: 50rem;
+    font-size: 1.6rem;
+    font-family: $mulish;
+    border-radius: 10px;
+
+    + .card {
+        margin-top: 2rem;
+    }
+
+    &__title {
+        font-size: 1.6rem;
+        margin-bottom: 5px;
+        font-weight: 700;
+        
+    }
+   
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    &__time {
+        padding: 5px;
+        border-radius: 5px;
+        height: fit-content;
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: $bg;
+        background-color: $white;
+        border: 1px darken($white, 10%) solid;
+        &--bgOut{
+            background-color: transparent;
+            color: $white;
+            border: none;
+        }
+    }
+
+    &__textCenter{
+        text-align: center;
+        font-size: 1.4rem;
+    }
+
+    &__list {
+        margin-left: 3rem;
+    }
+
+    &__listItem {
+        list-style: disc;
+        margin: 10px 0;
+        line-height: 2rem;
+    }
+
+    &--white {
+        color: $bg;
+        background-color: $white;
+
+        b {
+            font-weight: 700;
+            color: $blue;
+        }
+    }
+
+    &--dark {
+        background-color: $blueDark;
+    }
+}
