@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <link
+      rel="shortcut icon"
+      href="./src/img/ico/favicon.png"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/main.css" />
+    <title>SOS Colombia</title>
+  </head>
+  <body>
+    <!--////////////////////////////////
+    Obtain supplies Page
+    ////////////////////////////////-->
+    <main>
+      <h1>Obtener insumos</h1>
+
+      <form>
+
+        <h2 class="category__container">¿Dónde obtener insumos?</h2>
+        
+        <div class="category__container">
+          <label for="basicTitle" class="category checkbox checkbox--underline">
+            <p for="basic" class="checkbox__label">Oriente</p>
+          </label>
+
+          <input
+            type="checkbox"
+            name="basicTitle"
+            id="basicTitle"
+            class="category__expand"
+          />
+
+          <span class="material-icons material-icons-outlined category__arrow">expand_more</span>
+
+          <ul class="category__content">
+            <li class="checkbox">
+              <label for="basicRequest1" class="checkbox__label">1</label>
+            </li>
+
+            <li class="checkbox">
+              <label for="basicRequest2" class="checkbox__label">2</label>
+            </li>
+
+            <li class="checkbox">
+              <label for="basicRequest3" class="checkbox__label">3</label
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="category__container">
+          <label
+            for="equipmentTitle"
+            class="category checkbox checkbox--underline"
+          >
+            <p for="equipment" class="checkbox__label">Norte</p>
+          </label>
+
+          <input
+            type="checkbox"
+            name="equipmentTitle"
+            id="equipmentTitle"
+            class="category__expand"
+          />
+
+          <span class="material-icons material-icons-outlined category__arrow">expand_more</span>
+
+          <ul class="category__content">
+            <li class="checkbox">
+              <label for="equipmentRequest1" class="checkbox__label">1</label>
+            </li>
+
+            <li class="checkbox">
+              <label for="equipmentRequest2" class="checkbox__label">2</label>
+            </li>
+
+            <li class="checkbox">
+              <label for="equipmentRequest3" class="checkbox__label">3</label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="category__container">
+          <label
+            for="injectologyTitle"
+            class="category checkbox checkbox--underline"
+          >
+            <p for="injectology" class="checkbox__label">Centro</p>
+          </label>
+
+          <input
+            type="checkbox"
+            name="injectologyTitle"
+            id="injectologyTitle"
+            class="category__expand"
+          />
+
+          <span class="material-icons material-icons-outlined category__arrow">expand_more</span>
+
+          <ul class="category__content">
+            <li class="checkbox">
+              <label for="injectologyRequest1" class="checkbox__label">1</label>
+            </li>
+
+            <li class="checkbox">
+              <label for="injectologyRequest2" class="checkbox__label">2</label>
+            </li>
+
+            <li class="checkbox">
+              <label for="injectologyRequest3" class="checkbox__label">3</label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="category__container">
+          <label
+            for="medicineTitle"
+            class="category checkbox checkbox--underline"
+          >
+            <p for="medicine" class="checkbox__label">Sur</p>
+          </label>
+
+          <input
+            type="checkbox"
+            name="medicineTitle"
+            id="medicineTitle"
+            class="category__expand"
+          />
+
+          <span class="material-icons material-icons-outlined category__arrow">expand_more</span>
+
+          <ul class="category__content">
+            <li class="checkbox">
+              <label for="medicineRequest1" class="checkbox__label">1</label>
+            </li>
+
+            <li class="checkbox">
+              <label for="medicineRequest2" class="checkbox__label">2</label>
+            </li>
+
+            <li class="checkbox">
+                <label for="medicineRequest2" class="checkbox__label">3</label>
+            </li>
+          </ul>
+        </div>
+      </form>
+    </main>
+
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-firestore.js"></script>
+    <script src="/js/firebaseApp.js"></script>
+  </body>
+</html>
