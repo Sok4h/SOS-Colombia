@@ -3,24 +3,38 @@
     height: 20%;
     font-family: $quicksand;
     font-size: 1.5rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
-    margin-top: 7rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    padding: 0 10%;
     z-index: 1;
+    justify-content:flex-end;
+    text-align: right;
+
 
     &__a {
         height: 30%;
         width: 100%;
-        text-align: left;
-        flex-direction: row;
         text-decoration: none;
+        padding-left: 3rem;
+        font-size: 2rem;
         color: rgb(255, 255, 255);
 
         &:hover {
             color: rgba(254, 192, 33, 1);
         }
     }
+}
+
+@media screen and(max-width: $small) {
+    .navbar{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin-top: 7rem;
+
+        a{
+            text-align: left;
+
+        }
+
+    }
+    
 }
