@@ -26,6 +26,12 @@
         option {
             color: $blueDark;
         }
+
+        &--icon{
+
+            padding-left: 4rem;
+
+        }
     }
 
     &__arrow {
@@ -34,6 +40,13 @@
         bottom: 2rem;
         transform: translate(-50%, 50%);
     }
+
+    &__icon{
+        position: absolute;
+        top: 50%;
+        transform: translate(50%, -50%);
+    }
+
 }
 
 select {
