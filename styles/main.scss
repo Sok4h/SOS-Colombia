@@ -35,6 +35,21 @@ body {
     width: 100%;
 }
 
+.help-section {
+    padding: 5rem 2rem;
+
+    h2 {
+        font-size: 2rem;
+        margin: 2rem auto;
+    }
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 main {
     width: 100%;
     margin: 0 auto;
