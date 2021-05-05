@@ -32,26 +32,27 @@
     <title>SOS Colombia</title>
   </head>
   <body>
+    <main>
+
     <!--////////////////////////////////
     Splash Page
     ////////////////////////////////-->
 
-    <section class="splashpage animate__animated animate__zoomIn">
+    <section class=" hidden splashpage animate__animated animate__zoomIn">
       <img class="animate__animated animate__fadeInDown" src="./src/img/ico/logo.png" alt="" />
-
 
       <div class="splashpage__btnContainer">
         <button class="btn btn--blue"  onclick=ClickedBrigradeButton()>Soy Brigadista</button>
         <button class="btn btn--outlineWhite">Soy Ciudadano</button>
 
       </div>
-   
+      
     </section>
 
-    <!--////////////////////////////////
+<!--////////////////////////////////
     New Supply Request Page
     ////////////////////////////////-->
-    <main class="hidden">
+    <section class="create-request-section">
       <h1>Ciudad</h1>
 
       <form>
@@ -80,7 +81,7 @@
           />
         </div>
 
-        <div class="category__container">
+        <div class="category__container" style="--height: 20rem" style="--height: 20rem">
           <label for="basicTitle" class="category checkbox checkbox--underline">
             <input
               type="checkbox"
@@ -147,7 +148,7 @@
           </ul>
         </div>
 
-        <div class="category__container">
+        <div class="category__container" style="--height: 20rem" style="--height: 35rem">
           <label
             for="equipmentTitle"
             class="category checkbox checkbox--underline"
@@ -259,7 +260,7 @@
           </ul>
         </div>
 
-        <div class="category__container">
+        <div class="category__container" style="--height: 15rem">
           <label
             for="injectologyTitle"
             class="category checkbox checkbox--underline"
@@ -323,7 +324,7 @@
           </ul>
         </div>
 
-        <div class="category__container">
+        <div class="category__container" style="--height: 20rem" style="--height: 10rem">
           <label
             for="medicineTitle"
             class="category checkbox checkbox--underline"
@@ -375,7 +376,7 @@
           </ul>
         </div>
 
-        <div class="category__container">
+        <div class="category__container" style="--height: 20rem" style="--height: 20rem">
           <label
             for="solutionsTitle"
             class="category checkbox checkbox--underline"
@@ -451,7 +452,7 @@
           </ul>
         </div>
 
-        <div class="category__container">
+        <div class="category__container" style="--height: 20rem">
           <label
             for="bandagesTitle"
             class="category checkbox checkbox--underline"
@@ -541,6 +542,8 @@
 
         <button class="btn btn--white">Enviar</button>
       </form>
+    </section>
+      
     </main>
 
     <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>

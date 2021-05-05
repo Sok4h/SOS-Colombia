@@ -7,13 +7,15 @@
 @import './components/texfield';
 @import './components/checkbox';
 @import './containers/splashPage';
+@import './components/card';
+
 
 html {
     font-size: 62.5%
 }
 
 body {
-
+    display: flow-root;
     background-color: $bg;
     color: $white;
     min-height: 100vh;
@@ -22,6 +24,20 @@ body {
 
 
 
+.help-section, .find-items {
+    padding: 5rem 2rem;
+
+    h2 {
+        font-size: 2rem;
+        margin: 2rem auto;
+    }
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 main {
     width: 100%;
