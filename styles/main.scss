@@ -5,16 +5,15 @@
 @import './components/category';
 @import './components/btns';
 @import './components/texfield';
-@import './components/inputs';
 @import './components/checkbox';
-@import './containers/splashPage';
 @import './components/burgermenu';
 @import './components/navbar';
 @import './components/card';
 @import './components/createRequest';
-@import'./containers/login';
-
-
+@import'./layout/login';
+@import './layout/splashPage';
+@import './layout/create-request';
+@import './layout/generic';
 
 html {
     font-size: 62.5%
@@ -28,42 +27,8 @@ body {
     height: 100%;
 }
 
-
-
-.main-header {
-    position: fixed;
-    width: 100%;
-    z-index: 10;
-
-    &--active {
-        background-color: $blue;
-        pointer-events: all;
-
-        .navbar {
-            display: flex;
-            pointer-events: all;
-        }
-    }
-}
-
-.help-section, .find-items, .donations-section {
-    padding: 5rem 2rem;
-
-    h2 {
-        font-size: 2rem;
-        margin: 2rem auto;
-    }
-}
-
-.create-request-section {
-    padding: 3rem 2rem;
-
-    h1 {
-        font-size: 2rem;
-    }
-}
-
 .flex-center {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -81,6 +46,10 @@ main {
         max-width: 650px;
        
     }
+}
+
+.logo {
+    max-width: 200px;
 }
 
 .hidden {

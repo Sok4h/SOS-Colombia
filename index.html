@@ -32,9 +32,7 @@
     <title>SOS Colombia</title>
   </head>
   <body>
-
-
-    <header class="main-header">
+    <header class="main-header hidden">
       <section class="burgermenu">
         <img src="" alt="Logo" class="burgermenu__logo" />
         <button class="burgermenu__btn">
@@ -44,41 +42,44 @@
         </button>
       </section>
       <nav class="navbar">
-        <a href="#" class="navbar__a">Brinda Ayuda</a>
-        <a href="#" class="navbar__a">Donaciones</a>
-        <a href="#" class="navbar__a">Obtener Insumos</a>
+        <p id="nav-bring-help" class="navbar__a">Brinda Ayuda</p>
+        <p id="nav-donations" class="navbar__a">Donaciones</p>
+        <p id="nav-obtain-supplies" class="navbar__a">Obtener Insumos</p>
       </nav>
     </header>
 
-    
     <main>
       <!--////////////////////////////////
       Splash Page
       ////////////////////////////////-->
-
       <section class="splashpage animate__animated animate__zoomIn">
         <img
-          class="animate__animated animate__fadeInDown"
-          src="./src/img/ico/logo.png"
+          class="animate__animated animate__fadeInDown logo"
+          src="./src/img/ico/logo.svg"
           alt=""
         />
 
         <div
           class="splashpage__btnContainer animate__animated animate__fadeInUp"
         >
-          <button class="btn btn--blue" onclick="ClickedBrigradeButton()">
+          <button class="btn btn--blue" id="brigade-btn">
             Soy Brigadista
           </button>
-          <button class="btn btn--outlineWhite">Soy Ciudadano</button>
+          <button class="btn btn--outlineWhite" id="citizen-btn">Soy Ciudadano</button>
         </div>
       </section>
 
       <!--////////////////////////////////
       New Supply Request Page
       ////////////////////////////////-->
-
       <section class="animate__animated create-request-section hidden">
         <header class="flex-center">
+          <button id="create-request-back" class="create-request-back">
+              <span class="material-icons material-icons-outlined">
+                arrow_back_ios
+              </span>
+          </button>
+
           <h1>Indícanos qué necesitas</h1>
         </header>
         <form>
@@ -674,8 +675,38 @@
             >
           </li>
 
-          <button class="btn btn--white">Enviar</button>
+          <button class="btn btn--white" id="finish-request-creation-btn">Enviar</button>
         </form>
+      </section>
+
+      <!--////////////////////////////////
+      Login Page
+      ////////////////////////////////-->
+      <section class="login hidden" >
+        <h1>Bienvenido Brigadista ¡Es hora de autenticar!</h1>
+
+        <form action="submit">
+
+            <div class="textfield">
+                <input class="textfield__input textfield__input--icon" type="text" name="cedula" placeholder="Cédula" id="id">  
+                <span class="material-icons material-icons-outlined textfield__icon">
+                    person_outline
+                    </span>  
+            </div>
+            
+            <div class="textfield">
+                <input class="textfield__input textfield__input--icon" type="password" name="codigoAcceso" id="" placeholder="Código de acceso">  
+                <span class="material-icons material-icons-outlined textfield__icon">
+                    gpp_good
+                    </span>
+
+            </div>
+           
+
+
+            <button type="button" class="btn btn--white" id="login-btn">Continuar</button>
+        </form>
+        
       </section>
 
       <!--////////////////////////////////
@@ -1094,6 +1125,47 @@
             </div>
         </div>
       </section>
+
+      <!--////////////////////////////////
+      Request List Page
+      ////////////////////////////////-->
+      <section class="request hidden">
+        <div class="request__header">
+            <h1 class="request__tittle">Mis solicitudes</h1>
+            <div class="request__btnContainer" id="create-request-btn">
+              <p class="request__text">Realizar una solicitud</p>
+              <button class="request__btn">+</button>
+            </div>
+        </div>
+        <div class="card">
+          <header class="card__header">
+              <div>
+                  <h3 class="card__title">Calipso</h3>
+                  <h4 class="card__subtitle">(Calle 72J # 28b 24)</h4>
+              </div>
+
+              <div class="card__time card__time--bgOut">
+                  2:33 PM
+              </div>
+          </header>          
+          <ul class="card__list">
+              <li class="card__listItem">Agua</li>
+              <li class="card__listItem">Cánulas</li>
+              <li class="card__listItem">Tapabocas</li>
+          </ul>
+          <button class="btn btn--white">
+              Terminar solicitud
+          </button>
+          <p class="card__textCenter">Terminarás tu solicitud de insumos</p>
+      </div>
+      </section>
+
+      <!--////////////////////////////////
+      Request Confirmation Page
+      ////////////////////////////////-->
+      <section class="request-confirmation-section flex-center hidden">
+        <h1>Tu solicitud ha sido publicada con éxito</h1> 
+      </section>
     </main>
 
     <!--////////////////////////////////
@@ -1102,10 +1174,9 @@
 
     <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-firestore.js"></script>
-    <script src="./js/firebaseApp.js"></script>
-    <script src="./js/Transitions.js"></script>
-    <script src="./js/SignIn.js"></script>
     <script src="/js/utils/firebaseApp.js"></script>
+    <script src="/js/utils/transitions.js"></script>
+    <script src="/js/navigation.js"></script>
     <script src="/js/burgermenuinteraction.js"></script>
     <script src="/js/requestCheckboxBehavior.js"></script>
   </body>

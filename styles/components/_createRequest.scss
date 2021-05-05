@@ -1,5 +1,4 @@
 .request{
-
     margin: 0 auto;
     font-size: 1.6rem;
     font-family: $mulish;
@@ -28,6 +27,7 @@
         display: flex;
         flex-direction: row;
         align-items: center;
+        cursor: pointer;
     }
 
     &__btn{

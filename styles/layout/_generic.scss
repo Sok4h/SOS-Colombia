@@ -1,0 +1,29 @@
+.main-header {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+
+    &--active {
+        background-color: $blue;
+        pointer-events: all;
+
+        .navbar {
+            display: flex;
+            pointer-events: all;
+        }
+    }
+}
+
+.help-section, .find-items, .donations-section {
+    padding: 5rem 2rem;
+
+    h2 {
+        font-size: 2rem;
+        margin: 2rem auto;
+    }
+}
+
+.request-confirmation-section {
+    min-height: 100vh;
+    cursor: pointer;
+}
