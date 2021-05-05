@@ -14,6 +14,7 @@ html {
 }
 
 body {
+    display: flow-root;
     background-color: $bg;
     color: $white;
     min-height: 100vh;
