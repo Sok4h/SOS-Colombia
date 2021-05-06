@@ -55,7 +55,7 @@ const AddOptionToInputs = () => {
 
 
     var southGroup = document.createElement("optgroup");
-    southGroup.label = "South";
+    southGroup.label = "Sur";
     locationInput.appendChild(southGroup);
 
     locations.Sur.forEach((location) => {
@@ -77,7 +77,16 @@ const AddOptionToInputs = () => {
       westGroup.appendChild(opt);
     });
 
-
+    var centerGroup = document.createElement("optgroup");
+    centerGroup.label = "Centro";
+    locationInput.appendChild(centerGroup);
+    
+    locations.Centro.forEach((location) => {
+      var opt = document.createElement("option");
+      opt.innerHTML = location.name;
+      opt.value = location.id;
+      centerGroup.appendChild(opt);
+    });
 
   });
 };
