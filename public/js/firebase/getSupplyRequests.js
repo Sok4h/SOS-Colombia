@@ -45,6 +45,7 @@ function loadRequestInfo(container, query) {
 
           const cardData = {
             title: location.name,
+            subtitle: location.address,
             section: "¿Qué se necesita?",
             list: suppliesNames,
             time: request.time

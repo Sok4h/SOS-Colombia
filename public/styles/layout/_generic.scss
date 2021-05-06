@@ -15,7 +15,10 @@
     }
 }
 
-.help-section, .find-items, .donations-section, .blood-donation-section {
+.help-section,
+.find-items,
+.donations-section,
+.blood-donation-section {
     padding: 5rem 4rem;
 
     h1 {
@@ -26,6 +29,15 @@
         font-size: 2rem;
         margin: 2rem auto;
     }
+
+    h3 {
+        font-size: 1.7rem;
+
+        a {
+            color: salmon;
+        }
+    }
+
 }
 
 .request-confirmation-section {

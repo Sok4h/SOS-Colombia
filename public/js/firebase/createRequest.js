@@ -106,12 +106,12 @@ window.addEventListener("load", () => {
         })
       );
 
-      json.supplies.push({   
+     if(foodCheckbox) json.supplies.push({   
   
         name: foodCheckbox.closest(".checkbox").querySelector("label").innerText,
       });
 
-      json.supplies.push({
+      if(animalFoodCheckbox) json.supplies.push({
     
         name: animalFoodCheckbox.closest(".checkbox").querySelector("label").innerText,
       });
