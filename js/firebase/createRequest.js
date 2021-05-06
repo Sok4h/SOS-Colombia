@@ -4,7 +4,9 @@ window.addEventListener('load', () => {
 
     createRequestBtn.addEventListener('click', (event) => {
         event.preventDefault();
-        let json = {};
+        let json = {
+            supplies: []
+        };
         if(placeSelect.value) {
             const basicCheckboxes =  document.querySelectorAll('input[name="basicRequest"]:checked');
             const equipmentCheckboxes =  document.querySelectorAll('input[name="equipmentRequest"]:checked');
@@ -13,11 +15,47 @@ window.addEventListener('load', () => {
             const solutionsCheckboxes =  document.querySelectorAll('input[name="solutionsRequest"]:checked');
             const woundsCheckboxes =  document.querySelectorAll('input[name="woundsRequest"]:checked');
         
+            let requestLength = basicCheckboxes.length + equipmentCheckboxes.length + injectologyCheckboxes.length + medicineCheckboxes.length + solutionsCheckboxes.length + woundsCheckboxes.length;
+
+            if(requestLength == 0) {
+                window.alert('Escoge al menos un insumo');
+                return;
+            }
+
+            basicCheckboxes.forEach(basic => json.supplies.push({ category: 'basic', index: basic.value, name: basic.closest('.checkbox').querySelector('label').innerText}));
+            equipmentCheckboxes.forEach(equipment => json.supplies.push({ category: 'equipment', index: equipment.value, name: equipment.closest('.checkbox').querySelector('label').innerText}));
+            injectologyCheckboxes.forEach(injectology => json.supplies.push({ category: 'injectology', index: injectology.value, name: injectology.closest('.checkbox').querySelector('label').innerText}));
+            medicineCheckboxes.forEach(medicine => json.supplies.push({ category: 'medicine', index: medicine.value, name: medicine.closest('.checkbox').querySelector('label').innerText}));
+            solutionsCheckboxes.forEach(solutions => json.supplies.push({ category: 'solutions', index: solutions.value, name: solutions.closest('.checkbox').querySelector('label').innerText}));
+            woundsCheckboxes.forEach(wounds => json.supplies.push({ category: 'wounds', index: wounds.value, name: wounds.closest('.checkbox').querySelector('label').innerText}));
+
+            
+
+            const currentTime = new Date();
+            if(currentTime.getMinutes() < 10) {
+                json.timestamp = currentTime.getHours()+':0'+currentTime.getMinutes();
+            } else {
+                json.timestamp = currentTime.getHours()+':'+currentTime.getMinutes();
+            }
+            
+
             firebase.auth().onAuthStateChanged(user => {
-                json.user = user.email.split('@')[0].toUpperCase();
-                console.log(json);
-                navigateBetweenScreens(createRequestScreen, requestCreatedScreen);
-            });         
+                json.author = user.email.split('@')[0].toUpperCase();
+                
+                
+            }); 
+
+            json.supply_concentration_spot = placeSelect.value;
+
+            db.collection('supplies_concentration_spots').doc(placeSelect.value).get()
+            .then(data => {
+                json.sector = data.data().sector;
+                db.collection('requests').doc().set(json)
+                .then(() => {
+                    navigateBetweenScreens(createRequestScreen, requestCreatedScreen);
+                });
+            });
+            return;        
         }
         
         window.alert('Elige un punto de la lista');
