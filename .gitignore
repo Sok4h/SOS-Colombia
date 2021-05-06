@@ -1,3 +1,6 @@
 styles/main.css
 styles/main.css.map
 js/utils/firebaseApp.js
+firebase-debug.log
+firebase.json
+.firebaserc
