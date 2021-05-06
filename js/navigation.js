@@ -5,7 +5,7 @@ const loginScreen = document.querySelector(".login");
 const helpScreen = document.querySelector(".help-section");
 const findItemsScreen = document.querySelector(".find-items");
 const donationsScreen = document.querySelector(".donations-section");
-const requestListScreen = document.querySelector(".request");
+const requestListScreen = document.querySelector(".myRequests");
 const requestCreatedScreen = document.querySelector(
   ".request-confirmation-section"
 );
@@ -57,13 +57,21 @@ citizenBtn.addEventListener("click", () => {
 
 loginBtn.addEventListener("click", () => {
   login()
-  .then(user => {
-    navigateBetweenScreensAnimated(loginScreen, requestListScreen,"animate__fadeOutLeft","animate__fadeInRight");
-  })
-  .catch(error => {
-    window.alert(error.message);
-    console.log(error);
-  });
+    .then((user) => {
+      navigateBetweenScreensAnimated(
+        loginScreen,
+        requestListScreen,
+        "animate__fadeOutLeft",
+        "animate__fadeInRight"
+      );
+      let userID = user.user.email.split("@")[0].toUpperCase();
+
+      LoadMyRequests(userID);
+    })
+    .catch((error) => {
+      window.alert(error.message);
+      console.log(error);
+    });
 });
 
 createRequestBtn.addEventListener("click", () => {
@@ -82,9 +90,11 @@ navObtainSuppliesLink.addEventListener("click", () => {
   navBarTransition(findItemsScreen);
 });
 
-
 requestCreatedScreen.addEventListener("click", () => {
   navigateBetweenScreens(requestCreatedScreen, requestListScreen);
+
+  let userID = firebase.auth().currentUser.email.split("@")[0].toUpperCase();
+  LoadMyRequests(userID);
 });
 
 /*const ClickedBrigradeButton = () => {
