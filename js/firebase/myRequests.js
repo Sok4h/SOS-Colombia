@@ -1,11 +1,7 @@
-const myRequest = document.querySelector(".myRequests");
-
-
+const myRequest = document.querySelector(".myRequests__content");
 
 function LoadMyRequests(userID) {
-
-
-    
+    myRequest.innerHTML = '';
     db.collection("requests")
       .where("author", "==", userID)
       .get()
@@ -41,21 +37,32 @@ function LoadMyRequests(userID) {
               const cardData = {
                 title: location.name,
                 subtitle: location.address,
-                section: "Aqui iria la descripción del request",
                 list: suppliesNames,
+                time: request.time
               };
   
-              const card = createCard("", cardData);
-  
-              height += 10 + 3 * cardData.list.length;
+              let btnInfo = {
+                text: 'Terminar solicitud',
+                callback: deleteRequest,
+                message: 'Terminarás tu solicitud de insumos'
+              }
+
+              const card = createCard("", cardData, "article", btnInfo);
+
+              card.dataset.requestId = request.id;
   
               myRequest.appendChild(card);
-              myRequest.style.setProperty("--height", `${height}rem`);
             });
         });
       });
-  }
+}
 
+function deleteRequest(event) {
+  const card = event.target.closest('.card');
+  const id = card.dataset.requestId;
+  db.collection('requests').doc(id).delete()
+  .then(() => {
+  });
 
-
-
+  card.parentNode.removeChild(card);
+}

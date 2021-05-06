@@ -32,17 +32,33 @@ window.addEventListener('load', () => {
             
 
             const currentTime = new Date();
-            if(currentTime.getMinutes() < 10) {
-                json.timestamp = currentTime.getHours()+':0'+currentTime.getMinutes();
-            } else {
-                json.timestamp = currentTime.getHours()+':'+currentTime.getMinutes();
-            }
+            let hour = currentTime.getHours();
+            let minutes = currentTime.getMinutes();
+            let timeString = "";
             
+            if(minutes < 10) {
+                minutes = "0" + minutes;
+            }
+
+            if(hour > 12) {
+                hour -= 12;
+                if(hour < 10) {
+                    timeString = '0' + hour + ':' + minutes +' PM';
+                } else {
+                    timeString = hour + ':' + minutes +' PM';
+                }
+            } else {
+                if(hour < 10) {
+                    timeString = '0' + hour + ':' + minutes +' AM';
+                } else {
+                    timeString = hour + ':' + minutes +' AM';
+                }
+            }    
+            
+            json.timestamp = timeString;
 
             firebase.auth().onAuthStateChanged(user => {
-                json.author = user.email.split('@')[0].toUpperCase();
-                
-                
+                json.author = user.email.split('@')[0].toUpperCase();     
             }); 
 
             json.supply_concentration_spot = placeSelect.value;
@@ -55,6 +71,7 @@ window.addEventListener('load', () => {
                     navigateBetweenScreens(createRequestScreen, requestCreatedScreen);
                 });
             });
+
             return;        
         }
         

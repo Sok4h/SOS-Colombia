@@ -1,4 +1,4 @@
-const createCard = (type, data, elementType) => {
+const createCard = (type, data, elementType, button) => {
   let card;
   if (elementType) {
     card = document.createElement(elementType);
@@ -27,6 +27,13 @@ const createCard = (type, data, elementType) => {
     subtitle.innerText = data.subtitle;
   }
 
+  if(data.time) {
+    const time = document.createElement('p');
+    time.classList.add('card__time');
+    header.appendChild(time);
+    time.innerHTML = data.time;
+  }
+
   if (data.section) {
     const sectionText = document.createElement("p");
     sectionText.classList.add("card__section");
@@ -50,6 +57,24 @@ const createCard = (type, data, elementType) => {
         item.innerText = element;
       }
     });
+  }
+
+  if(button) {
+    const buttonContainer = document.createElement("div");
+    buttonContainer.classList.add("flex-center", "flex-column");
+    card.appendChild(buttonContainer);
+
+    const btn = document.createElement("button");
+    btn.classList.add('btn', 'btn--white');
+    btn.innerHTML = button.text;
+    btn.addEventListener('click', button.callback);
+    buttonContainer.appendChild(btn);
+
+    if(button.message) {
+      const btnMsg = document.createElement('p');
+      btnMsg.innerText = button.message;
+      buttonContainer.appendChild(btnMsg);
+    }
   }
 
   if (type == "dark") {

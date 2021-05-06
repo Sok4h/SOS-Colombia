@@ -52,7 +52,7 @@ function loadRequestInfo(container, query) {
 
             const card = createCard("", cardData, "li");
 
-            height += 10 + 3 * cardData.list.length;
+            height += 10 + 5 * cardData.list.length;
 
             container.appendChild(card);
             container.style.setProperty("--height", `${height}rem`);
