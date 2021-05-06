@@ -62,10 +62,10 @@
         <div
           class="splashpage__btnContainer animate__animated animate__fadeInUp"
         >
-          <button class="btn btn--blue" id="brigade-btn">
-            Soy Brigadista
+          <button class="btn btn--blue" id="brigade-btn">Soy Brigadista</button>
+          <button class="btn btn--outlineWhite" id="citizen-btn">
+            Soy Ciudadano
           </button>
-          <button class="btn btn--outlineWhite" id="citizen-btn">Soy Ciudadano</button>
         </div>
       </section>
 
@@ -75,9 +75,9 @@
       <section style="--animate-duration: 0.5s" class="animate__animated create-request-section hidden">
         <header class="flex-center">
           <button id="create-request-back" class="create-request-back">
-              <span class="material-icons material-icons-outlined">
-                arrow_back_ios
-              </span>
+            <span class="material-icons material-icons-outlined">
+              arrow_back_ios
+            </span>
           </button>
 
           <h1>Indícanos qué necesitas</h1>
@@ -85,13 +85,11 @@
         <form>
           <div class="textfield">
             <label for="punto" class="textfield__label">¿En dónde estás?</label>
-            <select name="punto" id="punto" class="textfield__input">
-              <option value="">Selecciona un punto</option>
-              <option value="1">Punto 1</option>
-              <option value="2">Punto 2</option>
-              <option value="3">Punto 3</option>
-              <option value="4">Punto 4</option>
-            </select>
+            <select
+              name="punto"
+              id="punto"
+              class="textfield__input create-request-section__locationSelection"
+            ></select>
 
             <span
               class="material-icons material-icons-outlined textfield__arrow"
@@ -291,7 +289,9 @@
             >
           </li>
 
-          <button class="btn btn--white" id="finish-request-creation-btn">Enviar</button>
+          <button class="btn btn--white" id="finish-request-creation-btn">
+            Enviar
+          </button>
         </form>
       </section>
 
@@ -302,27 +302,40 @@
         <h1>Bienvenido Brigadista ¡Es hora de autenticar!</h1>
 
         <form action="submit">
+          <div class="textfield">
+            <input
+              class="textfield__input textfield__input--icon"
+              type="text"
+              name="cedula"
+              placeholder="Cédula"
+              id="id"
+            />
+            <span
+              class="material-icons material-icons-outlined textfield__icon"
+            >
+              person_outline
+            </span>
+          </div>
 
-            <div class="textfield">
-                <input class="textfield__input textfield__input--icon" type="text" name="cedula" placeholder="Cédula" id="id">  
-                <span class="material-icons material-icons-outlined textfield__icon">
-                    person_outline
-                    </span>  
-            </div>
-            
-            <div class="textfield">
-                <input class="textfield__input textfield__input--icon" type="password" name="codigoAcceso" id="password" placeholder="Código de acceso">  
-                <span class="material-icons material-icons-outlined textfield__icon">
-                    gpp_good
-                    </span>
+          <div class="textfield">
+            <input
+              class="textfield__input textfield__input--icon"
+              type="password"
+              name="codigoAcceso"
+              id="password"
+              placeholder="Código de acceso"
+            />
+            <span
+              class="material-icons material-icons-outlined textfield__icon"
+            >
+              gpp_good
+            </span>
+          </div>
 
-            </div>
-           
-
-
-            <button type="button" class="btn btn--white" id="login-btn">Continuar</button>
+          <button type="button" class="btn btn--white" id="login-btn">
+            Continuar
+          </button>
         </form>
-        
       </section>
 
       <!--////////////////////////////////
@@ -330,213 +343,225 @@
       ////////////////////////////////-->
       <section style="--animate-duration: 0.5s" class="help-section hidden">
         <header class="flex-center">
-            <h1>Brinda ayuda</h1>
+          <h1>Brinda ayuda</h1>
         </header>
 
         <h2>Brigadas que necesitan tu ayuda</h2>
 
         <div class="category__container" style="--height: 50rem">
-            <label for="east" class="category checkbox checkbox--underline">
-                <p class="checkbox__label">Oriente</p>
-            </label>
+          <label for="east" class="category checkbox checkbox--underline">
+            <p class="checkbox__label">Oriente</p>
+          </label>
 
-            <input type="checkbox" name="east" id="east" class="category__expand"/>
-            <span class="material-icons material-icons-outlined category__arrow">expand_more</span>
-        
-            <div class="category__content">
-                <div class="card">
-                    <header class="card__header">
-                        <div>
-                            <h3 class="card__title">Calipso</h3>
-                            <h4 class="card__subtitle">(Calle 72J # 28b 24)</h4>
-                        </div>
-        
-                        <div class="card__time">
-                            2:33 PM
-                        </div>
-                    </header>          
-                    
-                    <p class="card__section">Lugar de encuentro: Lugar Insumos</p>
-                    <ul class="card__list">
-                        <li class="card__listItem">Agua</li>
-                        <li class="card__listItem">Cánulas</li>
-                        <li class="card__listItem">Tapabocas</li>
-                    </ul>
+          <input
+            type="checkbox"
+            name="east"
+            id="east"
+            class="category__expand"
+          />
+          <span class="material-icons material-icons-outlined category__arrow"
+            >expand_more</span
+          >
+
+          <div class="category__content">
+            <div class="card">
+              <header class="card__header">
+                <div>
+                  <h3 class="card__title">Calipso</h3>
+                  <h4 class="card__subtitle">(Calle 72J # 28b 24)</h4>
                 </div>
 
-                <div class="card">
-                    <header class="card__header">
-                        <div>
-                            <h3 class="card__title">Calipso</h3>
-                            <h4 class="card__subtitle">(Calle 72J # 28b 24)</h4>
-                        </div>
-        
-                        <div class="card__time">
-                            2:33 PM
-                        </div>
-                    </header>          
-                    
-                    <p class="card__section">Lugar de encuentro: Lugar Insumos</p>
-                    <ul class="card__list">
-                        <li class="card__listItem">Agua</li>
-                        <li class="card__listItem">Cánulas</li>
-                        <li class="card__listItem">Tapabocas</li>
-                    </ul>
-                </div>
+                <div class="card__time">2:33 PM</div>
+              </header>
+
+              <p class="card__section">Lugar de encuentro: Lugar Insumos</p>
+              <ul class="card__list">
+                <li class="card__listItem">Agua</li>
+                <li class="card__listItem">Cánulas</li>
+                <li class="card__listItem">Tapabocas</li>
+              </ul>
             </div>
+
+            <div class="card">
+              <header class="card__header">
+                <div>
+                  <h3 class="card__title">Calipso</h3>
+                  <h4 class="card__subtitle">(Calle 72J # 28b 24)</h4>
+                </div>
+
+                <div class="card__time">2:33 PM</div>
+              </header>
+
+              <p class="card__section">Lugar de encuentro: Lugar Insumos</p>
+              <ul class="card__list">
+                <li class="card__listItem">Agua</li>
+                <li class="card__listItem">Cánulas</li>
+                <li class="card__listItem">Tapabocas</li>
+              </ul>
+            </div>
+          </div>
         </div>
 
         <div class="category__container" style="--height: 50rem">
-            <label for="center" class="category checkbox checkbox--underline">
-                <p class="checkbox__label">Norte</p>
-            </label>
+          <label for="center" class="category checkbox checkbox--underline">
+            <p class="checkbox__label">Norte</p>
+          </label>
 
-            <input type="checkbox" name="center" id="center" class="category__expand"/>
-            <span class="material-icons material-icons-outlined category__arrow">expand_more</span>
-        
-            <div class="category__content">
-                <div class="card">
-                    <header class="card__header">
-                        <div>
-                            <h3 class="card__title">Calipso</h3>
-                            <h4 class="card__subtitle">(Calle 72J # 28b 24)</h4>
-                        </div>
-        
-                        <div class="card__time">
-                            2:33 PM
-                        </div>
-                    </header>          
-                    
-                    <p class="card__section">Lugar de encuentro: Lugar Insumos</p>
-                    <ul class="card__list">
-                        <li class="card__listItem">Agua</li>
-                        <li class="card__listItem">Cánulas</li>
-                        <li class="card__listItem">Tapabocas</li>
-                    </ul>
+          <input
+            type="checkbox"
+            name="center"
+            id="center"
+            class="category__expand"
+          />
+          <span class="material-icons material-icons-outlined category__arrow"
+            >expand_more</span
+          >
+
+          <div class="category__content">
+            <div class="card">
+              <header class="card__header">
+                <div>
+                  <h3 class="card__title">Calipso</h3>
+                  <h4 class="card__subtitle">(Calle 72J # 28b 24)</h4>
                 </div>
 
-                <div class="card">
-                    <header class="card__header">
-                        <div>
-                            <h3 class="card__title">Calipso</h3>
-                            <h4 class="card__subtitle">(Calle 72J # 28b 24)</h4>
-                        </div>
-        
-                        <div class="card__time">
-                            2:33 PM
-                        </div>
-                    </header>          
-                    
-                    <p class="card__section">Lugar de encuentro: Lugar Insumos</p>
-                    <ul class="card__list">
-                        <li class="card__listItem">Agua</li>
-                        <li class="card__listItem">Cánulas</li>
-                        <li class="card__listItem">Tapabocas</li>
-                    </ul>
-                </div>
+                <div class="card__time">2:33 PM</div>
+              </header>
+
+              <p class="card__section">Lugar de encuentro: Lugar Insumos</p>
+              <ul class="card__list">
+                <li class="card__listItem">Agua</li>
+                <li class="card__listItem">Cánulas</li>
+                <li class="card__listItem">Tapabocas</li>
+              </ul>
             </div>
+
+            <div class="card">
+              <header class="card__header">
+                <div>
+                  <h3 class="card__title">Calipso</h3>
+                  <h4 class="card__subtitle">(Calle 72J # 28b 24)</h4>
+                </div>
+
+                <div class="card__time">2:33 PM</div>
+              </header>
+
+              <p class="card__section">Lugar de encuentro: Lugar Insumos</p>
+              <ul class="card__list">
+                <li class="card__listItem">Agua</li>
+                <li class="card__listItem">Cánulas</li>
+                <li class="card__listItem">Tapabocas</li>
+              </ul>
+            </div>
+          </div>
         </div>
 
         <div class="category__container" style="--height: 50rem">
-            <label for="south" class="category checkbox checkbox--underline">
-                <p class="checkbox__label">Centro</p>
-            </label>
+          <label for="south" class="category checkbox checkbox--underline">
+            <p class="checkbox__label">Centro</p>
+          </label>
 
-            <input type="checkbox" name="south" id="south" class="category__expand"/>
-            <span class="material-icons material-icons-outlined category__arrow">expand_more</span>
-        
-            <div class="category__content">
-                <div class="card">
-                    <header class="card__header">
-                        <div>
-                            <h3 class="card__title">Calipso</h3>
-                            <h4 class="card__subtitle">(Calle 72J # 28b 24)</h4>
-                        </div>
-        
-                        <div class="card__time">
-                            2:33 PM
-                        </div>
-                    </header>          
-                    
-                    <p class="card__section">Lugar de encuentro: Lugar Insumos</p>
-                    <ul class="card__list">
-                        <li class="card__listItem">Agua</li>
-                        <li class="card__listItem">Cánulas</li>
-                        <li class="card__listItem">Tapabocas</li>
-                    </ul>
+          <input
+            type="checkbox"
+            name="south"
+            id="south"
+            class="category__expand"
+          />
+          <span class="material-icons material-icons-outlined category__arrow"
+            >expand_more</span
+          >
+
+          <div class="category__content">
+            <div class="card">
+              <header class="card__header">
+                <div>
+                  <h3 class="card__title">Calipso</h3>
+                  <h4 class="card__subtitle">(Calle 72J # 28b 24)</h4>
                 </div>
 
-                <div class="card">
-                    <header class="card__header">
-                        <div>
-                            <h3 class="card__title">Calipso</h3>
-                            <h4 class="card__subtitle">(Calle 72J # 28b 24)</h4>
-                        </div>
-        
-                        <div class="card__time">
-                            2:33 PM
-                        </div>
-                    </header>          
-                    
-                    <p class="card__section">Lugar de encuentro: Lugar Insumos</p>
-                    <ul class="card__list">
-                        <li class="card__listItem">Agua</li>
-                        <li class="card__listItem">Cánulas</li>
-                        <li class="card__listItem">Tapabocas</li>
-                    </ul>
-                </div>
+                <div class="card__time">2:33 PM</div>
+              </header>
+
+              <p class="card__section">Lugar de encuentro: Lugar Insumos</p>
+              <ul class="card__list">
+                <li class="card__listItem">Agua</li>
+                <li class="card__listItem">Cánulas</li>
+                <li class="card__listItem">Tapabocas</li>
+              </ul>
             </div>
+
+            <div class="card">
+              <header class="card__header">
+                <div>
+                  <h3 class="card__title">Calipso</h3>
+                  <h4 class="card__subtitle">(Calle 72J # 28b 24)</h4>
+                </div>
+
+                <div class="card__time">2:33 PM</div>
+              </header>
+
+              <p class="card__section">Lugar de encuentro: Lugar Insumos</p>
+              <ul class="card__list">
+                <li class="card__listItem">Agua</li>
+                <li class="card__listItem">Cánulas</li>
+                <li class="card__listItem">Tapabocas</li>
+              </ul>
+            </div>
+          </div>
         </div>
 
         <div class="category__container" style="--height: 50rem">
-            <label for="north" class="category checkbox checkbox--underline">
-                <p class="checkbox__label">Sur</p>
-            </label>
+          <label for="north" class="category checkbox checkbox--underline">
+            <p class="checkbox__label">Sur</p>
+          </label>
 
-            <input type="checkbox" name="north" id="north" class="category__expand"/>
-            <span class="material-icons material-icons-outlined category__arrow">expand_more</span>
-        
-            <div class="category__content">
-                <div class="card">
-                    <header class="card__header">
-                        <div>
-                            <h3 class="card__title">Calipso</h3>
-                            <h4 class="card__subtitle">(Calle 72J # 28b 24)</h4>
-                        </div>
-        
-                        <div class="card__time">
-                            2:33 PM
-                        </div>
-                    </header>          
-                    
-                    <p class="card__section">Lugar de encuentro: Lugar Insumos</p>
-                    <ul class="card__list">
-                        <li class="card__listItem">Agua</li>
-                        <li class="card__listItem">Cánulas</li>
-                        <li class="card__listItem">Tapabocas</li>
-                    </ul>
+          <input
+            type="checkbox"
+            name="north"
+            id="north"
+            class="category__expand"
+          />
+          <span class="material-icons material-icons-outlined category__arrow"
+            >expand_more</span
+          >
+
+          <div class="category__content">
+            <div class="card">
+              <header class="card__header">
+                <div>
+                  <h3 class="card__title">Calipso</h3>
+                  <h4 class="card__subtitle">(Calle 72J # 28b 24)</h4>
                 </div>
 
-                <div class="card">
-                    <header class="card__header">
-                        <div>
-                            <h3 class="card__title">Calipso</h3>
-                            <h4 class="card__subtitle">(Calle 72J # 28b 24)</h4>
-                        </div>
-        
-                        <div class="card__time">
-                            2:33 PM
-                        </div>
-                    </header>          
-                    
-                    <p class="card__section">Lugar de encuentro: Lugar Insumos</p>
-                    <ul class="card__list">
-                        <li class="card__listItem">Agua</li>
-                        <li class="card__listItem">Cánulas</li>
-                        <li class="card__listItem">Tapabocas</li>
-                    </ul>
-                </div>
+                <div class="card__time">2:33 PM</div>
+              </header>
+
+              <p class="card__section">Lugar de encuentro: Lugar Insumos</p>
+              <ul class="card__list">
+                <li class="card__listItem">Agua</li>
+                <li class="card__listItem">Cánulas</li>
+                <li class="card__listItem">Tapabocas</li>
+              </ul>
             </div>
+
+            <div class="card">
+              <header class="card__header">
+                <div>
+                  <h3 class="card__title">Calipso</h3>
+                  <h4 class="card__subtitle">(Calle 72J # 28b 24)</h4>
+                </div>
+
+                <div class="card__time">2:33 PM</div>
+              </header>
+
+              <p class="card__section">Lugar de encuentro: Lugar Insumos</p>
+              <ul class="card__list">
+                <li class="card__listItem">Agua</li>
+                <li class="card__listItem">Cánulas</li>
+                <li class="card__listItem">Tapabocas</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -547,14 +572,13 @@
         <h1>Obtener insumos</h1>
 
         <form>
-  
           <h2 class="category__container">¿Dónde obtener insumos?</h2>
           
           <div class="category__container">
             <label for="eastTitle" class="category checkbox checkbox--underline">
               <p for="east" class="checkbox__label">Oriente</p>
             </label>
-  
+
             <input
               type="checkbox"
               name="eastTitle"
@@ -575,7 +599,7 @@
             >
               <p for="north" class="checkbox__label">Norte</p>
             </label>
-  
+
             <input
               type="checkbox"
               name="northTitle"
@@ -596,7 +620,7 @@
             >
               <p for="center" class="checkbox__label">Centro</p>
             </label>
-  
+
             <input
               type="checkbox"
               name="centerTitle"
@@ -617,7 +641,7 @@
             >
               <p for="south" class="checkbox__label">Sur</p>
             </label>
-  
+
             <input
               type="checkbox"
               name="southTitle"
@@ -659,14 +683,12 @@
       ////////////////////////////////-->
       <section style="--animate-duration: 0.5s" class="donations-section hidden">
         <header class="flex-center">
-            <h1>Brinda ayuda</h1>
+          <h1>Brinda ayuda</h1>
         </header>
 
         <h2>Cuentas habilitadas para donación</h2>
 
-        <div class="donations__wrapper">
-
-        </div>
+        <div class="donations__wrapper"></div>
       </section>
 
       <!--////////////////////////////////
@@ -674,33 +696,29 @@
       ////////////////////////////////-->
       <section style="--animate-duration: 0.5s" class="request hidden">
         <div class="request__header">
-            <h1 class="request__tittle">Mis solicitudes</h1>
-            <div class="request__btnContainer" id="create-request-btn">
-              <p class="request__text">Realizar una solicitud</p>
-              <button class="request__btn">+</button>
-            </div>
+          <h1 class="request__tittle">Mis solicitudes</h1>
+          <div class="request__btnContainer" id="create-request-btn">
+            <p class="request__text">Realizar una solicitud</p>
+            <button class="request__btn">+</button>
+          </div>
         </div>
         <div class="card">
           <header class="card__header">
-              <div>
-                  <h3 class="card__title">Calipso</h3>
-                  <h4 class="card__subtitle">(Calle 72J # 28b 24)</h4>
-              </div>
+            <div>
+              <h3 class="card__title">Calipso</h3>
+              <h4 class="card__subtitle">(Calle 72J # 28b 24)</h4>
+            </div>
 
-              <div class="card__time card__time--bgOut">
-                  2:33 PM
-              </div>
-          </header>          
+            <div class="card__time card__time--bgOut">2:33 PM</div>
+          </header>
           <ul class="card__list">
-              <li class="card__listItem">Agua</li>
-              <li class="card__listItem">Cánulas</li>
-              <li class="card__listItem">Tapabocas</li>
+            <li class="card__listItem">Agua</li>
+            <li class="card__listItem">Cánulas</li>
+            <li class="card__listItem">Tapabocas</li>
           </ul>
-          <button class="btn btn--white">
-              Terminar solicitud
-          </button>
+          <button class="btn btn--white">Terminar solicitud</button>
           <p class="card__textCenter">Terminarás tu solicitud de insumos</p>
-      </div>
+        </div>
       </section>
 
       <!--////////////////////////////////
@@ -729,8 +747,9 @@
     <!-- //////////////////// 
     DB scripts  
     ////////////////////-->
+    <script src="/js/firebase/getDonations.js"></script> 
+    <script src="js/firebase/locationSelection.js"></script>
     <script src="./js/firebase/getSuppliesGatheringInfo.js"></script>
-    <script src="./js/firebase/getDonations.js"></script>
     <script src="./js/firebase/login.js"></script>
     <script src="./js/firebase/getSupplyList.js"></script>
 

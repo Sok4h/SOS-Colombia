@@ -3,6 +3,10 @@
     width: 100%;
     margin: 2rem auto;
 
+    optgroup {
+        color: $bg;
+    }
+
     &__label {
         display: block;
         margin-bottom: 1rem;
@@ -27,7 +31,7 @@
             color: $blueDark;
         }
 
-        &--icon{
+        &--icon {
 
             padding-left: 4rem;
 
@@ -41,7 +45,7 @@
         transform: translate(-50%, 50%);
     }
 
-    &__icon{
+    &__icon {
         position: absolute;
         top: 50%;
         transform: translate(50%, -50%);
