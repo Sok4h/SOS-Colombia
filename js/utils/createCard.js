@@ -1,4 +1,4 @@
-const createCard = (type, data, elementType) => {
+const createCard = (type, data, elementType, id) => {
   let card;
   if (elementType) {
     card = document.createElement(elementType);
@@ -56,6 +56,17 @@ const createCard = (type, data, elementType) => {
     card.classList.add("card--dark");
   } else if (type == "white") {
     card.classList.add("card--white");
+  }
+
+  if(id != null) {
+    const btnDeleted = document.createElement("button");
+    const textDeleted = document.createElement("p");
+    btnDeleted.innerHTML ="Terminar solicitud";
+    btnDeleted.classList.add("btn--white");
+    textDeleted.innerHTML ="Terminarás tu solicitud de insumos";
+
+    card.appendChild(btnDeleted);
+    card.appendChild(textDeleted);
   }
 
   return card;

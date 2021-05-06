@@ -71,4 +71,12 @@
     &--dark {
         background-color: $blueDark;
     }
+
+    button{
+        margin-left: 25%;
+        margin-bottom: 5px;
+        border-radius: 10px;
+        border: none;
+        height: 30px;
+    }
 }
