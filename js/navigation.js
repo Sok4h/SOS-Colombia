@@ -20,6 +20,8 @@ const createRequestBackBtn = document.getElementById("create-request-back");
 const navHelpLink = document.getElementById("nav-bring-help");
 const navDonationsLink = document.getElementById("nav-donations");
 const navObtainSuppliesLink = document.getElementById("nav-obtain-supplies");
+const deletedBtns = document.querySelectorAll('.card__btnDeleted');
+
 
 function navigateBetweenScreens(from, to) {
   HideSection(from, "animate__zoomOut");
@@ -95,6 +97,13 @@ requestCreatedScreen.addEventListener("click", () => {
 
   let userID = firebase.auth().currentUser.email.split("@")[0].toUpperCase();
   LoadMyRequests(userID);
+});
+
+deletedBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    let userID = firebase.auth().currentUser.email.split("@")[0].toUpperCase();
+    DeleteMyRequest(userID);
+  })
 });
 
 /*const ClickedBrigradeButton = () => {

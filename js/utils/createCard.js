@@ -61,8 +61,11 @@ const createCard = (type, data, elementType, id) => {
   if(id != null) {
     const btnDeleted = document.createElement("button");
     const textDeleted = document.createElement("p");
+
     btnDeleted.innerHTML ="Terminar solicitud";
     btnDeleted.classList.add("btn--white");
+    btnDeleted.classList.add("card__btnDeleted");
+
     textDeleted.innerHTML ="Terminarás tu solicitud de insumos";
 
     card.appendChild(btnDeleted);
