@@ -1,5 +1,11 @@
-const createCard = (type, data) => {
-    const card = document.createElement('article');
+const createCard = (type, data, elementType) => {
+    let card;
+    if(elementType) {
+        card = document.createElement(elementType);
+    } else {
+        card = document.createElement('article');
+    }
+    
     card.classList.add('card');
 
     const header = document.createElement('header');
@@ -27,7 +33,6 @@ const createCard = (type, data) => {
         sectionText.innerText = data.section;
         card.appendChild(sectionText);
     }
-
     if(data.list) {
         const list = document.createElement('ul');
         list.classList.add('card__list');
@@ -36,12 +41,13 @@ const createCard = (type, data) => {
             const item = document.createElement('li');
             item.classList.add('card__listItem');
             list.appendChild(item);
-            try {
-                const json = JSON.parse(element);
+            
+            const json = JSON.parse(element);
+
+            if(typeof json == 'object') {
                 item.innerHTML = `<b> ${json.name} </b> <br> ${json.number}`;
-            } catch {
+            } else {
                 item.innerText = element;
-                throw new Error(element);
             }
         });
     }
