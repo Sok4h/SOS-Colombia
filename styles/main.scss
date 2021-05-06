@@ -65,3 +65,19 @@ main {
         pointer-events: none;
     } 
 }
+
+@media (min-width: $small) {
+    .main-header {
+        position: static;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+
+        p {
+            padding: 0;
+        }
+    }
+}

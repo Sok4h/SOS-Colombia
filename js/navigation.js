@@ -28,14 +28,14 @@ function navigateBetweenScreens(from, to) {
   HideSection(from, "animate__zoomOut");
   setTimeout(() => {
     ShowSection(to, "animate__zoomIn");
-  }, 1000);
+  }, 500);
 }
 
 function navigateBetweenScreensAnimated(from, to, outAnimation, inAnimation) {
   HideSection(from, outAnimation);
   setTimeout(() => {
     ShowSection(to, inAnimation);
-  }, 1000);
+  }, 500);
 }
 
 function navBarTransition(to) {
@@ -61,7 +61,6 @@ citizenBtn.addEventListener("click", () => {
 loginBtn.addEventListener("click", () => {
   login()
   .then(user => {
-    console.log(user);
     navigateBetweenScreensAnimated(loginScreen, requestListScreen,"animate__fadeOutLeft","animate__fadeInRight");
   })
   .catch(error => {

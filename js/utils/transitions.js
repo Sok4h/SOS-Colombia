@@ -3,7 +3,7 @@ const HideSection = (section, animation) => {
   section.classList.add(animation);
   setTimeout(() => {
     SetActive(section, false);
-  }, 1000);
+  }, 500);
 }; //closes HideSection method
 
 const ShowSection = (section, animation) => {
