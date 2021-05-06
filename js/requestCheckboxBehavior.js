@@ -1,4 +1,4 @@
-window.addEventListener("load", () => {
+const addCheckboxBehavior = () => {
   const basicToggle = document.querySelector('input[name="basic"]');
   const basicExpand = document.querySelector('input[name="basicTitle"]');
   const basicCheckboxes = document.querySelectorAll(
@@ -121,4 +121,4 @@ window.addEventListener("load", () => {
       });
     });
   } //closes attachListeners function
-});
+}

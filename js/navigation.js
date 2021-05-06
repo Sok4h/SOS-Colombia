@@ -61,7 +61,6 @@ citizenBtn.addEventListener("click", () => {
 loginBtn.addEventListener("click", () => {
   login()
   .then(user => {
-    console.log(user);
     navigateBetweenScreensAnimated(loginScreen, requestListScreen,"animate__fadeOutLeft","animate__fadeInRight");
   })
   .catch(error => {
