@@ -1,5 +1,6 @@
 window.addEventListener('load', () => {
     const basicContainer = document.getElementById('basic-list');
+    const cleaningContainer = document.getElementById('cleaning-list');
     const equipmentContainer = document.getElementById('equipment-list');
     const injectologyContainer = document.getElementById('injectology-list');
     const woundsContainer = document.getElementById('wounds-list');
@@ -11,6 +12,7 @@ window.addEventListener('load', () => {
     createCheckboxesFromDatabase(woundsContainer, 'wounds');
     createCheckboxesFromDatabase(injectologyContainer, 'injectology');
     createCheckboxesFromDatabase(equipmentContainer, 'equipment');
+    createCheckboxesFromDatabase(cleaningContainer, 'cleaning');
     createCheckboxesFromDatabase(basicContainer, 'basic');
 
     setTimeout(addCheckboxBehavior, 5000);

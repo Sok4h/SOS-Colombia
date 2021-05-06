@@ -9,13 +9,14 @@ window.addEventListener('load', () => {
         };
         if(placeSelect.value) {
             const basicCheckboxes =  document.querySelectorAll('input[name="basicRequest"]:checked');
+            const cleaningCheckboxes =  document.querySelectorAll('input[name="cleaningRequest"]:checked');
             const equipmentCheckboxes =  document.querySelectorAll('input[name="equipmentRequest"]:checked');
             const injectologyCheckboxes =  document.querySelectorAll('input[name="injectologyRequest"]:checked');
             const medicineCheckboxes =  document.querySelectorAll('input[name="medicineRequest"]:checked');
             const solutionsCheckboxes =  document.querySelectorAll('input[name="solutionsRequest"]:checked');
             const woundsCheckboxes =  document.querySelectorAll('input[name="woundsRequest"]:checked');
         
-            let requestLength = basicCheckboxes.length + equipmentCheckboxes.length + injectologyCheckboxes.length + medicineCheckboxes.length + solutionsCheckboxes.length + woundsCheckboxes.length;
+            let requestLength = basicCheckboxes.length + cleaningCheckboxes.length+ equipmentCheckboxes.length + injectologyCheckboxes.length + medicineCheckboxes.length + solutionsCheckboxes.length + woundsCheckboxes.length;
 
             if(requestLength == 0) {
                 window.alert('Escoge al menos un insumo');
@@ -23,6 +24,7 @@ window.addEventListener('load', () => {
             }
 
             basicCheckboxes.forEach(basic => json.supplies.push({ category: 'basic', index: basic.value, name: basic.closest('.checkbox').querySelector('label').innerText}));
+            cleaningCheckboxes.forEach(cleaning => json.supplies.push({ category: 'cleaning', index: cleaning.value, name: cleaning.closest('.checkbox').querySelector('label').innerText}));
             equipmentCheckboxes.forEach(equipment => json.supplies.push({ category: 'equipment', index: equipment.value, name: equipment.closest('.checkbox').querySelector('label').innerText}));
             injectologyCheckboxes.forEach(injectology => json.supplies.push({ category: 'injectology', index: injectology.value, name: injectology.closest('.checkbox').querySelector('label').innerText}));
             medicineCheckboxes.forEach(medicine => json.supplies.push({ category: 'medicine', index: medicine.value, name: medicine.closest('.checkbox').querySelector('label').innerText}));

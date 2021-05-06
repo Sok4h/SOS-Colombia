@@ -5,6 +5,13 @@ const addCheckboxBehavior = () => {
     'input[name="basicRequest"]'
   );
 
+
+  const cleaningToggle = document.querySelector('input[name="cleaning"]');
+  const cleaningExpand = document.querySelector('input[name="cleaningTitle"]');
+  const cleaningCheckboxes = document.querySelectorAll(
+    'input[name="cleaningRequest"]'
+  );
+
   const equipmentToggle = document.querySelector('input[name="equipment"]');
   const equipmentExpand = document.querySelector(
     'input[name="equipmentTitle"]'
@@ -45,6 +52,10 @@ const addCheckboxBehavior = () => {
 
   basicToggle.addEventListener("change", (event) => {
     toggleSection(basicToggle, basicExpand, basicCheckboxes);
+  });
+
+  cleaningToggle.addEventListener("change", (event) => {
+    toggleSection(cleaningToggle, cleaningExpand, cleaningCheckboxes);
   });
 
   equipmentToggle.addEventListener("change", (event) => {
@@ -90,6 +101,13 @@ const addCheckboxBehavior = () => {
         verifySection(basicToggle, basicCheckboxes);
       });
     });
+
+    cleaningCheckboxes.forEach((checkbox) => {
+      checkbox.addEventListener("change", () => {
+        verifySection(cleaningToggle, cleaningCheckboxes);
+      });
+    });
+
 
     equipmentCheckboxes.forEach((checkbox) => {
       checkbox.addEventListener("change", () => {
