@@ -20,9 +20,6 @@ const createRequestBackBtn = document.getElementById("create-request-back");
 const navHelpLink = document.getElementById("nav-bring-help");
 const navDonationsLink = document.getElementById("nav-donations");
 const navObtainSuppliesLink = document.getElementById("nav-obtain-supplies");
-const finishRequestCreationBtn = document.getElementById(
-  "finish-request-creation-btn"
-);
 
 function navigateBetweenScreens(from, to) {
   HideSection(from, "animate__zoomOut");
@@ -85,10 +82,6 @@ navObtainSuppliesLink.addEventListener("click", () => {
   navBarTransition(findItemsScreen);
 });
 
-finishRequestCreationBtn.addEventListener("click", (event) => {
-  event.preventDefault();
-  navigateBetweenScreens(createRequestScreen, requestCreatedScreen);
-});
 
 requestCreatedScreen.addEventListener("click", () => {
   navigateBetweenScreens(requestCreatedScreen, requestListScreen);
