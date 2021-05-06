@@ -32,7 +32,6 @@ function loadRequestInfo(container, query) {
 
           suppliesNames.push(supplyName.name);
         });
-     
 
         db.collection("supplies_concentration_spots")
           .doc(request.location)
@@ -53,12 +52,13 @@ function loadRequestInfo(container, query) {
               list: suppliesNames,
             };
 
-            height++;
             const card = createCard("", cardData, "li");
+
+            height += 10 + 3 * cardData.list.length;
+
             container.appendChild(card);
+            container.style.setProperty("--height", `${height}rem`);
           });
       });
-
-      container.style.setProperty("--height", `${height * 100}rem`);
     });
 }
