@@ -45,7 +45,7 @@ function LoadMyRequests(userID) {
                 list: suppliesNames,
               };
   
-              const card = createCard("", cardData);
+              const card = createCard("", cardData,null,userID);
   
               height += 10 + 3 * cardData.list.length;
   
