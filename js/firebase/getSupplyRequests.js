@@ -28,9 +28,7 @@ function loadRequestInfo(container, query) {
 
         const suppliesNames = [];
         request.supplies.forEach((supply) => {
-          let supplyName = JSON.parse(supply);
-
-          suppliesNames.push(supplyName.name);
+          suppliesNames.push(supply.name);
         });
 
         db.collection("supplies_concentration_spots")
