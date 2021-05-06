@@ -48,11 +48,10 @@ const createCard = (type, data, elementType, button) => {
       const item = document.createElement("li");
       item.classList.add("card__listItem");
       list.appendChild(item);
-      let json ;
-      if (element.charAt(0) == "{")  json = JSON.parse(element);
+      //if (element.charAt(0) == "{")  json = JSON.parse(element);
 
-      if (typeof json == "object") {
-        item.innerHTML = `<b> ${json.name} </b> <br> ${json.number}`;
+      if (typeof element == "object") {
+        item.innerHTML = `<b> ${element.title} </b> <br> ${element.text}`;
       } else {
         item.innerText = element;
       }

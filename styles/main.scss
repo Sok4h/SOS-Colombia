@@ -43,6 +43,10 @@ body {
     flex-direction: column;
 }
 
+.underline {
+    text-decoration: underline;
+}
+
 main {
     width: 100%;
     margin: 0 auto;
@@ -61,7 +65,7 @@ main {
     display: none;
 }
 
-@media (max-width: $small) {
+@media (max-width: $medium) {
     .main-header {
         position: fixed;
         right: 0;
@@ -71,7 +75,7 @@ main {
     } 
 }
 
-@media (min-width: $small) {
+@media (min-width: $medium) {
     .main-header {
         position: static;
     }

@@ -3,6 +3,7 @@ const splashScreen = document.querySelector(".splashpage");
 const createRequestScreen = document.querySelector(".create-request-section");
 const loginScreen = document.querySelector(".login");
 const helpScreen = document.querySelector(".help-section");
+const donateBloodScreen = document.querySelector(".blood-donation-section");
 const findItemsScreen = document.querySelector(".find-items");
 const donationsScreen = document.querySelector(".donations-section");
 const requestListScreen = document.querySelector(".myRequests");
@@ -20,6 +21,7 @@ const createRequestBackBtn = document.getElementById("create-request-back");
 const navHelpLink = document.getElementById("nav-bring-help");
 const navDonationsLink = document.getElementById("nav-donations");
 const navObtainSuppliesLink = document.getElementById("nav-obtain-supplies");
+const navDonateBloodLink = document.getElementById("nav-donate-blood");
 
 function navigateBetweenScreens(from, to) {
   HideSection(from, "animate__zoomOut");
@@ -80,6 +82,11 @@ createRequestBtn.addEventListener("click", () => {
 
 navHelpLink.addEventListener("click", () => {
   navBarTransition(helpScreen);
+});
+
+navDonateBloodLink.addEventListener("click", () => {
+  getBloodDonations();
+  navBarTransition(donateBloodScreen);
 });
 
 navDonationsLink.addEventListener("click", () => {

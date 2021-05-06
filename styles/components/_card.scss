@@ -71,4 +71,17 @@
     &--dark {
         background-color: $blueDark;
     }
+
+    &--alert {
+        position: absolute;
+        width: calc(100% - 4rem);
+        bottom: 2rem;
+        color: $white;
+        cursor: pointer;
+
+        @media (min-width: $small) {
+            width: 100%;
+            bottom: 5rem;
+        }
+    }
 }
