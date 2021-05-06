@@ -103,6 +103,7 @@ navDonateBloodLink.addEventListener("click", () => {
 });
 
 navDonationsLink.addEventListener("click", () => {
+  getDonations();
   navBarTransition(donationsScreen);
 });
 

@@ -1,5 +1,7 @@
-window.addEventListener('load', () => {
+const getDonations = () => {
     const donationsContainer = document.querySelector('.donations__wrapper');
+
+    donationsContainer.innerHTML = "";
 
     db.collection('money_donation_info').get()
     .then(donations => {
@@ -22,4 +24,4 @@ window.addEventListener('load', () => {
             donationsContainer.appendChild(card);
         });
     })
-});
+}

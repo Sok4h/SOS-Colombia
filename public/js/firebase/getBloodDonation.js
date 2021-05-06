@@ -1,5 +1,7 @@
 const getBloodDonations = () => {
-    const bloodDonationSection = document.querySelector('.blood-donation-section');
+    const bloodDonationSection = document.querySelector('.blood-donation-wrapper');
+
+    bloodDonationSection.innerHTML = "";
 
     db.collection('blood-donations').get()
     .then(result => {
