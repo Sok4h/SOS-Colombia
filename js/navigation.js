@@ -48,6 +48,19 @@ createRequestBackBtn.addEventListener("click", () => {
 
 brigateBtn.addEventListener("click", () => {
   navigateBetweenScreens(splashScreen, loginScreen);
+  firebase.auth().onAuthStateChanged(user => {
+    if(user) {
+      navigateBetweenScreensAnimated(
+        loginScreen,
+        requestListScreen,
+        "animate__fadeOutLeft",
+        "animate__fadeInRight"
+      );
+      let userID = user.email.split("@")[0].toUpperCase();
+  
+      LoadMyRequests(userID);
+    }
+  });
 });
 
 citizenBtn.addEventListener("click", () => {
