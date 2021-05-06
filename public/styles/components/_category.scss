@@ -3,6 +3,7 @@
     cursor: pointer;
 
     &__expand {
+        opacity: 0;
 
         &:checked {
             ~.category__content {

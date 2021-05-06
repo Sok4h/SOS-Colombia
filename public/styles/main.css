@@ -68,6 +68,10 @@ h1, h2, h3 {
   cursor: pointer;
 }
 
+.category__expand {
+  opacity: 0;
+}
+
 .category__expand:checked ~ .category__content {
   max-height: var(--height);
 }
@@ -290,7 +294,7 @@ select::-ms-expand {
 }
 
 .burgermenu__btn span {
-  background-color: aliceblue;
+  background-color: #FFFFFF;
   display: block;
   height: 3px;
   width: 25px;
@@ -370,7 +374,7 @@ select::-ms-expand {
   text-decoration: none;
   padding-left: 3rem;
   font-size: 2rem;
-  color: white;
+  color: #FFFFFF;
   cursor: pointer;
 }
 
@@ -642,6 +646,8 @@ select::-ms-expand {
   position: fixed;
   width: 100%;
   z-index: 10;
+  -webkit-transition: background-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out;
 }
 
 .main-header--active {

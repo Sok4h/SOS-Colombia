@@ -94,20 +94,24 @@ createRequestBtn.addEventListener("click", () => {
 });
 
 navHelpLink.addEventListener("click", () => {
+  closeMenu();
   navBarTransition(helpScreen);
 });
 
 navDonateBloodLink.addEventListener("click", () => {
+  closeMenu();
   getBloodDonations();
   navBarTransition(donateBloodScreen);
 });
 
 navDonationsLink.addEventListener("click", () => {
+  closeMenu();
   getDonations();
   navBarTransition(donationsScreen);
 });
 
 navObtainSuppliesLink.addEventListener("click", () => {
+  closeMenu();
   navBarTransition(findItemsScreen);
 });
 

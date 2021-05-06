@@ -4,3 +4,4 @@ js/utils/firebaseApp.js
 firebase-debug.log
 firebase.json
 .firebaserc
+.firebase
