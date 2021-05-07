@@ -1,0 +1,33 @@
+.dialogDeleteRequest{
+
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    background:rgba(0, 0, 0, 0.75);
+    left:0px;
+    top: 0px;
+    padding: 1em;
+    width: 100%;
+    z-index: 1;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+
+    &__container{
+
+        &__title {
+
+            text-align: center;
+            margin-top:10px;
+            margin-bottom: 10px;
+        }
+    
+        .btn{
+    
+            margin: 0.5rem auto;
+        }
+
+    }
+   
+
+}

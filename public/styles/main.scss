@@ -10,10 +10,12 @@
 @import './components/navbar';
 @import './components/card';
 @import './components/createRequest';
+@import './layout/dialogDeleteRequest'; 
 @import'./layout/login';
 @import './layout/splashPage';
 @import './layout/create-request';
 @import './layout/generic';
+
 
 html {
     font-size: 62.5%;

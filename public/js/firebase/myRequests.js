@@ -43,7 +43,7 @@ function LoadMyRequests(userID) {
   
               let btnInfo = {
                 text: 'Terminar solicitud',
-                callback: deleteRequest,
+                callback: ActivateDialog,
                 message: 'Terminarás tu solicitud de insumos'
               }
 
@@ -57,11 +57,12 @@ function LoadMyRequests(userID) {
       });
 }
 
-function deleteRequest(event) {
-  const card = event.target.closest('.card');
+function deleteRequest(card) {
   const id = card.dataset.requestId;
   db.collection('requests').doc(id).delete()
   .then(() => {
+
+    CloseDialog();
   });
 
   card.parentNode.removeChild(card);
