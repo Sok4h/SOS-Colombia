@@ -5,8 +5,19 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    vertical-align: middle;
+    position:relative;
 
+    
+    .login-header{
+
+        align-self: flex-start;
+
+        .create-request-back{
+
+            left: 15%;
+            top: 20%;
+        }
+    }
 
     h1{
         text-align: center;  
@@ -19,7 +30,9 @@
     form{
         width: 100%;
         max-width: 300px;
-        position: relative;
+        justify-self: center;
+
+        
 
         .btn{
             margin-top:35px;
@@ -28,4 +41,6 @@
 
         
     }
+
+    
 }

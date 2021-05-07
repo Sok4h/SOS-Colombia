@@ -190,9 +190,16 @@
       Login Page
       ////////////////////////////////-->
     <section style="--animate-duration: 0.5s" class="login hidden">
+      <header class="login-header">
+        <button id="create-request-backHome" class="create-request-back">
+          <span class="material-icons material-icons-outlined">
+            arrow_back_ios
+          </span>
+        </button>
+      </header>
       <h1>Bienvenido Brigadista ¡Es hora de autenticar!</h1>
-
       <form action="submit">
+        
         <div class="textfield">
           <input class="textfield__input textfield__input--icon" type="text" name="cedula" placeholder="Usuario"
             id="id" />
@@ -444,7 +451,7 @@
   <script src="./js/requestCheckboxBehavior.js"></script>
   <script src="./js/utils/createCard.js"></script>
   <script src="./js/utils/createCheckbox.js"></script>
-  
+
   <!-- //////////////////// 
     DB scripts  
     ////////////////////-->
