@@ -10,54 +10,82 @@ loadRequestInfo(CenterRequestContainer, "Centro");
 loadRequestInfo(WestRequestContainer, "Oeste");
 loadRequestInfo(EastRequestContainer, "Oriente");
 
+
 function loadRequestInfo(container, query) {
   db.collection("requests")
-  .where("sector", "==", query)
-  .get()
-  .then((data) => {
-    let height = 1;
-    data.forEach((requestData) => {
-      const request = {
-        author: requestData.data().author,
-        zone: requestData.data().sector,
-        location: requestData.data().supply_concentration_spot,
-        time: requestData.data().timestamp,
-        supplies: requestData.data().supplies,
-        id: requestData.id,
-      };
+    .where("sector", "==", query)
+    .get()
+    .then((data) => {
 
-      const suppliesNames = [];
-      request.supplies.forEach((supply) => {
-        suppliesNames.push(supply.name);
-      });
-
-      db.collection("supplies_concentration_spots")
-        .doc(request.location)
-        .get()
-        .then((locationData) => {
-          const location = {
-            address: locationData.data().address,
-            name: locationData.data().name,
-            phones: locationData.data().phone,
-            zone: locationData.data().sector,
-            id: locationData.id,
+      
+        let height = 1;
+        data.forEach((requestData) => {
+          const request = {
+            author: requestData.data().author,
+            zone: requestData.data().sector,
+            location: requestData.data().supply_concentration_spot,
+            time: requestData.data().timestamp,
+            supplies: requestData.data().supplies,
+            id: requestData.id,
           };
 
-          const cardData = {
-            title: location.name,
-            subtitle: location.address,
-            section: "¿Qué se necesita?",
-            list: suppliesNames,
-            time: request.time
-          };
+          const suppliesNames = [];
+          request.supplies.forEach((supply) => {
+            suppliesNames.push(supply.name);
+          });
 
-          const card = createCard("", cardData, "li");
+          db.collection("supplies_concentration_spots")
+            .doc(request.location)
+            .get()
+            .then((locationData) => {
+              const location = {
+                address: locationData.data().address,
+                name: locationData.data().name,
+                phones: locationData.data().phone,
+                zone: locationData.data().sector,
+                id: locationData.id,
+              };
 
-          height += 10 + 5 * cardData.list.length;
+              const cardData = {
+                title: location.name,
+                subtitle: location.address,
+                section: "¿Qué se necesita?",
+                list: suppliesNames,
+                time: request.time
+              };
 
-          container.appendChild(card);
-          container.style.setProperty("--height", `${height}rem`);
+              const card = createCard("", cardData, "li");
+
+              height += 10 + 5 * cardData.list.length;
+
+              container.appendChild(card);
+              container.style.setProperty("--height", `${height}rem`);
+            });
         });
+      
+
+
     });
-  });
+
+
+}
+
+function noneRequestInfo() {
+  const noitems = document.createElement("h2");
+  noitems.innerHTML = "No hay solicitudes de esta zona en el momento."
+  if (NorthRequestContainer.childElementCount === 0) {
+    NorthRequestContainer.appendChild(noitems);
+  }
+  if (SouthRequestContainer.childElementCount === 0) {
+    SouthRequestContainer.appendChild(noitems);
+  }
+  if (CenterRequestContainer.childElementCount === 0) {
+    CenterRequestContainer.appendChild(noitems);
+  }
+  if (WestRequestContainer.childElementCount === 0) {
+    WestRequestContainer.appendChild(noitems);
+  }
+  if (EastRequestContainer.childElementCount === 0) {
+    EastRequestContainer.appendChild(noitems);
+  }
 }

@@ -74,6 +74,7 @@ citizenBtn.addEventListener("click", () => {
   setTimeout(() => {
     ShowSection(navBar, "animate__fadeIn");
   }, 1000);
+  noneRequestInfo();
 });
 
 loginBtn.addEventListener("click", () => {
@@ -102,6 +103,7 @@ createRequestBtn.addEventListener("click", () => {
 navHelpLink.addEventListener("click", () => {
   closeMenu();
   navBarTransition(helpScreen);
+  noneRequestInfo();
 });
 
 navDonateBloodLink.addEventListener("click", () => {
