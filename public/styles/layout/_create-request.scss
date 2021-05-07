@@ -8,11 +8,15 @@
 
 .create-request-back {
     position: absolute;
-    left: 0;
-    top: 50%;
+    
     transform: translateY(-50%);
     color: $white;
     background: none;
     border: none;
     cursor: pointer;
+}
+
+#create-request-backHome{
+    left: 5%;
+    top: 7%;
 }
