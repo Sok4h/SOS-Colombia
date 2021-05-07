@@ -73,7 +73,8 @@
     }
 
     &--alert {
-        position: fixed;
+        position: block;
+        margin-top: 30px;
         width: calc(100% - 4rem);
         bottom: 2rem;
         color: $white;
@@ -82,6 +83,7 @@
         @media (min-width: $small) {
             width: 100%;
             bottom: 5rem;
+            position: block;
         }
     }
 }
