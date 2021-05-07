@@ -1,3 +1,4 @@
+
 //Sections
 const splashScreen = document.querySelector(".splashpage");
 const backHome = document.getElementById("create-request-backHome");
