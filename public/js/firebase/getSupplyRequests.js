@@ -6,7 +6,7 @@ const EastRequestContainer = document.querySelector(".help-section__East");
 
 loadRequestInfo(NorthRequestContainer, "Norte");
 loadRequestInfo(SouthRequestContainer, "Sur");
-loadRequestInfo(CenterRequestContainer, "Center");
+loadRequestInfo(CenterRequestContainer, "Centro");
 loadRequestInfo(WestRequestContainer, "Oeste");
 loadRequestInfo(EastRequestContainer, "Oriente");
 
