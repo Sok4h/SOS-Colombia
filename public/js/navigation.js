@@ -1,5 +1,6 @@
 //Sections
 const splashScreen = document.querySelector(".splashpage");
+const backHome = document.getElementById("create-request-backHome");
 const createRequestScreen = document.querySelector(".create-request-section");
 const loginScreen = document.querySelector(".login");
 const helpScreen = document.querySelector(".help-section");
@@ -42,6 +43,10 @@ function navBarTransition(to) {
   if (currentSection != to) navigateBetweenScreens(currentSection, to);
 }
 
+backHome.addEventListener("click",()=>{
+
+  navigateBetweenScreens(loginScreen,splashScreen);
+})
 createRequestBackBtn.addEventListener("click", () => {
   navigateBetweenScreens(createRequestScreen, requestListScreen);
 });
