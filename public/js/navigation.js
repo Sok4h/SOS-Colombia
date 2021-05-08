@@ -24,6 +24,7 @@ const navHelpLink = document.getElementById("nav-bring-help");
 const navDonationsLink = document.getElementById("nav-donations");
 const navObtainSuppliesLink = document.getElementById("nav-obtain-supplies");
 const navDonateBloodLink = document.getElementById("nav-donate-blood");
+const confirmRequestCreated = document.getElementById("btnRequestConfirmation");
 
 function navigateBetweenScreens(from, to) {
   HideSection(from, "animate__zoomOut");
@@ -130,7 +131,7 @@ navObtainSuppliesLink.addEventListener("click", () => {
   navBarTransition(findItemsScreen);
 });
 
-requestCreatedScreen.addEventListener("click", () => {
+confirmRequestCreated.addEventListener("click", () => {
   navigateBetweenScreens(requestCreatedScreen, requestListScreen);
 
   let userID = firebase.auth().currentUser.email.split("@")[0].toUpperCase();
