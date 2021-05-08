@@ -1,4 +1,3 @@
-
 //Sections
 const splashScreen = document.querySelector(".splashpage");
 const backHome = document.getElementById("create-request-backHome");
@@ -18,6 +17,7 @@ const navBar = document.querySelector(".main-header");
 const brigateBtn = document.getElementById("brigade-btn");
 const citizenBtn = document.getElementById("citizen-btn");
 const loginBtn = document.getElementById("login-btn");
+const logOutBtns = document.querySelectorAll(".logOutBtn");
 const createRequestBtn = document.getElementById("create-request-btn");
 const createRequestBackBtn = document.getElementById("create-request-back");
 const navHelpLink = document.getElementById("nav-bring-help");
@@ -44,18 +44,24 @@ function navBarTransition(to) {
   if (currentSection != to) navigateBetweenScreens(currentSection, to);
 }
 
-backHome.addEventListener("click",()=>{
-
-  navigateBetweenScreens(loginScreen,splashScreen);
-})
+backHome.addEventListener("click", () => {
+  navigateBetweenScreens(loginScreen, splashScreen);
+});
 createRequestBackBtn.addEventListener("click", () => {
   navigateBetweenScreens(createRequestScreen, requestListScreen);
 });
 
+logOutBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    firebase.auth().signOut();
+    navigateBetweenScreens(requestListScreen, splashScreen);
+  });
+});
+
 brigateBtn.addEventListener("click", () => {
   navigateBetweenScreens(splashScreen, loginScreen);
-  firebase.auth().onAuthStateChanged(user => {
-    if(user) {
+  firebase.auth().onAuthStateChanged((user) => {
+    if (user) {
       navigateBetweenScreensAnimated(
         loginScreen,
         requestListScreen,
@@ -63,7 +69,7 @@ brigateBtn.addEventListener("click", () => {
         "animate__fadeInRight"
       );
       let userID = user.email.split("@")[0].toUpperCase();
-  
+
       LoadMyRequests(userID);
     }
   });

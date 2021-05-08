@@ -1,472 +1,743 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- HEAD -->
+  <!-- HEAD -->
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 
-  <link rel="shortcut icon" href="./src/img/ico/favicon.png" type="image/x-icon" />
-  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link
+      rel="shortcut icon"
+      href="./src/img/ico/favicon.png"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="./styles/main.css" />
-  <title>SOS Colombia</title>
-</head>
+    <link rel="stylesheet" href="./styles/main.css" />
+    <title>SOS Colombia</title>
+  </head>
 
-<!-- BODY -->
+  <!-- BODY -->
 
-<body>
-  <!--////////////////////////////////
+  <body>
+    <!--////////////////////////////////
      Burguer menu
       ////////////////////////////////-->
-  <header class="main-header hidden">
-    <section class="burgermenu">
-      <img src="" alt="Logo" class="burgermenu__logo" />
-      <button class="burgermenu__btn">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </section>
-    <nav class="navbar">
-      <p id="nav-bring-help" class="navbar__a">Brinda Ayuda</p>
-      <p id="nav-donations" class="navbar__a">Donaciones</p>
-      <p id="nav-obtain-supplies" class="navbar__a">Obtener Insumos</p>
-      <p id="nav-donate-blood" class="navbar__a">Donatón de sangre</p>
-    </nav>
-  </header>
+    <header class="main-header hidden">
+      <section class="burgermenu">
+        <img src="" alt="Logo" class="burgermenu__logo" />
+        <button class="burgermenu__btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </section>
+      <nav class="navbar">
+        <p id="nav-bring-help" class="navbar__a">Brinda Ayuda</p>
+        <p id="nav-donations" class="navbar__a">Donaciones</p>
+        <p id="nav-obtain-supplies" class="navbar__a">Obtener Insumos</p>
+        <p id="nav-donate-blood" class="navbar__a">Donatón de sangre</p>
+      </nav>
+    </header>
 
-  <main>
-    <!--////////////////////////////////
+    <main>
+      <!--////////////////////////////////
       Splash Page
       ////////////////////////////////-->
-    <section class="splashpage animate__animated animate__zoomIn" style="--animate-duration: 0.5s">
-      <img class="animate__animated animate__fadeInDown logo" src="./src/img/ico/logo.svg" alt="" />
+      <section
+        class="splashpage animate__animated animate__zoomIn"
+        style="--animate-duration: 0.5s"
+      >
+        <img
+          class="animate__animated animate__fadeInDown logo"
+          src="./src/img/ico/logo.svg"
+          alt=""
+        />
 
-      <div class="splashpage__btnContainer animate__animated animate__fadeInUp">
-        <button class="btn btn--blue" id="brigade-btn">Soy Brigadista</button>
-        <button class="btn btn--outlineWhite" id="citizen-btn">
-          Soy Ciudadano
-        </button>
-      </div>
-    </section>
+        <div
+          class="splashpage__btnContainer animate__animated animate__fadeInUp"
+        >
+          <button class="btn btn--blue" id="brigade-btn">Soy Brigadista</button>
+          <button class="btn btn--outlineWhite" id="citizen-btn">
+            Soy Ciudadano
+          </button>
+        </div>
+      </section>
 
-    <!--////////////////////////////////
+      <!--////////////////////////////////
       New Supply Request Page
       ////////////////////////////////-->
-    <section style="--animate-duration: 0.5s" class="animate__animated create-request-section hidden">
-      <header class="flex-center">
-        <button id="create-request-back" class="create-request-back">
-          <span class="material-icons material-icons-outlined">
-            arrow_back_ios
-          </span>
-        </button>
+      <section
+        style="--animate-duration: 0.5s"
+        class="animate__animated create-request-section hidden"
+      >
+        <header class="flex-center">
+          <button id="create-request-back" class="create-request-back">
+            <span class="material-icons material-icons-outlined">
+              arrow_back_ios
+            </span>
+          </button>
 
-        <h1>Indícanos qué necesitas</h1>
-      </header>
-      <form>
-        <div class="textfield">
-          <label for="punto" class="textfield__label">¿En dónde estás?</label>
-          <select name="punto" id="punto" class="textfield__input create-request-section__locationSelection">
-            <option value="" selected>Selecciona un punto...</option>
-          </select>
+          <h1>Indícanos qué necesitas</h1>
+        </header>
+        <form>
+          <div class="textfield">
+            <label for="punto" class="textfield__label">¿En dónde estás?</label>
+            <select
+              name="punto"
+              id="punto"
+              class="textfield__input create-request-section__locationSelection"
+            >
+              <option value="" selected>Selecciona un punto...</option>
+            </select>
 
-          <span class="material-icons material-icons-outlined textfield__arrow">expand_more</span>
-        </div>
+            <span
+              class="material-icons material-icons-outlined textfield__arrow"
+              >expand_more</span
+            >
+          </div>
 
-        <div class="category__container">
-          <label for="basicTitle" class="category checkbox checkbox--underline">
-            <input type="checkbox" name="basic" id="basic" class="checkbox__input" />
-            <p for="basic" class="checkbox__label">Básicos</p>
-          </label>
+          <div class="category__container">
+            <label
+              for="basicTitle"
+              class="category checkbox checkbox--underline"
+            >
+              <input
+                type="checkbox"
+                name="basic"
+                id="basic"
+                class="checkbox__input"
+              />
+              <p for="basic" class="checkbox__label">Básicos</p>
+            </label>
 
-          <input type="checkbox" name="basicTitle" id="basicTitle" class="category__expand" />
+            <input
+              type="checkbox"
+              name="basicTitle"
+              id="basicTitle"
+              class="category__expand"
+            />
 
-          <span class="material-icons material-icons-outlined category__arrow">expand_more</span>
+            <span class="material-icons material-icons-outlined category__arrow"
+              >expand_more</span
+            >
 
-          <ul class="category__content" id="basic-list"></ul>
-        </div>
+            <ul class="category__content" id="basic-list"></ul>
+          </div>
 
-        <div class="category__container">
-          <label for="cleaningTitle" class="category checkbox checkbox--underline">
-            <input type="checkbox" name="cleaning" id="cleaning" class="checkbox__input" />
-            <p for="cleaning" class="checkbox__label">Aseo y Limpieza</p>
-          </label>
+          <div class="category__container">
+            <label
+              for="cleaningTitle"
+              class="category checkbox checkbox--underline"
+            >
+              <input
+                type="checkbox"
+                name="cleaning"
+                id="cleaning"
+                class="checkbox__input"
+              />
+              <p for="cleaning" class="checkbox__label">Aseo y Limpieza</p>
+            </label>
 
-          <input type="checkbox" name="cleaningTitle" id="cleaningTitle" class="category__expand" />
+            <input
+              type="checkbox"
+              name="cleaningTitle"
+              id="cleaningTitle"
+              class="category__expand"
+            />
 
-          <span class="material-icons material-icons-outlined category__arrow">expand_more</span>
+            <span class="material-icons material-icons-outlined category__arrow"
+              >expand_more</span
+            >
 
-          <ul class="category__content" id="cleaning-list"></ul>
-        </div>
+            <ul class="category__content" id="cleaning-list"></ul>
+          </div>
 
-        <div class="category__container">
-          <label for="equipmentTitle" class="category checkbox checkbox--underline">
-            <input type="checkbox" name="equipment" id="equipment" class="checkbox__input" />
-            <p for="equipment" class="checkbox__label">Equipamentos</p>
-          </label>
+          <div class="category__container">
+            <label
+              for="equipmentTitle"
+              class="category checkbox checkbox--underline"
+            >
+              <input
+                type="checkbox"
+                name="equipment"
+                id="equipment"
+                class="checkbox__input"
+              />
+              <p for="equipment" class="checkbox__label">Equipamentos</p>
+            </label>
 
-          <input type="checkbox" name="equipmentTitle" id="equipmentTitle" class="category__expand" />
+            <input
+              type="checkbox"
+              name="equipmentTitle"
+              id="equipmentTitle"
+              class="category__expand"
+            />
 
-          <span class="material-icons material-icons-outlined category__arrow">expand_more</span>
+            <span class="material-icons material-icons-outlined category__arrow"
+              >expand_more</span
+            >
 
-          <ul class="category__content" id="equipment-list"></ul>
-        </div>
+            <ul class="category__content" id="equipment-list"></ul>
+          </div>
 
-        <div class="category__container">
-          <label for="injectologyTitle" class="category checkbox checkbox--underline">
-            <input type="checkbox" name="injectology" id="injectology" class="checkbox__input" />
-            <p for="injectology" class="checkbox__label">Inyectología</p>
-          </label>
+          <div class="category__container">
+            <label
+              for="injectologyTitle"
+              class="category checkbox checkbox--underline"
+            >
+              <input
+                type="checkbox"
+                name="injectology"
+                id="injectology"
+                class="checkbox__input"
+              />
+              <p for="injectology" class="checkbox__label">Inyectología</p>
+            </label>
 
-          <input type="checkbox" name="injectologyTitle" id="injectologyTitle" class="category__expand" />
+            <input
+              type="checkbox"
+              name="injectologyTitle"
+              id="injectologyTitle"
+              class="category__expand"
+            />
 
-          <span class="material-icons material-icons-outlined category__arrow">expand_more</span>
+            <span class="material-icons material-icons-outlined category__arrow"
+              >expand_more</span
+            >
 
-          <ul class="category__content" id="injectology-list"></ul>
-        </div>
+            <ul class="category__content" id="injectology-list"></ul>
+          </div>
 
-        <div class="category__container">
-          <label for="medicineTitle" class="category checkbox checkbox--underline">
-            <input type="checkbox" name="medicine" id="medicine" class="checkbox__input" />
-            <p for="medicine" class="checkbox__label">Medicamentos</p>
-          </label>
+          <div class="category__container">
+            <label
+              for="medicineTitle"
+              class="category checkbox checkbox--underline"
+            >
+              <input
+                type="checkbox"
+                name="medicine"
+                id="medicine"
+                class="checkbox__input"
+              />
+              <p for="medicine" class="checkbox__label">Medicamentos</p>
+            </label>
 
-          <input type="checkbox" name="medicineTitle" id="medicineTitle" class="category__expand" />
+            <input
+              type="checkbox"
+              name="medicineTitle"
+              id="medicineTitle"
+              class="category__expand"
+            />
 
-          <span class="material-icons material-icons-outlined category__arrow">expand_more</span>
+            <span class="material-icons material-icons-outlined category__arrow"
+              >expand_more</span
+            >
 
-          <ul class="category__content" id="medicine-list"></ul>
-        </div>
+            <ul class="category__content" id="medicine-list"></ul>
+          </div>
 
-        <div class="category__container">
-          <label for="solutionsTitle" class="category checkbox checkbox--underline">
-            <input type="checkbox" name="solutions" id="solutions" class="checkbox__input" />
-            <p for="solutions" class="checkbox__label">Soluciones</p>
-          </label>
+          <div class="category__container">
+            <label
+              for="solutionsTitle"
+              class="category checkbox checkbox--underline"
+            >
+              <input
+                type="checkbox"
+                name="solutions"
+                id="solutions"
+                class="checkbox__input"
+              />
+              <p for="solutions" class="checkbox__label">Soluciones</p>
+            </label>
 
-          <input type="checkbox" name="solutionsTitle" id="solutionsTitle" class="category__expand" />
+            <input
+              type="checkbox"
+              name="solutionsTitle"
+              id="solutionsTitle"
+              class="category__expand"
+            />
 
-          <span class="material-icons material-icons-outlined category__arrow">expand_more</span>
+            <span class="material-icons material-icons-outlined category__arrow"
+              >expand_more</span
+            >
 
-          <ul class="category__content" id="solutions-list"></ul>
-        </div>
+            <ul class="category__content" id="solutions-list"></ul>
+          </div>
 
-        <div class="category__container">
-          <label for="woundsTitle" class="category checkbox checkbox--underline">
-            <input type="checkbox" name="wounds" id="wounds" class="checkbox__input" />
-            <p for="wounds" class="checkbox__label">Heridas</p>
-          </label>
+          <div class="category__container">
+            <label
+              for="woundsTitle"
+              class="category checkbox checkbox--underline"
+            >
+              <input
+                type="checkbox"
+                name="wounds"
+                id="wounds"
+                class="checkbox__input"
+              />
+              <p for="wounds" class="checkbox__label">Heridas</p>
+            </label>
 
-          <input type="checkbox" name="woundsTitle" id="woundsTitle" class="category__expand" />
+            <input
+              type="checkbox"
+              name="woundsTitle"
+              id="woundsTitle"
+              class="category__expand"
+            />
 
-          <span class="material-icons material-icons-outlined category__arrow">expand_more</span>
+            <span class="material-icons material-icons-outlined category__arrow"
+              >expand_more</span
+            >
 
-          <ul class="category__content" id="wounds-list"></ul>
-        </div>
+            <ul class="category__content" id="wounds-list"></ul>
+          </div>
 
-        <li class="checkbox">
-          <input type="checkbox" name="foodRequest" id="foodRequest" class="checkbox__input" />
-          <label for="foodRequest" class="checkbox__label">Alimentos no perecederos / Alimentos empaquetados</label>
-        </li>
+          <li class="checkbox">
+            <input
+              type="checkbox"
+              name="foodRequest"
+              id="foodRequest"
+              class="checkbox__input"
+            />
+            <label for="foodRequest" class="checkbox__label"
+              >Alimentos no perecederos / Alimentos empaquetados</label
+            >
+          </li>
 
-        <li class="checkbox">
-          <input type="checkbox" name="animalFoodRequest" id="animalFoodRequest" class="checkbox__input" />
-          <label for="animalFoodRequest" class="checkbox__label">Alimento para mascotas</label>
-        </li>
+          <li class="checkbox">
+            <input
+              type="checkbox"
+              name="animalFoodRequest"
+              id="animalFoodRequest"
+              class="checkbox__input"
+            />
+            <label for="animalFoodRequest" class="checkbox__label"
+              >Alimento para mascotas</label
+            >
+          </li>
 
-        <button class="btn btn--white" id="finish-request-creation-btn">
-          Enviar
-        </button>
-      </form>
-    </section>
+          <button class="btn btn--white" id="finish-request-creation-btn">
+            Enviar
+          </button>
+        </form>
+      </section>
 
-    <!--////////////////////////////////
+      <!--////////////////////////////////
       Login Page
       ////////////////////////////////-->
-    <section style="--animate-duration: 0.5s" class="login hidden">
-      <header class="login-header">
-        <button id="create-request-backHome" class="create-request-back">
-          <span class="material-icons material-icons-outlined">
-            arrow_back_ios
-          </span>
-        </button>
-      </header>
-      <h1>Bienvenido Brigadista ¡Es hora de autenticar!</h1>
-      <form action="submit">
-        
-        <div class="textfield">
-          <input class="textfield__input textfield__input--icon" type="text" name="cedula" placeholder="Usuario"
-            id="id" />
-          <span class="material-icons material-icons-outlined textfield__icon">
-            person_outline
-          </span>
-        </div>
+      <section style="--animate-duration: 0.5s" class="login hidden">
+        <header class="login-header">
+          <button id="create-request-backHome" class="create-request-back">
+            <span class="material-icons material-icons-outlined">
+              arrow_back_ios
+            </span>
+          </button>
+        </header>
+        <h1>Bienvenido Brigadista ¡Es hora de autenticar!</h1>
+        <form action="submit">
+          <div class="textfield">
+            <input
+              class="textfield__input textfield__input--icon"
+              type="text"
+              name="cedula"
+              placeholder="Usuario"
+              id="id"
+            />
+            <span
+              class="material-icons material-icons-outlined textfield__icon"
+            >
+              person_outline
+            </span>
+          </div>
 
-        <div class="textfield">
-          <input class="textfield__input textfield__input--icon" type="password" name="codigoAcceso" id="password"
-            placeholder="Código de acceso" />
-          <span class="material-icons material-icons-outlined textfield__icon">
-            gpp_good
-          </span>
-        </div>
+          <div class="textfield">
+            <input
+              class="textfield__input textfield__input--icon"
+              type="password"
+              name="codigoAcceso"
+              id="password"
+              placeholder="Código de acceso"
+            />
+            <span
+              class="material-icons material-icons-outlined textfield__icon"
+            >
+              gpp_good
+            </span>
+          </div>
 
-        <button type="button" class="btn btn--white" id="login-btn">
-          Continuar
-        </button>
-      </form>
+          <button type="button" class="btn btn--white" id="login-btn">
+            Continuar
+          </button>
+        </form>
 
-      <a href="https://www.instagram.com/sosbrigadista/" target="_blank" class="card card--dark card--alert">
-        <h3 class="card__title">Importante</h3>
-        <p class="card__section">
-          En este momento nos encontramos operando con un grupo reducido de
-          brigadistas, si deseas ser parte del grupo por favor contáctanos en
-          Instagram: <span class="underline">@SOSBrigadistas.</span>
-        </p>
-      </a>
-    </section>
+        <a
+          href="https://www.instagram.com/sosbrigadista/"
+          target="_blank"
+          class="card card--dark card--alert"
+        >
+          <h3 class="card__title">Importante</h3>
+          <p class="card__section">
+            En este momento nos encontramos operando con un grupo reducido de
+            brigadistas, si deseas ser parte del grupo por favor contáctanos en
+            Instagram: <span class="underline">@SOSBrigadistas.</span>
+          </p>
+        </a>
+      </section>
 
-    <!--////////////////////////////////
+      <!--////////////////////////////////
       Bring help Page
       ////////////////////////////////-->
-    <section style="--animate-duration: 0.5s" class="help-section hidden">
-      <header class="flex-center">
-        <h1>Brinda ayuda</h1>
-      </header>
+      <section style="--animate-duration: 0.5s" class="help-section hidden">
+        <header class="flex-center">
+          <h1>Brinda ayuda</h1>
+        </header>
 
-      <h2>Puntos que necesitan tu ayuda</h2>
+        <h2>Puntos que necesitan tu ayuda</h2>
 
-      <h3>
-        Para mas información sobre un punto de recolección de suministros,
-        escríbenos a:
-        <a class="underline" href="https://www.instagram.com/sosbrigadista/" target="_blank">@SOSBrigadistas</a>.
-      </h3>
+        <h3>
+          Para mas información sobre un punto de recolección de suministros,
+          escríbenos a:
+          <a
+            class="underline"
+            href="https://www.instagram.com/sosbrigadista/"
+            target="_blank"
+            >@SOSBrigadistas</a
+          >.
+        </h3>
 
-      <div class="category__container" style="--height: 50rem">
-        <label for="east" class="category checkbox checkbox--underline">
-          <p class="checkbox__label">Oriente</p>
-        </label>
+        <div class="category__container" style="--height: 50rem">
+          <label for="east" class="category checkbox checkbox--underline">
+            <p class="checkbox__label">Oriente</p>
+          </label>
 
-        <input type="checkbox" name="east" id="east" class="category__expand" />
-        <span class="material-icons material-icons-outlined category__arrow">expand_more</span>
+          <input
+            type="checkbox"
+            name="east"
+            id="east"
+            class="category__expand"
+          />
+          <span class="material-icons material-icons-outlined category__arrow"
+            >expand_more</span
+          >
 
-        <ul class="category__content help-section__East"></ul>
-      </div>
+          <ul class="category__content help-section__East"></ul>
+        </div>
 
-      <div class="category__container" style="--height: 50rem">
-        <label for="center" class="category checkbox checkbox--underline">
-          <p class="checkbox__label">Centro</p>
-        </label>
+        <div class="category__container" style="--height: 50rem">
+          <label for="center" class="category checkbox checkbox--underline">
+            <p class="checkbox__label">Centro</p>
+          </label>
 
-        <input type="checkbox" name="center" id="center" class="category__expand" />
-        <span class="material-icons material-icons-outlined category__arrow">expand_more</span>
+          <input
+            type="checkbox"
+            name="center"
+            id="center"
+            class="category__expand"
+          />
+          <span class="material-icons material-icons-outlined category__arrow"
+            >expand_more</span
+          >
 
-        <ul class="category__content help-section__Center"></ul>
-      </div>
+          <ul class="category__content help-section__Center"></ul>
+        </div>
 
-      <div class="category__container" style="--height: 50rem">
-        <label for="south" class="category checkbox checkbox--underline">
-          <p class="checkbox__label">Sur</p>
-        </label>
+        <div class="category__container" style="--height: 50rem">
+          <label for="south" class="category checkbox checkbox--underline">
+            <p class="checkbox__label">Sur</p>
+          </label>
 
-        <input type="checkbox" name="south" id="south" class="category__expand" />
-        <span class="material-icons material-icons-outlined category__arrow">expand_more</span>
+          <input
+            type="checkbox"
+            name="south"
+            id="south"
+            class="category__expand"
+          />
+          <span class="material-icons material-icons-outlined category__arrow"
+            >expand_more</span
+          >
 
-        <ul class="category__content help-section__South"></ul>
-      </div>
+          <ul class="category__content help-section__South"></ul>
+        </div>
 
-      <div class="category__container" style="--height: 50rem">
-        <label for="north" class="category checkbox checkbox--underline">
-          <p class="checkbox__label">Norte</p>
-        </label>
+        <div class="category__container" style="--height: 50rem">
+          <label for="north" class="category checkbox checkbox--underline">
+            <p class="checkbox__label">Norte</p>
+          </label>
 
-        <input type="checkbox" name="north" id="north" class="category__expand" />
-        <span class="material-icons material-icons-outlined category__arrow">expand_more</span>
+          <input
+            type="checkbox"
+            name="north"
+            id="north"
+            class="category__expand"
+          />
+          <span class="material-icons material-icons-outlined category__arrow"
+            >expand_more</span
+          >
 
-        <ul class="category__content help-section__North"></ul>
-      </div>
+          <ul class="category__content help-section__North"></ul>
+        </div>
 
-      <div class="category__container" style="--height: 50rem">
-        <label for="west" class="category checkbox checkbox--underline">
-          <p class="checkbox__label">Oeste</p>
-        </label>
+        <div class="category__container" style="--height: 50rem">
+          <label for="west" class="category checkbox checkbox--underline">
+            <p class="checkbox__label">Oeste</p>
+          </label>
 
-        <input type="checkbox" name="west" id="west" class="category__expand" />
-        <span class="material-icons material-icons-outlined category__arrow">expand_more</span>
+          <input
+            type="checkbox"
+            name="west"
+            id="west"
+            class="category__expand"
+          />
+          <span class="material-icons material-icons-outlined category__arrow"
+            >expand_more</span
+          >
 
-        <ul class="category__content help-section__West"></ul>
-      </div>
-    </section>
+          <ul class="category__content help-section__West"></ul>
+        </div>
+      </section>
 
-    <!--////////////////////////////////
+      <!--////////////////////////////////
       Blood donation Page
       ////////////////////////////////-->
-    <section style="--animate-duration: 0.5s" class="blood-donation-section hidden">
-      <header class="flex-center">
-        <h1>Donatón de sangre</h1>
-      </header>
+      <section
+        style="--animate-duration: 0.5s"
+        class="blood-donation-section hidden"
+      >
+        <header class="flex-center">
+          <h1>Donatón de sangre</h1>
+        </header>
 
-      <h2>Hospitales que necesitan tu ayuda</h2>
+        <h2>Hospitales que necesitan tu ayuda</h2>
 
-      <div class="blood-donation-wrapper"></div>
-    </section>
+        <div class="blood-donation-wrapper"></div>
+      </section>
 
-    <!--////////////////////////////////
+      <!--////////////////////////////////
       Find items Page
       ////////////////////////////////-->
-    <section style="--animate-duration: 0.5s" class="find-items hidden">
-      <h1>Obtener insumos</h1>
+      <section style="--animate-duration: 0.5s" class="find-items hidden">
+        <h1>Obtener insumos</h1>
 
-      <form>
-        <h2 class="category__container">¿Dónde comprar insumos para donaciones?</h2>
+        <form>
+          <h2 class="category__container">
+            ¿Dónde comprar insumos para donaciones?
+          </h2>
 
-        <div class="category__container">
-          <label for="eastTitle" class="category checkbox checkbox--underline">
-            <p for="east" class="checkbox__label">Oriente</p>
-          </label>
+          <div class="category__container">
+            <label
+              for="eastTitle"
+              class="category checkbox checkbox--underline"
+            >
+              <p for="east" class="checkbox__label">Oriente</p>
+            </label>
 
-          <input type="checkbox" name="eastTitle" id="eastTitle" class="category__expand" />
+            <input
+              type="checkbox"
+              name="eastTitle"
+              id="eastTitle"
+              class="category__expand"
+            />
 
-          <span class="material-icons material-icons-outlined category__arrow">expand_more</span>
+            <span class="material-icons material-icons-outlined category__arrow"
+              >expand_more</span
+            >
 
-          <ul id="suppliesInfo-east" class="category__content"></ul>
-        </div>
+            <ul id="suppliesInfo-east" class="category__content"></ul>
+          </div>
 
-        <div class="category__container">
-          <label for="northTitle" class="category checkbox checkbox--underline">
-            <p for="north" class="checkbox__label">Norte</p>
-          </label>
+          <div class="category__container">
+            <label
+              for="northTitle"
+              class="category checkbox checkbox--underline"
+            >
+              <p for="north" class="checkbox__label">Norte</p>
+            </label>
 
-          <input type="checkbox" name="northTitle" id="northTitle" class="category__expand" />
+            <input
+              type="checkbox"
+              name="northTitle"
+              id="northTitle"
+              class="category__expand"
+            />
 
-          <span class="material-icons material-icons-outlined category__arrow">expand_more</span>
+            <span class="material-icons material-icons-outlined category__arrow"
+              >expand_more</span
+            >
 
-          <ul id="suppliesInfo-north" class="category__content"></ul>
-        </div>
+            <ul id="suppliesInfo-north" class="category__content"></ul>
+          </div>
 
-        <div class="category__container">
-          <label for="centerTitle" class="category checkbox checkbox--underline">
-            <p for="center" class="checkbox__label">Centro</p>
-          </label>
+          <div class="category__container">
+            <label
+              for="centerTitle"
+              class="category checkbox checkbox--underline"
+            >
+              <p for="center" class="checkbox__label">Centro</p>
+            </label>
 
-          <input type="checkbox" name="centerTitle" id="centerTitle" class="category__expand" />
+            <input
+              type="checkbox"
+              name="centerTitle"
+              id="centerTitle"
+              class="category__expand"
+            />
 
-          <span class="material-icons material-icons-outlined category__arrow">expand_more</span>
+            <span class="material-icons material-icons-outlined category__arrow"
+              >expand_more</span
+            >
 
-          <ul id="suppliesInfo-center" class="category__content"></ul>
-        </div>
+            <ul id="suppliesInfo-center" class="category__content"></ul>
+          </div>
 
-        <div class="category__container">
-          <label for="southTitle" class="category checkbox checkbox--underline">
-            <p for="south" class="checkbox__label">Sur</p>
-          </label>
+          <div class="category__container">
+            <label
+              for="southTitle"
+              class="category checkbox checkbox--underline"
+            >
+              <p for="south" class="checkbox__label">Sur</p>
+            </label>
 
-          <input type="checkbox" name="southTitle" id="southTitle" class="category__expand" />
+            <input
+              type="checkbox"
+              name="southTitle"
+              id="southTitle"
+              class="category__expand"
+            />
 
-          <span class="material-icons material-icons-outlined category__arrow">expand_more</span>
+            <span class="material-icons material-icons-outlined category__arrow"
+              >expand_more</span
+            >
 
-          <ul id="suppliesInfo-south" class="category__content"></ul>
-        </div>
+            <ul id="suppliesInfo-south" class="category__content"></ul>
+          </div>
 
-        <div class="category__container">
-          <label for="westTitle" class="category checkbox checkbox--underline">
-            <p for="west" class="checkbox__label">Oeste</p>
-          </label>
+          <div class="category__container">
+            <label
+              for="westTitle"
+              class="category checkbox checkbox--underline"
+            >
+              <p for="west" class="checkbox__label">Oeste</p>
+            </label>
 
-          <input type="checkbox" name="westTitle" id="westTitle" class="category__expand" />
+            <input
+              type="checkbox"
+              name="westTitle"
+              id="westTitle"
+              class="category__expand"
+            />
 
-          <span class="material-icons material-icons-outlined category__arrow">expand_more</span>
+            <span class="material-icons material-icons-outlined category__arrow"
+              >expand_more</span
+            >
 
-          <ul id="suppliesInfo-west" class="category__content"></ul>
-        </div>
-      </form>
-    </section>
+            <ul id="suppliesInfo-west" class="category__content"></ul>
+          </div>
+        </form>
+      </section>
 
-    <!--////////////////////////////////
+      <!--////////////////////////////////
       Donations Page
       ////////////////////////////////-->
-    <section style="--animate-duration: 0.5s" class="donations-section hidden">
-      <header class="flex-center">
-        <h1>Brinda ayuda</h1>
-      </header>
+      <section
+        style="--animate-duration: 0.5s"
+        class="donations-section hidden"
+      >
+        <header class="flex-center">
+          <h1>Brinda ayuda</h1>
+        </header>
 
-      <h2>Cuentas habilitadas para donación</h2>
+        <h2>Cuentas habilitadas para donación</h2>
 
-      <div class="donations__wrapper"></div>
-    </section>
+        <div class="donations__wrapper"></div>
+      </section>
 
-    <!--////////////////////////////////
+      <!--////////////////////////////////
       Request List Page
       ////////////////////////////////-->
-    <section style="--animate-duration: 0.5s" class="myRequests hidden">
-      <div class="myRequests__header">
-        <h1 class="myRequests__tittle">Mis solicitudes</h1>
-        <div class="myRequests__btnContainer" id="create-request-btn">
-          <p class="myRequests__text">Realizar una solicitud</p>
-          <button class="myRequests__btn">+</button>
-        </div>
-      </div>
-
-      <div class="dialogDeleteRequest hidden">
-
-        <div class="dialogDeleteRequest__container">
-
-          <p class="dialogDeleteRequest__container__title">
-            ¿Estás seguro de terminar la solicitud?</p>
-          <button class="btn btn--white" onclick="deleteRequest(GetCard())"> Terminar</button>
-          <button class="btn btn--outlineWhite" onclick="CloseDialog()">Cancelar</button>
-
+      <section style="--animate-duration: 0.5s" class="myRequests hidden">
+        <div class="myRequests__header">
+          <h1 class="myRequests__tittle">Mis solicitudes</h1>
+          <div class="myRequests__btnContainer" id="create-request-btn">
+            <p class="myRequests__text">Realizar una solicitud</p>
+            <button class="myRequests__btn">+</button>
+          </div>
         </div>
 
-      </div>
+        <div class="dialogDeleteRequest hidden">
+          <div class="dialogDeleteRequest__container">
+            <p class="dialogDeleteRequest__container__title">
+              ¿Estás seguro de terminar la solicitud?
+            </p>
+            <button class="btn btn--white" onclick="deleteRequest(GetCard())">
+              Terminar
+            </button>
+            <button class="btn btn--outlineWhite" onclick="CloseDialog()">
+              Cancelar
+            </button>
+          </div>
+        </div>
 
-      <div class="myRequests__content"></div>
+        <div class="myRequests__content"></div>
+        <button class="btn logOutBtn">Cerrar Sesión</button>
+      </section>
 
-    </section>
-
-    <!--////////////////////////////////
+      <!--////////////////////////////////
       Request Confirmation Page
       ////////////////////////////////-->
-    <section style="--animate-duration: 0.5s" class="request-confirmation-section flex-center hidden">
-      <h1>Tu solicitud ha sido publicada con éxito</h1>
-    </section>
-  </main>
+      <section
+        style="--animate-duration: 0.5s"
+        class="request-confirmation-section flex-center hidden"
+      >
+        <h1>Tu solicitud ha sido publicada con éxito</h1>
+      </section>
+    </main>
 
-  <!--////////////////////////////////
+    <!--////////////////////////////////
     Scripts
     ////////////////////////////////-->
 
-  <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-firestore.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-analytics.js"></script>
-  <script src="./js/utils/firebaseApp.js"></script>
-  <script src="./js/utils/transitions.js"></script>
-  <script src="./js/burgermenuinteraction.js"></script>
-  <script src="./js/requestCheckboxBehavior.js"></script>
-  <script src="./js/utils/createCard.js"></script>
-  <script src="./js/utils/createCheckbox.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-analytics.js"></script>
+    <script src="./js/utils/firebaseApp.js"></script>
+    <script src="./js/utils/transitions.js"></script>
+    <script src="./js/burgermenuinteraction.js"></script>
+    <script src="./js/requestCheckboxBehavior.js"></script>
+    <script src="./js/utils/createCard.js"></script>
+    <script src="./js/utils/createCheckbox.js"></script>
 
-  <!-- //////////////////// 
+    <!-- //////////////////// 
     DB scripts  
     ////////////////////-->
-  <script src="./js/firebase/getBloodDonation.js"></script>
-  <script src="./js/firebase/getDonations.js"></script>
-  <script src="./js/firebase/locationSelection.js"></script>
-  <script src="./js/firebase/getSuppliesGatheringInfo.js"></script>
-  <script src="./js/firebase/login.js"></script>
-  <script src="./js/firebase/getSupplyList.js"></script>
-  <script src="./js/firebase/getSupplyRequests.js"></script>
-  <script src="./js/firebase/myRequests.js"></script>
-  <script src="./js/firebase/createRequest.js"></script>
-  <script src="./js/navigation.js"></script>
-  <script src="./js/dialogDeleteRequest.js"></script>
-
-</body>
-
+    <script src="./js/firebase/getBloodDonation.js"></script>
+    <script src="./js/firebase/getDonations.js"></script>
+    <script src="./js/firebase/locationSelection.js"></script>
+    <script src="./js/firebase/getSuppliesGatheringInfo.js"></script>
+    <script src="./js/firebase/login.js"></script>
+    <script src="./js/firebase/getSupplyList.js"></script>
+    <script src="./js/firebase/getSupplyRequests.js"></script>
+    <script src="./js/firebase/myRequests.js"></script>
+    <script src="./js/firebase/createRequest.js"></script>
+    <script src="./js/navigation.js"></script>
+    <script src="./js/dialogDeleteRequest.js"></script>
+  </body>
 </html>
