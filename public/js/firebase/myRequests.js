@@ -1,6 +1,7 @@
 const myRequest = document.querySelector(".myRequests__content");
 
 function LoadMyRequests(userID) {
+
     myRequest.innerHTML = '';
     db.collection("requests")
       .where("author", "==", userID)

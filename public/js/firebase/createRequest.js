@@ -106,17 +106,21 @@ window.addEventListener("load", () => {
         })
       );
 
-     if(foodCheckbox) json.supplies.push({   
-  
-        name: foodCheckbox.closest(".checkbox").querySelector("label").innerText,
-      });
+      if (foodCheckbox) {
+        json.supplies.push({
+          name: foodCheckbox.closest(".checkbox").querySelector("label")
+            .innerText,
+        });
+        foodCheckbox.checked = false;
+      }
 
-      if(animalFoodCheckbox) json.supplies.push({
-    
-        name: animalFoodCheckbox.closest(".checkbox").querySelector("label").innerText,
-      });
-
-
+      if (animalFoodCheckbox){
+        json.supplies.push({
+          name: animalFoodCheckbox.closest(".checkbox").querySelector("label")
+            .innerText,
+        });
+        animalFoodCheckbox.checked = false;
+      }
 
       const currentTime = new Date();
       let hour = currentTime.getHours();

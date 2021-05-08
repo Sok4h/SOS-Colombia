@@ -1,5 +1,7 @@
-//Sections
+//Screens
+
 const splashScreen = document.querySelector(".splashpage");
+let currentScreen = splashScreen;
 const backHome = document.getElementById("create-request-backHome");
 const createRequestScreen = document.querySelector(".create-request-section");
 const loginScreen = document.querySelector(".login");
@@ -11,6 +13,7 @@ const requestListScreen = document.querySelector(".myRequests");
 const requestCreatedScreen = document.querySelector(
   ".request-confirmation-section"
 );
+
 const navBar = document.querySelector(".main-header");
 
 //Buttons
@@ -26,75 +29,35 @@ const navObtainSuppliesLink = document.getElementById("nav-obtain-supplies");
 const navDonateBloodLink = document.getElementById("nav-donate-blood");
 
 function navigateBetweenScreens(from, to) {
+  currentScreen = to;
+
   HideSection(from, "animate__zoomOut");
   setTimeout(() => {
     ShowSection(to, "animate__zoomIn");
   }, 500);
-}
+} //closes navigateBetweenScreens method
 
 function navigateBetweenScreensAnimated(from, to, outAnimation, inAnimation) {
+  currentScreen = to;
+
   HideSection(from, outAnimation);
   setTimeout(() => {
     ShowSection(to, inAnimation);
   }, 500);
-}
-
-function navBarTransition(to) {
-  const currentSection = document.querySelector("section.active");
-  if (currentSection != to) navigateBetweenScreens(currentSection, to);
-}
-
-backHome.addEventListener("click", () => {
-  navigateBetweenScreens(loginScreen, splashScreen);
-});
-createRequestBackBtn.addEventListener("click", () => {
-  navigateBetweenScreens(createRequestScreen, requestListScreen);
-});
-
-logOutBtns.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    firebase.auth().signOut();
-    navigateBetweenScreens(requestListScreen, splashScreen);
-  });
-});
+} //closes navigateBetweenScreensAnimated method
 
 brigateBtn.addEventListener("click", () => {
-  navigateBetweenScreens(splashScreen, loginScreen);
-  firebase.auth().onAuthStateChanged((user) => {
-    if (user) {
-      navigateBetweenScreensAnimated(
-        loginScreen,
-        requestListScreen,
-        "animate__fadeOutLeft",
-        "animate__fadeInRight"
-      );
-      let userID = user.email.split("@")[0].toUpperCase();
-
-      LoadMyRequests(userID);
-    }
-  });
+  Redirect("/login-brigadista");
 });
 
-citizenBtn.addEventListener("click", () => {
-  navigateBetweenScreens(splashScreen, helpScreen);
-  setTimeout(() => {
-    ShowSection(navBar, "animate__fadeIn");
-  }, 1000);
-  noneRequestInfo();
+backHome.addEventListener("click", () => {
+  Redirect("");
 });
 
 loginBtn.addEventListener("click", () => {
   login()
-    .then((user) => {
-      navigateBetweenScreensAnimated(
-        loginScreen,
-        requestListScreen,
-        "animate__fadeOutLeft",
-        "animate__fadeInRight"
-      );
-      let userID = user.user.email.split("@")[0].toUpperCase();
-
-      LoadMyRequests(userID);
+    .then(() => {
+      Redirect("/my-requests");
     })
     .catch((error) => {
       window.alert(error.message);
@@ -102,38 +65,51 @@ loginBtn.addEventListener("click", () => {
     });
 });
 
+logOutBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    firebase.auth().signOut();
+    let waitingLogOut = setInterval(() => {
+      if (!currentUser) {
+        Redirect("/login-brigadista");
+        clearInterval(waitingLogOut);
+      }
+    }, 250);
+  });
+});
+
 createRequestBtn.addEventListener("click", () => {
-  navigateBetweenScreens(requestListScreen, createRequestScreen);
+  Redirect("/new-request");
 });
 
-navHelpLink.addEventListener("click", () => {
-  closeMenu();
-  navBarTransition(helpScreen);
-  noneRequestInfo();
-});
-
-navDonateBloodLink.addEventListener("click", () => {
-  closeMenu();
-  getBloodDonations();
-  navBarTransition(donateBloodScreen);
-});
-
-navDonationsLink.addEventListener("click", () => {
-  closeMenu();
-  getDonations();
-  navBarTransition(donationsScreen);
-});
-
-navObtainSuppliesLink.addEventListener("click", () => {
-  closeMenu();
-  navBarTransition(findItemsScreen);
+createRequestBackBtn.addEventListener("click", () => {
+  Redirect("/my-requests");
 });
 
 requestCreatedScreen.addEventListener("click", () => {
-  navigateBetweenScreens(requestCreatedScreen, requestListScreen);
+  Redirect("/my-requests");
+});
 
-  let userID = firebase.auth().currentUser.email.split("@")[0].toUpperCase();
-  LoadMyRequests(userID);
+citizenBtn.addEventListener("click", () => {
+  Redirect("/citizen-help");
+});
+
+navHelpLink.addEventListener("click", () => {
+  Redirect("/citizen-help");
+  closeMenu();
+});
+
+navDonationsLink.addEventListener("click", () => {
+  Redirect("/citizen-donation");
+  closeMenu();
+});
+
+navObtainSuppliesLink.addEventListener("click", () => {
+  Redirect("/citizen-get-supplies");
+  closeMenu();
+});
+navDonateBloodLink.addEventListener("click", () => {
+  Redirect("/citizen-donate-blood");
+  closeMenu();
 });
 
 /*const ClickedBrigradeButton = () => {

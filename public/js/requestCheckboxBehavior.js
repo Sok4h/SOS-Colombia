@@ -1,49 +1,63 @@
 const addCheckboxBehavior = () => {
   const basicToggle = document.querySelector('input[name="basic"]');
+  basicToggle.checked = false;
   const basicExpand = document.querySelector('input[name="basicTitle"]');
+  basicExpand.checked = false;
   const basicCheckboxes = document.querySelectorAll(
     'input[name="basicRequest"]'
   );
 
-
   const cleaningToggle = document.querySelector('input[name="cleaning"]');
+  cleaningToggle.checked = false;
   const cleaningExpand = document.querySelector('input[name="cleaningTitle"]');
+  cleaningExpand.checked = false;
   const cleaningCheckboxes = document.querySelectorAll(
     'input[name="cleaningRequest"]'
   );
 
   const equipmentToggle = document.querySelector('input[name="equipment"]');
+  equipmentToggle.checked = false;
   const equipmentExpand = document.querySelector(
     'input[name="equipmentTitle"]'
   );
+  equipmentExpand.checked = false;
   const equipmentCheckboxes = document.querySelectorAll(
     'input[name="equipmentRequest"]'
   );
 
   const injectologyToggle = document.querySelector('input[name="injectology"]');
+  injectologyToggle.checked = false;
   const injectologyExpand = document.querySelector(
     'input[name="injectologyTitle"]'
   );
+  injectologyExpand.checked = false;
   const injectologyCheckboxes = document.querySelectorAll(
     'input[name="injectologyRequest"]'
   );
 
   const medicineToggle = document.querySelector('input[name="medicine"]');
+  medicineToggle.checked = false;
   const medicineExpand = document.querySelector('input[name="medicineTitle"]');
+  medicineExpand.checked = false;
   const medicineCheckboxes = document.querySelectorAll(
     'input[name="medicineRequest"]'
   );
 
   const solutionsToggle = document.querySelector('input[name="solutions"]');
+  solutionsToggle.checked = false;
+
   const solutionsExpand = document.querySelector(
     'input[name="solutionsTitle"]'
   );
+  solutionsExpand.checked = false;
   const solutionsCheckboxes = document.querySelectorAll(
     'input[name="solutionsRequest"]'
   );
 
   const woundsToggle = document.querySelector('input[name="wounds"]');
+  woundsToggle.checked = false;
   const woundsExpand = document.querySelector('input[name="woundsTitle"]');
+  woundsExpand.checked = false;
   const woundsCheckboxes = document.querySelectorAll(
     'input[name="woundsRequest"]'
   );
@@ -108,7 +122,6 @@ const addCheckboxBehavior = () => {
       });
     });
 
-
     equipmentCheckboxes.forEach((checkbox) => {
       checkbox.addEventListener("change", () => {
         verifySection(equipmentToggle, equipmentCheckboxes);
@@ -139,4 +152,4 @@ const addCheckboxBehavior = () => {
       });
     });
   } //closes attachListeners function
-}
+};

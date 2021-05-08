@@ -1,7 +1,3 @@
-const selectLocationInputs = document.querySelectorAll(
-  ".create-request-section__locationSelection"
-);
-
 const locations = {
   Norte: [],
   Oriente: [],
@@ -10,10 +6,11 @@ const locations = {
   Centro: [],
 };
 
-const LoadLocation = () => {
+const LoadLocationInput = (selectionInput) => {
   db.collection("supplies_concentration_spots")
     .get()
     .then((locationsDB) => {
+      ClearLocations();
       locationsDB.forEach((locationDB) => {
         const location = {
           address: locationDB.data().address,
@@ -25,70 +22,73 @@ const LoadLocation = () => {
 
         locations[location.zone].push(location);
       });
-      AddOptionToInputs();
+      AddOptionToInput(selectionInput);
     });
 };
 
-const AddOptionToInputs = () => {
-  selectLocationInputs.forEach((locationInput) => {
-    var northOtGroup = document.createElement("optgroup");
-    northOtGroup.label = "Norte";
-    locationInput.appendChild(northOtGroup);
+const AddOptionToInput = (locationInput) => {
+  locationInput.innerHTML = "";
 
-    locations.Norte.forEach((location) => {
-      var opt = document.createElement("option");
-      opt.innerHTML = location.name;
-      opt.value = location.id;
-      northOtGroup.appendChild(opt);
-    });
+  var northOtGroup = document.createElement("optgroup");
+  northOtGroup.label = "Norte";
+  locationInput.appendChild(northOtGroup);
 
-    var eastOtGroup = document.createElement("optgroup");
-    eastOtGroup.label = "Oriente";
-    locationInput.appendChild(eastOtGroup);
+  locations.Norte.forEach((location) => {
+    var opt = document.createElement("option");
+    opt.innerHTML = location.name;
+    opt.value = location.id;
+    northOtGroup.appendChild(opt);
+  });
 
-    locations.Oriente.forEach((location) => {
-      var opt = document.createElement("option");
-      opt.innerHTML = location.name;
-      opt.value = location.id;
-      eastOtGroup.appendChild(opt);
-    });
+  var eastOtGroup = document.createElement("optgroup");
+  eastOtGroup.label = "Oriente";
+  locationInput.appendChild(eastOtGroup);
 
+  locations.Oriente.forEach((location) => {
+    var opt = document.createElement("option");
+    opt.innerHTML = location.name;
+    opt.value = location.id;
+    eastOtGroup.appendChild(opt);
+  });
 
-    var southGroup = document.createElement("optgroup");
-    southGroup.label = "Sur";
-    locationInput.appendChild(southGroup);
+  var southGroup = document.createElement("optgroup");
+  southGroup.label = "Sur";
+  locationInput.appendChild(southGroup);
 
-    locations.Sur.forEach((location) => {
-      var opt = document.createElement("option");
-      opt.innerHTML = location.name;
-      opt.value = location.id;
-      southGroup.appendChild(opt);
-    });
+  locations.Sur.forEach((location) => {
+    var opt = document.createElement("option");
+    opt.innerHTML = location.name;
+    opt.value = location.id;
+    southGroup.appendChild(opt);
+  });
 
-    
-    var westGroup = document.createElement("optgroup");
-    westGroup.label = "Oeste";
-    locationInput.appendChild(westGroup);
-    
-    locations.Oeste.forEach((location) => {
-      var opt = document.createElement("option");
-      opt.innerHTML = location.name;
-      opt.value = location.id;
-      westGroup.appendChild(opt);
-    });
+  var westGroup = document.createElement("optgroup");
+  westGroup.label = "Oeste";
+  locationInput.appendChild(westGroup);
 
-    var centerGroup = document.createElement("optgroup");
-    centerGroup.label = "Centro";
-    locationInput.appendChild(centerGroup);
-    
-    locations.Centro.forEach((location) => {
-      var opt = document.createElement("option");
-      opt.innerHTML = location.name;
-      opt.value = location.id;
-      centerGroup.appendChild(opt);
-    });
+  locations.Oeste.forEach((location) => {
+    var opt = document.createElement("option");
+    opt.innerHTML = location.name;
+    opt.value = location.id;
+    westGroup.appendChild(opt);
+  });
 
+  var centerGroup = document.createElement("optgroup");
+  centerGroup.label = "Centro";
+  locationInput.appendChild(centerGroup);
+
+  locations.Centro.forEach((location) => {
+    var opt = document.createElement("option");
+    opt.innerHTML = location.name;
+    opt.value = location.id;
+    centerGroup.appendChild(opt);
   });
 };
 
-LoadLocation();
+const ClearLocations = () => {
+  locations.Norte = [];
+  locations.Oriente = [];
+  locations.Sur = [];
+  locations.Oeste = [];
+  locations.Centro = [];
+};

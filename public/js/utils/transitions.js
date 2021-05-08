@@ -28,19 +28,23 @@ const CleanAnimations = (section) => {
   section.classList.remove("animate__fadeInUp");
   section.classList.remove("animate__fadeOutLeft");
   section.classList.remove("animate__fadeInRight");
+  section.classList.remove("animate__fadeOutRight");
+  section.classList.remove("animate__fadeInLeft");
   section.classList.remove("animate__fadeIn");
+  section.classList.remove("animate__slideLeft");
+  section.classList.remove("animate__fadeIn");
+  section.classList.remove("animate__fadeOut");
+  section.classList.remove("animate__fadeOutDown");
+  section.classList.remove("animate__fadeInUp");
 }; //closes CleanAnimations method
 
 const SetActive = (section, active) => {
   if (active) {
     if (section.classList.contains("hidden"))
       section.classList.remove("hidden");
-    section.classList.add("active");
-    section.classList.remove("animate__zoomOut");
   } else {
     if (!section.classList.contains("hidden")) {
       section.classList.add("hidden");
-      section.classList.remove("active");
     }
   }
 }; //closes SetActive method
