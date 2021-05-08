@@ -20,6 +20,16 @@
     
     }
 
+    &--red {
+        background-color: $red;
+        color: $white;
+        &:hover{
+            background-color:darken($color: $red, $amount: 10%);
+        }
+
+        
+    }
+
     &--white {
         background: $white;
         color: $blueDark;
