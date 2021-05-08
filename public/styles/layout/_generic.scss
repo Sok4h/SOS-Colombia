@@ -41,6 +41,8 @@
 }
 
 .request-confirmation-section {
+    display: flex;
     min-height: 100vh;
     cursor: pointer;
+    flex-direction: column;
 }

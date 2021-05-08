@@ -20,23 +20,50 @@
     
     }
 
+    &--red {
+        background-color: $red;
+        color: $white;
+        &:hover{
+            background-color:darken($color: $red, $amount: 10%);
+        }
+
+        
+    }
+
     &--white {
         background: $white;
         color: $blueDark;
+        &:hover{
+            background-color:darken($color: $white, $amount: 10%);
+        }
+
+        
     }
 
     &--outline {
         background: none;
         color: $blueDark;
         border: 3px solid $blueDark;
+
+        &:hover{
+            border:darken($color: $blueDark, $amount: 10%);
+        }
     }
 
     &--outlineWhite {
         background: none;
         color: $white;
         border: 3px solid $white;
+
+        &:hover{
+            background-color:darken($color: $white, $amount: 10%);
+            border:darken($color: $white, $amount: 10%);
+            color: $blueDark;
+        }
     } 
 
     
-} 
+}
+
+
 

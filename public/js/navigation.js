@@ -27,6 +27,7 @@ const navHelpLink = document.getElementById("nav-bring-help");
 const navDonationsLink = document.getElementById("nav-donations");
 const navObtainSuppliesLink = document.getElementById("nav-obtain-supplies");
 const navDonateBloodLink = document.getElementById("nav-donate-blood");
+const confirmRequestCreated = document.getElementById("btnRequestConfirmation");
 
 function navigateBetweenScreens(from, to) {
   currentScreen = to;

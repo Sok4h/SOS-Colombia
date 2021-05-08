@@ -31,14 +31,16 @@
     }
 
     &__btn{
-        background-color: $blue;
-        color: $white;
         border-style: none;
         border-radius: 10px;
         width: 35px;
         height: 35px;
         text-align: center;
         cursor: pointer;
+
+        &:hover{
+            background-color:darken($color: $blue, $amount: 10%);
+        }
     }
 
     .btn{
