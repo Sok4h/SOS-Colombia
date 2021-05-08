@@ -39,6 +39,10 @@
         height: 35px;
         text-align: center;
         cursor: pointer;
+
+        &:hover{
+            background-color:darken($color: $blue, $amount: 10%);
+        }
     }
 
     .btn{
