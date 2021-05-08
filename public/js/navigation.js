@@ -79,8 +79,9 @@ citizenBtn.addEventListener("click", () => {
   navigateBetweenScreens(splashScreen, helpScreen);
   setTimeout(() => {
     ShowSection(navBar, "animate__fadeIn");
+    noneRequestInfo();
   }, 1000);
-  noneRequestInfo();
+  
 });
 
 loginBtn.addEventListener("click", () => {
