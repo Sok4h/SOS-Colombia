@@ -125,6 +125,9 @@ window.addEventListener("load", () => {
       const currentTime = new Date();
       let hour = currentTime.getHours();
       let minutes = currentTime.getMinutes();
+      let days = currentTime.getUTCDate();
+      let month = currentTime.getUTCMonth() + 1;
+      let year = currentTime.getUTCFullYear();
       let timeString = "";
 
       if (minutes < 10) {
@@ -134,15 +137,15 @@ window.addEventListener("load", () => {
       if (hour > 12) {
         hour -= 12;
         if (hour < 10) {
-          timeString = "0" + hour + ":" + minutes + " PM";
+          timeString = "0" + hour + ":" + minutes + " PM"+ " " + days + "/"+ month + "/" + year;
         } else {
-          timeString = hour + ":" + minutes + " PM";
+          timeString = hour + ":" + minutes + " PM"+ " " + days + "/"+ month + "/" + year;
         }
       } else {
         if (hour < 10) {
-          timeString = "0" + hour + ":" + minutes + " AM";
+          timeString = "0" + hour + ":" + minutes + " AM"+ " " + days + "/"+ month + "/" + year;
         } else {
-          timeString = hour + ":" + minutes + " AM";
+          timeString = hour + ":" + minutes + " AM"+ " " + days + "/"+ month + "/" + year;
         }
       }
 
