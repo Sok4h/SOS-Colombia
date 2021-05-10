@@ -20,22 +20,18 @@ function Router() {
 
   switch (linkRoute) {
     case "":
+      deactivateHeader();
       navigateBetweenScreensAnimated(
         currentScreen,
         splashScreen,
         "animate__fadeOutRight",
         "animate__zoomIn"
-      );
-      setTimeout(() => {
-        HideSection(navBar, "animate__fadeOut");
-      }, 500);
+      );     
 
       break;
 
     case "/login-brigadista":
-      setTimeout(() => {
-        HideSection(navBar, "animate__fadeIn");
-      }, 500);
+      deactivateHeader();
 
       if (currentUser) {
         Redirect("/my-requests");
@@ -106,6 +102,7 @@ function Router() {
         ShowSection(navBar, "animate__fadeIn");
       }, 500);
       loadSupplyRequests();
+      linkChosen(navHelpLink)
       break;
 
     case "/citizen-donation":
@@ -119,6 +116,7 @@ function Router() {
         ShowSection(navBar, "animate__fadeIn");
       }, 500);
       getDonations();
+      linkChosen(navDonationsLink)
       break;
 
     case "/citizen-get-supplies":
@@ -133,6 +131,7 @@ function Router() {
       }, 500);
 
       LoadSupplyGatheringPoints();
+      linkChosen(navObtainSuppliesLink)
       break;
 
     case "/citizen-donate-blood":
@@ -147,6 +146,7 @@ function Router() {
       }, 500);
 
       getBloodDonations();
+      linkChosen(navDonateBloodLink)
       break;
 
     case "/404":

@@ -1,39 +1,55 @@
 .navbar {
-    width: 100%;
-    height: 20%;
+
+    display: flex;
+    flex-direction: row;
+    max-width: 1500px;
+    min-width: 700px;
+    width: 70%;
+
     font-family: $quicksand;
     font-size: 1.5rem;
-    padding: 0 10%;
-    z-index: 1;
-    justify-content:flex-end;
-    text-align: right;
+    padding: 0;
+
+
+    justify-content: space-around;
+
+
+
+
 
     &__a {
-        height: 30%;
-        width: 100%;
-        text-decoration: none;
-        padding-left: 3rem;
+
+
+
+        width: auto;
         font-size: 2rem;
         color: $white;
         cursor: pointer;
 
         &:hover {
-            color: rgba(254, 192, 33, 1);
+            color: rgb(125, 217, 253);
         }
+
+
+    }
+
+    .__chosen {
+        color: rgba(254, 192, 33, 1);
     }
 }
 
 @media screen and(max-width: $medium) {
-    .navbar{
+    .navbar {
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
+        height: 20%;
         margin-top: 7rem;
         display: none;
         pointer-events: none;
+        padding: 0 3rem;
 
-        a{
+        a {
             text-align: left;
         }
-    }    
+    }
 }

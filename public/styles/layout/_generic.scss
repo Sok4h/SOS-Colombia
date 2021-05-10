@@ -4,11 +4,17 @@
     z-index: 10;
     transition: background-color 0.2s ease-out;
 
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     &--active {
-        background-color: $blue;
+
         pointer-events: all;
 
         .navbar {
+
             display: flex;
             pointer-events: all;
         }
@@ -20,6 +26,7 @@
 .donations-section,
 .blood-donation-section {
     padding: 5rem 4rem;
+
 
     h1 {
         margin-bottom: 4rem;
@@ -45,4 +52,15 @@
     min-height: 100vh;
     cursor: pointer;
     flex-direction: column;
+}
+
+
+@media (max-width: $medium) {
+    .main-header {     
+    
+        &--active {
+            background-color: $blue;
+           
+        }
+    }
 }

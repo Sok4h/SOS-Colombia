@@ -97,20 +97,24 @@ citizenBtn.addEventListener("click", () => {
 navHelpLink.addEventListener("click", () => {
   Redirect("/citizen-help");
   closeMenu();
+
 });
 
 navDonationsLink.addEventListener("click", () => {
   Redirect("/citizen-donation");
   closeMenu();
+
 });
 
 navObtainSuppliesLink.addEventListener("click", () => {
   Redirect("/citizen-get-supplies");
   closeMenu();
+
 });
 navDonateBloodLink.addEventListener("click", () => {
   Redirect("/citizen-donate-blood");
   closeMenu();
+
 });
 
 /*const ClickedBrigradeButton = () => {

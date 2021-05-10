@@ -537,13 +537,16 @@
       Find items Page
       ////////////////////////////////-->
       <section style="--animate-duration: 0.5s" class="find-items hidden">
-        <h1>Obtener insumos</h1>
-
+   
+        <header class="flex-center">
+          <h1>Obtener insumos</h1>
+        </header>
         <form>
           <h2 class="category__container">
             ¿Dónde comprar insumos para donaciones?
           </h2>
-
+      
+  
           <div class="category__container">
             <label
               for="eastTitle"
@@ -675,6 +678,20 @@
       <!--////////////////////////////////
       Request List Page
       ////////////////////////////////-->
+
+      <div class="dialogDeleteRequest hidden">
+        <div class="dialogDeleteRequest__container">
+          <h3 class="dialogDeleteRequest__container__title">
+            ¿Estás seguro de terminar la solicitud?
+          </h3>
+          <button class="btn btn--white" onclick="deleteRequest(GetCard())">
+            Terminar
+          </button>
+          <button class="btn btn--outlineWhite" onclick="CloseDialog()">
+            Cancelar
+          </button>
+        </div>
+      </div>
       <section style="--animate-duration: 0.5s" class="myRequests hidden">
         <div class="myRequests__header">
           <h1 class="myRequests__tittle">Mis solicitudes</h1>
@@ -684,19 +701,7 @@
           </div>
         </div>
 
-        <div class="dialogDeleteRequest hidden">
-          <div class="dialogDeleteRequest__container">
-            <p class="dialogDeleteRequest__container__title">
-              ¿Estás seguro de terminar la solicitud?
-            </p>
-            <button class="btn btn--white" onclick="deleteRequest(GetCard())">
-              Terminar
-            </button>
-            <button class="btn btn--outlineWhite" onclick="CloseDialog()">
-              Cancelar
-            </button>
-          </div>
-        </div>
+    
 
         <div class="myRequests__content"></div>
         <button class="btn btn--white logOutBtn">Cerrar Sesión</button>

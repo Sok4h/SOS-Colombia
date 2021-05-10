@@ -10,7 +10,7 @@
 @import './components/navbar';
 @import './components/card';
 @import './components/createRequest';
-@import './layout/dialogDeleteRequest'; 
+@import './layout/dialogDeleteRequest';
 @import'./layout/login';
 @import './layout/splashPage';
 @import './layout/create-request';
@@ -57,7 +57,7 @@ main {
 
     @media (min-width: $small) {
         max-width: 650px;
-       
+
     }
 }
 
@@ -73,20 +73,25 @@ main {
     .main-header {
         position: fixed;
         right: 0;
-        height:100vh;
-        width:70%;
+        height: 100vh;
+        width: 70%;
         pointer-events: none;
-    } 
+        display: block;
+
+        &.hidden {
+            display: none;
+        }
+    }
 }
 
 @media (min-width: $medium) {
     .main-header {
         position: static;
+
     }
 
     .navbar {
-        display: flex;
-        justify-content: center;
+
         text-align: center;
 
         p {
