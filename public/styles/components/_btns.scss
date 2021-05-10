@@ -4,66 +4,62 @@
     max-width: 250px;
     height: 46px;
     font-size: 1.4rem;
-    font-weight: 600;
+
     border-radius: 10px;
     border: none;
     margin: 2rem auto;
     cursor: pointer;
+    transition: background-color .3s ease-in-out, box-shadow .3s ease-in-out;
+ 
+
+
+    color: $white;
+    background-color: darken($blue, $amount: 20%);
+
+
 
     &--blue {
-        background: $blue;
         color: $white;
-
-        &:hover{
-            background-color:darken($color: $blue, $amount: 10%);
-        }
+        background-color: darken($blue, $amount: 15%);
     
+        
+        &:hover {
+            background-color: lighten($blue, $amount: 20%);
+            box-shadow: lighten($blue, $amount: 20%) 0px 0px 15px -5px;
+        }
+
     }
 
     &--red {
-        background-color: $red;
+
         color: $white;
-        &:hover{
-            background-color:darken($color: $red, $amount: 10%);
+        background-color: darken($red, $amount: 20%);
+
+        &:hover {
+            background-color: lighten($red, $amount: 20%);
+            box-shadow: lighten($red, $amount: 20%) 0px 0px 20px -5px;
         }
 
-        
     }
 
     &--white {
-        background: $white;
         color: $blueDark;
-        &:hover{
-            background-color:darken($color: $white, $amount: 10%);
-        }
+        background-color: darken($white, $amount: 25%);
 
-        
+        &:hover {
+            background-color: $white;
+            box-shadow: white 0px 0px 15px -5px;
+        }
     }
+
 
     &--outline {
-        background: none;
-        color: $blueDark;
-        border: 3px solid $blueDark;
-
-        &:hover{
-            border:darken($color: $blueDark, $amount: 10%);
-        }
-    }
-
-    &--outlineWhite {
-        background: none;
+        background-color: none;
         color: $white;
         border: 3px solid $white;
+    }
 
-        &:hover{
-            background-color:darken($color: $white, $amount: 10%);
-            border:darken($color: $white, $amount: 10%);
-            color: $blueDark;
-        }
-    } 
 
-    
+
+
 }
-
-
-
