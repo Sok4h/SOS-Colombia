@@ -542,10 +542,26 @@
         class="uxlab-donation-section hidden"
       >
         <header class="flex-center">
-          <h1>Donatón UXLAB</h1>
+          <h1 style="margin-top: 5%">Donatón UXLAB</h1>
         </header>
 
-        <h2>Acompaños en está iniciativa</h2>
+        <h2 style="text-align: center; margin-top:2.5%; margin-bottom:5% ">Acompaños en está iniciativa</h2>
+
+        <form action="" method="get" class="card">
+          <p>Nombre: <input type="text" name="nombre" size="40"></p>
+          <p>Apellido: <input type="text" name="apellido" size="40"></p>
+          <p>Empresa/Institución: <input type="text" name="nombre" size="40"></p>
+          <p>Correo: <input type="number" name="nacido" min="1900"></p>
+          <p>Términos y condiciones:
+            <input type="radio" name="hm" value="h">  Autorizo hacer pública mi donación si se requiere.
+            (Quisiéramos agradecer en nuestras redes sociales a las empresas o personas que donen, si activas esta opción entendemos que estás de acuerdo con que usemos tu nombre o el de tu empresa
+            <input type="radio" name="hm" value="m"> Publicar a nombre de mi empresa
+          </p>
+          <p>
+            <input type="submit" value="Enviar" class="btn btn--red">
+            <input type="reset" value="Borrar" class="btn btn--white">
+          </p>
+        </form>
 
         <div class="blood-donation-wrapper"></div>
       </section>
