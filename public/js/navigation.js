@@ -7,6 +7,7 @@ const createRequestScreen = document.querySelector(".create-request-section");
 const loginScreen = document.querySelector(".login");
 const helpScreen = document.querySelector(".help-section");
 const donateBloodScreen = document.querySelector(".blood-donation-section");
+const donateUxlabScreen = document.querySelector(".uxlab-donation-section");
 const findItemsScreen = document.querySelector(".find-items");
 const donationsScreen = document.querySelector(".donations-section");
 const requestListScreen = document.querySelector(".myRequests");
