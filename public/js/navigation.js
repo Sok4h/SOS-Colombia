@@ -93,7 +93,7 @@ requestCreatedScreen.addEventListener("click", () => {
 });
 
 citizenBtn.addEventListener("click", () => {
-  Redirect("/citizen-help");
+  Redirect("/citizen-donate-uxlab");
 });
 
 navHelpLink.addEventListener("click", () => {
