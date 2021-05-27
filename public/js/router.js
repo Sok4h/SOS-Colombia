@@ -26,7 +26,7 @@ function Router() {
         splashScreen,
         "animate__fadeOutRight",
         "animate__zoomIn"
-      );     
+      );
 
       break;
 
@@ -147,6 +147,21 @@ function Router() {
 
       getBloodDonations();
       linkChosen(navDonateBloodLink)
+      break;
+
+    case "/citizen-donate-uxlab":
+      navigateBetweenScreensAnimated(
+        currentScreen,
+        donateUxlabScreen,
+        "animate__fadeOutLeft",
+        "animate__fadeInRight"
+      );
+      setTimeout(() => {
+        ShowSection(navBar, "animate__fadeIn");
+      }, 500);
+
+      getBloodDonations();
+      linkChosen(navDonateUxLabLink)
       break;
 
     case "/404":

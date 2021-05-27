@@ -28,6 +28,7 @@ const navHelpLink = document.getElementById("nav-bring-help");
 const navDonationsLink = document.getElementById("nav-donations");
 const navObtainSuppliesLink = document.getElementById("nav-obtain-supplies");
 const navDonateBloodLink = document.getElementById("nav-donate-blood");
+const navDonateUxLabLink = document.getElementById("nav-donate-uxlab");
 const confirmRequestCreated = document.getElementById("btnRequestConfirmation");
 
 function navigateBetweenScreens(from, to) {
@@ -114,6 +115,12 @@ navObtainSuppliesLink.addEventListener("click", () => {
 });
 navDonateBloodLink.addEventListener("click", () => {
   Redirect("/citizen-donate-blood");
+  closeMenu();
+
+});
+
+navDonateUxLabLink.addEventListener("click", () => {
+  Redirect("/citizen-donate-uxlab");
   closeMenu();
 
 });
