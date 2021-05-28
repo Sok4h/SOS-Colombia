@@ -1,0 +1,25 @@
+.list {
+    position: relative;
+
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 50rem;
+    font-size: 1.6rem;
+    font-family: $mulish;
+    
+    &__title{
+        font-size: 2rem;
+        font-family: $quicksand;
+        font-weight: bold;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    &__ol{
+        list-style: decimal;
+    }
+
+    &__li{
+        margin-bottom: 1rem;
+    }
+}

@@ -1,6 +1,6 @@
 window.addEventListener("load", () =>{
 
-    const createDonateBtn = document.getElementById("create-donate-btn");
+    const createDonateBtn = document.getElementById("create-donation-btn");
 
     createDonateBtn.addEventListener("click", (event) =>{
         event.preventDefault();
