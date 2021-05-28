@@ -28,3 +28,18 @@
     }
 
 }
+
+@media (max-width: $small){
+    .list{
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 13px;
+
+        &__li{
+            button{
+                margin-top: 10px !important;
+            }
+            
+        }
+    }
+}

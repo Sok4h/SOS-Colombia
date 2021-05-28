@@ -59,6 +59,51 @@
     }
 }
 
-@media (min-width: $small){
+@media (max-width: $small){
+    .form{
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 13px;
+        &-group{
+
     
+            p{
+                width: 30%;
+            }
+            
+            input{
+
+                width: 70%;
+            }
+
+            button{
+                
+                width:40%;
+            }
+    
+            &-v2{
+
+                > p{
+                    width: 100%;
+                }
+                > div{
+
+                    >div{
+
+                    }
+                    &:first-child{
+
+                    }
+                    p{
+
+                    }
+                    input{
+                        
+                    }
+                }
+    
+                
+            }
+        }
+    }
 }
