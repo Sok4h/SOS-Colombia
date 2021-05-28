@@ -7,7 +7,8 @@ window.addEventListener("load", () =>{
         var copyText = document.getElementById("number-copy");
       
         /* Select the text field */
-        copyText.innerHTML;
+        copyText.select();
+        copyText.setSelectionRange(0, 99999);
          /* For mobile devices */
       
         /* Copy the text inside the text field */
