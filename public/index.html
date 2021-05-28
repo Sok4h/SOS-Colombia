@@ -338,23 +338,29 @@
           <p>Apellido:</p> <input type="text" name="apellido" class="textfield__input">
         </div>
         <div class="form-group">
-          <p>Empresa /<br>Institución: </p> <input type="text" name="nombre" class="textfield__input">
+          <p>Empresa /<br>Institución: </p> <input type="text" name="enterprise" class="textfield__input">
         </div>
         <div class="form-group">
-          <p>Correo:</p> <input type="number" name="nacido" class="textfield__input">
+          <p>Correo:</p> <input type="text" name="email" class="textfield__input">
+        </div>
+        <div class="form-group">
+          <p>Total a donar:</p> <input type="number" name="money" class="textfield__input">
         </div>
         <div class="form-group form-group-v2">
           <p>Términos y condiciones:</p>
           <div>
             
               <div>
-                <input type="checkbox" name="vehicle1" value="Bike"> <br>
-                 <p>Autorizo hacer pública mi donación si se requiere.
-                  (Quisiéramos agradecer en nuestras redes sociales a las empresas o personas que donen, si activas esta opción
-                  entendemos que estás de acuerdo con que usemos tu nombre o el de tu empresa</p> 
+                <input type="checkbox" name="vehicle1" value="auth-donation"> <br>
+                <div style="width:100%">
+                  <p>Autorizo hacer pública mi donación si se requiere.</p>
+                  <p style="font-size: 14px">(Quisiéramos agradecer en nuestras redes sociales a las empresas o personas que donen, si activas esta opción
+                  entendemos que estás de acuerdo con que usemos tu nombre o el de tu empresa)</p> 
+                </div>
+
               </div>
               <div>
-                <input type="checkbox" name="vehicle1" value="Bike"> <br>
+                <input type="checkbox" name="vehicle1" value="auth-enterprise"> <br>
                 <p>Publicar a nombre de mi empresa</p> 
               </div>
             
