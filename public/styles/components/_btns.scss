@@ -52,6 +52,16 @@
         }
     }
 
+    &--green {
+        color: white;
+        background-color: darken(#118f54, $amount: 0%);
+
+        &:hover {
+            background-color: darken(#118f54, $amount: 10%) ;
+            box-shadow: #118f54 0px 0px 15px -5px;
+        }
+    }
+
 
     &--outline {
         background-color: none;
