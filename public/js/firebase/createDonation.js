@@ -1,9 +1,10 @@
 window.addEventListener("load", () =>{
 
-    const createDonateBtn = document.getElementById("create-donation-btn");
+    const createDonateNequiBtn = document.getElementById("create-donationNequi-btn");
+    const createDonateVakiBtn = document.getElementById("create-donationVaki-btn");
 
-    createDonateBtn.addEventListener("click", (event) =>{
-        event.preventDefault();
+    function createDonation( url){
+        
         let json ={
             info: [],
         }
@@ -30,7 +31,16 @@ window.addEventListener("load", () =>{
         .doc()
         .set(json)
         .then(()=>{
-            location.href = "https://recarga.nequi.com.co/bdigitalpsl/#!/";
+            location.href = url;
         });
-    });
+    }
+    createDonateNequiBtn.addEventListener("click", (event) =>{
+        event.preventDefault();
+        createDonation("https://recarga.nequi.com.co/bdigitalpsl/#!/") 
+    } );
+
+    createDonateVakiBtn.addEventListener("click",(event)=>{
+        event.preventDefault();
+        createDonation("https://vaki.co/tt7dzhY9mKhM2z9tfGJu?utm_source=whatsapp") 
+    } );
 });
