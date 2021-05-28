@@ -1,0 +1,30 @@
+.form{
+    max-width: 60rem;
+    &-group{
+        width: 100%;
+        margin-bottom: 5px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        p{
+            width:30%;
+            text-align: center;
+        }
+        
+        input{
+            width:70%;
+        }
+
+        &-v2{
+            flex-direction: column;
+            width: 100%;
+            > div{
+                width:100%;
+                p{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
